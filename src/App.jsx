@@ -6,9 +6,9 @@ import PropTypes from "prop-types";
 
 /**
  * The internal imports
-*/
+ */
 import Navbar from "./components/Navbar";
-import Home from "./components/pages/Home";
+import Home from "./components/pages/home/Home";
 import About from "./components/pages/About";
 import Blog from "./components/pages/Blog";
 import Contact from "./components/pages/Contact";
@@ -41,7 +41,7 @@ function Root({ element }) {
   return (
     <>
       {element}
-      <Navbar />
+      {/* <Navbar /> */}
     </>
   );
 }

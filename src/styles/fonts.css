@@ -1,0 +1,25 @@
+@font-face {
+  font-family: montserrat;
+  src: url(../assets/fonts/Montserrat.ttf);
+}
+
+@font-face {
+  font-family: montserrat-bold;
+  src: url(../assets/fonts/Montserrat-Bold.ttf);
+}
+
+@font-face {
+  font-family: poppins-black;
+  src: url(../assets/fonts/Poppins-Black.ttf);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: poppins-black;
+  text-transform: uppercase;
+}
+
+h1 {
+  line-height: 3.444rem;
+  font-size: 2.833rem;
+  letter-spacing: -1px;
+}

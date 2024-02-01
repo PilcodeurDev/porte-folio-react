@@ -1,0 +1,56 @@
+.profil {
+  background-image: url(../../../assets/SimonProfil.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+  border-radius: 30px;
+  height: calc(100vh - 80px);
+  top: 40px;
+  left: 40px;
+}
+
+.center-text {
+  margin-left: 40%;
+}
+
+.text-presentation {
+  position: relative;
+  top: -7rem;
+  padding-right: 7rem;
+}
+
+.text-presentation h1 {
+  padding-left: 3.33rem;
+
+}
+
+.text-presentation h1::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 25px;
+  width: 35px;
+  height: 4px;
+  border-radius: 10px;
+  background: var(--text-color-title);
+}
+
+.text-presentation font {
+  display: flex;
+}
+
+.text-presentation font:nth-child(1),
+.text-presentation font:nth-child(2) {
+  color: var(--text-color-title);
+}
+
+.text-presentation p {
+  line-height: 1.7rem;
+  font-size: 1.2rem;
+  margin: 1rem 0;
+}
+
+
+.text-presentation a {
+  text-transform: uppercase;
+}
