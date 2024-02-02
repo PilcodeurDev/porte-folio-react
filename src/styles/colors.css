@@ -1,0 +1,11 @@
+body {
+  background: var(--bg-color);
+  color: var(--text-color);
+
+  --btn-color: #183966;
+
+  --bg-color: #D1D8E2;
+
+  --text-color-text: #171717;
+  --text-color-title: #bba06b;
+}
