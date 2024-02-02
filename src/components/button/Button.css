@@ -33,7 +33,7 @@
   transition-timing-function: cubic-bezier(0.5, 1.6, 0.4, 0.7);
 }
 
-.icon {
+.btn .icon {
   position: relative;
   right: -1px;
   width: 40px;
