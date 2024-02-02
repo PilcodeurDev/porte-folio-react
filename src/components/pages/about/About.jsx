@@ -89,7 +89,7 @@ const myInformations = [
 const skillData = [
   {
     name: "html",
-    logo: <img src={html} alt="html" />,
+    logo: <img src={html} alt="html" className=" max-w-36 " />,
   },
   {
     name: "css",
@@ -143,15 +143,12 @@ export default function About() {
                 </div>
               ))}
             </div>
-            {/* <a
+            <Button
+              text="Télécharger moi"
               href={Cv_simon_despres}
-              download="cv-perso"
-              target="_blank"
-              rel="noreferrer"
-            >
-              télécharger moi
-            </a> */}
-            <Button text="Télécharger moi" href={Cv_simon_despres} icon={<FaDownload />} download="Simon_Despres.pdf" />
+              icon={<FaDownload />}
+              download="Simon_Despres.pdf"
+            />
           </div>
           <div>
             <h3 className="mb-3">Mes compétences</h3>
