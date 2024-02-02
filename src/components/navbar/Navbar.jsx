@@ -4,14 +4,6 @@
 import { Link } from "react-router-dom";
 import { BsFillHouseFill } from "react-icons/bs";
 import { FaUser, FaBook, FaEnvelope, FaComments } from "react-icons/fa";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import {
-//   faHouse,
-//   faUser,
-//   faBook,
-//   faEnvelope,
-//   faComment,
-// } from "@fortawesome/free-solid-svg-icons";
 
 /**
  * The internal imports

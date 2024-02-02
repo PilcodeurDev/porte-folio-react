@@ -1,0 +1,27 @@
+.title {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.title h1 {
+  margin: 80px 0;
+}
+
+.title h1 span:nth-child(2) {
+  margin-left: 8px;
+  color: var(--text-color-title);
+}
+
+.title .shadowTitle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 110px;
+  font-family: var(--font-poppins);
+  font-weight: 800;
+  opacity: 0.2;
+  z-index: -1;
+}
+

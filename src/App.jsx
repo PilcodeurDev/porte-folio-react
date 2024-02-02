@@ -9,7 +9,7 @@ import PropTypes from "prop-types";
  */
 import Navbar from "./components/navbar/Navbar";
 import Home from "./components/pages/home/Home";
-import About from "./components/pages/About";
+import About from "./components/pages/about/About";
 import Blog from "./components/pages/Blog";
 import Contact from "./components/pages/Contact";
 import Portefolio from "./components/pages/Portefolio";
