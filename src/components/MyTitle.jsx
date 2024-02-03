@@ -11,15 +11,3 @@ export default function MyTitle({span1, span2, shadow}) {
     </header>
   );
 }
-
-//     <header className="flex justify-center relative uppercase">
-//       <h1 className=" my-20">
-//         <span>{span1} </span>
-//         <span className="ml-2 text-[#bba06b]">{span2} </span>
-//       </h1>
-//       <span className="shadowTitle absolute top-1/2 left-1/2 text-[100px] font-bold opacity-20 -z-10 -translate-x-2/4 -translate-y-2/4 ">
-//         {shadow}
-//       </span>
-//     </header>
-//   );
-// }

@@ -5,7 +5,16 @@ import "./Button.css";
 
 import { Link } from "react-router-dom";
 
-export default function Button({ text, href, icon, download }) {
+export default function Button({ text, href, icon, download, type }) {
+
+  if (type === "submit") {
+    return (
+      <button type="submit" className="btn mx-0">
+        {text}
+        {icon && <span className="icon">{icon}</span>}
+      </button>
+    )
+  }
 
   if (download) {
     return (
