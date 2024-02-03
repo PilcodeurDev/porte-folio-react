@@ -52,6 +52,15 @@
   transition: 0.5s;
 }
 
+form svg {
+  height: 30px;
+  width: 30px;
+}
+
+form .btn:hover svg {
+  scale: 1.4;
+}
+
 .btn:hover .icon svg {
   height: 30px;
   width: 30px;
