@@ -9,7 +9,7 @@ export default function Button({ text, href, icon, download, type, disabled }) {
 
   if (type === "submit") {
     return (
-      <button type="submit" className={`btn mx-0 ${disabled && "opacity-50 pointer-events-none"}`} >
+      <button type="submit" className={`btn absolute right-0 mx-0 my-9 ${disabled && "opacity-50 pointer-events-none"}`} >
         {text}
         {icon && <span className="icon">{icon}</span>}
       </button>
