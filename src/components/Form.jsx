@@ -3,6 +3,11 @@
  */
 import { IoIosSend } from "react-icons/io";
 import { useForm } from "react-hook-form";
+import { useRef } from "react";
+import emailjs from "@emailjs/browser";
+import Fireworks from "react-canvas-confetti/dist/presets/fireworks";
+import { useState } from "react";
+import Modal from "react-modal";
 
 /**
  * The internal imports
@@ -10,18 +15,53 @@ import { useForm } from "react-hook-form";
 import Button from "./button/Button";
 
 export default function Form() {
+  const [congratulation, setCongratulation] = useState(false);
+  const [modalIsOpen, setIsOpen] = useState(false);
+  const form = useRef();
+
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
 
-  const onSubmit = (data) => console.log(data);
+  const customStyles = {
+    content: {
+      top: "25%",
+      left: "50%",
+      right: "auto",
+      bottom: "auto",
+      marginRight: "-50%",
+      transform: "translate(-50%, -50%)",
+    },
+  };
 
-  console.log(errors);
+  function openModal() {
+    setIsOpen(true);
+  }
+
+  function closeModal() {
+    setIsOpen(false);
+  }
+
+  const onSubmit = () => {
+    emailjs
+      .sendForm("service_akey2cf", "template_z2e34fz", form.current, {
+        publicKey: "wEY1a2rYcGO6Q338z",
+      })
+      .then(
+        () => {
+          setCongratulation(true);
+          openModal();
+        },
+        (error) => {
+          console.log("FAILED...", error.text);
+        }
+      );
+  };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
+    <form ref={form} onSubmit={handleSubmit(onSubmit)}>
       <div className="grid grid-cols1 gap-4 md:grid-cols-2">
         <div className="flex flex-col">
           <label htmlFor="firstname" className="font-medium">
@@ -46,17 +86,17 @@ export default function Form() {
           )}
         </div>
         <div className="flex flex-col">
-          <label htmlFor="name" className="font-medium">
+          <label htmlFor="lastname" className="font-medium">
             Nom
             <span className=" text-red-800 font-bold"> *</span>
           </label>
           <input
             className="px-6 py-3 rounded-3xl"
             type="text"
-            id="name"
-            name="name"
+            id="lastname"
+            name="lastname"
             placeholder="VOTRE NOM"
-            {...register("name", { required: "Vous devez rentrer un Nom" })}
+            {...register("lastname", { required: "Vous devez rentrer un Nom" })}
             aria-invalid={errors.name ? "true" : "false"}
           />
           {errors.name && (
@@ -117,6 +157,14 @@ export default function Form() {
       <div className="block relative">
         <Button text={"Envoyer"} type={"submit"} icon={<IoIosSend />} />
       </div>
+      {congratulation && <Fireworks autorun={{ speed: 1 }} />}
+      <Modal
+        isOpen={modalIsOpen}
+        onRequestClose={closeModal}
+        style={customStyles}
+      >
+        <p>Comme une lettre à la poste! Merci pour ton 📬 message.</p>
+      </Modal>
     </form>
   );
 }
