@@ -61,15 +61,11 @@ export default function Form() {
   };
 
   return (
-    <form ref={form} onSubmit={handleSubmit(onSubmit)}>
-      <div className="grid grid-cols1 gap-4 md:grid-cols-2">
-        <div className="flex flex-col">
-          <label htmlFor="firstname" className="font-medium">
-            Prénom
-            <span className=" text-red-800 font-bold"> *</span>
-          </label>
+    <form ref={form} onSubmit={handleSubmit(onSubmit)} className="col-span-3">
+      <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+        <div className="flex flex-col mx-2 mb-3">
           <input
-            className="px-6 py-3 rounded-3xl"
+            className="px-6 py-3 rounded-3xl text-md"
             type="text"
             id="firstname"
             name="firstname"
@@ -85,13 +81,9 @@ export default function Form() {
             </span>
           )}
         </div>
-        <div className="flex flex-col">
-          <label htmlFor="lastname" className="font-medium">
-            Nom
-            <span className=" text-red-800 font-bold"> *</span>
-          </label>
+        <div className="flex flex-col mx-2 mb-3">
           <input
-            className="px-6 py-3 rounded-3xl"
+            className="px-6 py-3 rounded-3xl text-md"
             type="text"
             id="lastname"
             name="lastname"
@@ -105,13 +97,9 @@ export default function Form() {
             </span>
           )}
         </div>
-        <div className="flex flex-col">
-          <label htmlFor="email" className="font-medium">
-            Email
-            <span className=" text-red-800 font-bold"> *</span>
-          </label>
+        <div className="flex flex-col mx-2 mb-3 md:col-span-2">
           <input
-            className="px-6 py-3 rounded-3xl"
+            className="px-6 py-3 rounded-3xl text-md"
             type="email"
             id="email"
             name="email"
@@ -125,17 +113,13 @@ export default function Form() {
             </span>
           )}
         </div>
-        <div className="flex flex-col md:col-span-2">
-          <label htmlFor="message" className="font-medium">
-            Message
-            <span className=" text-red-800 font-bold"> *</span>
-          </label>
+        <div className="flex flex-col mx-2 mb-3 md:col-span-2">
           <textarea
-            className="px-6 py-3 rounded-3xl"
+            className="px-6 py-3 rounded-3xl text-md"
             type="text"
             id="message"
             name="message"
-            rows="10"
+            rows="6"
             cols="30"
             placeholder="VOTRE MESSAGE"
             {...register("message", {
