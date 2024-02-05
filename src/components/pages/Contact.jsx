@@ -5,7 +5,6 @@ import {
   FaMap,
   FaEnvelope,
   FaPhoneSquareAlt,
-  FaFacebookF,
   FaGithub,
   FaLinkedinIn,
 } from "react-icons/fa";
@@ -37,9 +36,7 @@ export default function Contact() {
             <FaMap className="text-4xl text-[#bba06b] mr-4 h-10 w-10" />
             <div>
               <p className="uppercase">Adresse Postal</p>
-              <p className=" font-semibold">
-                {owner.address}
-              </p>
+              <p className=" font-semibold">{owner.address}</p>
               <p className=" font-semibold">{owner.address2}</p>
             </div>
           </div>
@@ -59,15 +56,7 @@ export default function Contact() {
           </div>
           <div className="flex gap-4 mt-6 mb-8">
             <a
-              href=""
-              target="_blank"
-              rel="noreferrer"
-              className="p-2 rounded-full bg-[#183966] hover:bg-[#bba06b] hover:transition-colors duration-1000"
-            >
-              <BsDiscord className="text-3xl text-white" />
-            </a>
-            <a
-              href=""
+              href="https://wa.me/33614421780"
               target="_blank"
               rel="noreferrer"
               className="p-2 rounded-full bg-[#183966] hover:bg-[#bba06b] hover:transition-colors duration-1000"
@@ -75,7 +64,7 @@ export default function Contact() {
               <RiWhatsappFill className="text-3xl text-white" />
             </a>
             <a
-              href=""
+              href="https://www.linkedin.com/in/simondespres/"
               target="_blank"
               rel="noreferrer"
               className="p-2 rounded-full bg-[#183966] hover:bg-[#bba06b] hover:transition-colors duration-1000"
@@ -83,7 +72,7 @@ export default function Contact() {
               <FaLinkedinIn className="text-3xl text-white" />
             </a>
             <a
-              href=""
+              href="https://github.com/PilcodeurDev"
               target="_blank"
               rel="noreferrer"
               className="p-2 rounded-full bg-[#183966] hover:bg-[#bba06b] hover:transition-colors duration-1000"
@@ -96,7 +85,7 @@ export default function Contact() {
               rel="noreferrer"
               className="p-2 rounded-full bg-[#183966] hover:bg-[#bba06b] hover:transition-colors duration-1000"
             >
-              <FaFacebookF className="text-3xl text-white" />
+              <BsDiscord className="text-3xl text-white" />
             </a>
           </div>
         </div>
