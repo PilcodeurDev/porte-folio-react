@@ -2,14 +2,17 @@
  * The external imports
  */
 import { FaArrowRightLong } from "react-icons/fa6";
+import { useContext } from "react";
 
 /**
  * The internal imports
  */
 import "./Home.css";
 import Button from "../../button/Button";
+import { DataContext } from "../../../context/DataProvider";
 
 export default function Home() {
+  const { owner } = useContext(DataContext);
   const btnText = "A propos de moi";
   const btnIcon = <FaArrowRightLong />;
   const btnHref = "/about";
@@ -25,7 +28,9 @@ export default function Home() {
         <div className="relative -top-5 pr-5">
           <h1 className="pl-12 dash">
             <font className=" flex text-[#BBA06B]">je m'appelle</font>
-            <font className=" flex text-[#BBA06B]">simon despres .</font>
+            <font className=" flex text-[#BBA06B]">
+              {owner.firstname} {owner.lastname} .
+            </font>
             <font className=" flex ">concepteur de</font>
             <font className=" flex ">sites web</font>
           </h1>

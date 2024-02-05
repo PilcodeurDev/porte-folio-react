@@ -11,14 +11,17 @@ import {
 } from "react-icons/fa";
 import { BsDiscord } from "react-icons/bs";
 import { RiWhatsappFill } from "react-icons/ri";
+import { useContext } from "react";
 
 /**
  * The internal imports
  */
 import MyTitle from "../MyTitle";
 import Form from "../Form";
+import { DataContext } from "../../context/DataProvider";
 
 export default function Contact() {
+  const { owner } = useContext(DataContext);
   return (
     <div className="w-[90%] m-auto md:max-w-[60%]">
       <MyTitle span1={"prendre"} span2={"contact"} shadow={"contact"} />
@@ -35,23 +38,23 @@ export default function Contact() {
             <div>
               <p className="uppercase">Adresse Postal</p>
               <p className=" font-semibold">
-                32 Bis rue de l'étang, Frasne (25560){" "}
+                {owner.address}
               </p>
-              <p className=" font-semibold">Doubs, France</p>
+              <p className=" font-semibold">{owner.address2}</p>
             </div>
           </div>
           <div className="flex mb-4">
             <FaEnvelope className="text-4xl text-[#bba06b] mr-4 h-10 w-10" />
             <div>
               <p className="uppercase">Envoyez-moi un email</p>
-              <p className=" font-semibold">simondprs62790@gmail.com</p>
+              <p className=" font-semibold">{owner.email}</p>
             </div>
           </div>
           <div className="flex mb-4">
             <FaPhoneSquareAlt className="text-4xl text-[#bba06b] mr-4 h-10 w-10" />
             <div>
               <p className="uppercase">Appelez-moi</p>
-              <p className=" font-semibold">+33 6 14 42 17 80</p>
+              <p className=" font-semibold">{owner.phone}</p>
             </div>
           </div>
           <div className="flex gap-4 mt-6 mb-8">
