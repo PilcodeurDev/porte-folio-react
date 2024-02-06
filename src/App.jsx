@@ -1,7 +1,7 @@
 /**
  * The external imports
  */
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import PropTypes from "prop-types";
 
 /**
@@ -13,6 +13,7 @@ import About from "./components/pages/About";
 import Blog from "./components/pages/Blog";
 import Contact from "./components/pages/Contact";
 import Portefolio from "./components/pages/Portefolio";
+import Single from "./components/pages/Single";
 
 const router = createBrowserRouter([
   {
@@ -25,7 +26,16 @@ const router = createBrowserRouter([
   },
   {
     path: "/blog",
-    element: <Root element={<Blog />} />,
+    children: [
+      {
+        path: "",
+        element: <Root element={<Blog />} />,
+      },
+      {
+        path: ":id",
+        element: <Single />,
+      },
+    ],
   },
   {
     path: "/contact",

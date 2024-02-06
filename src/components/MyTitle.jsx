@@ -1,4 +1,4 @@
-export default function MyTitle({span1, span2, shadow}) {
+export default function MyTitle({ span1, span2, shadow }) {
   return (
     <header className="flex justify-center relative uppercase">
       <h1 className=" my-20 text-xl sm:text-3xl md:text-[2.8rem]">

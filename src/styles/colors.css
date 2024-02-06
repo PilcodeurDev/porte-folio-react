@@ -3,8 +3,8 @@ body {
   color: var(--text-color);
 
   --btn-color: #183966;
-  --bg-color: #D1D8E2;
+  --bg-color: #d1d8e2;
 
-  --text-color-text: #171717;
+  --text-color: #0b192d;
   --text-color-title: #bba06b;
 }
