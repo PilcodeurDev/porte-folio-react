@@ -193,6 +193,9 @@ export default function DataProvider(props) {
     {
       id: 1,
       link: "mes-debuts-developpeur-web",
+      span1: "mes debuts",
+      span2: "de web",
+      shadow: "developpeur",
       title: "Comment j'ai appris à coder",
       catchphrase: "Mon parcours pour devenir développeur web",
       image: (
@@ -265,6 +268,9 @@ export default function DataProvider(props) {
     {
       id: 2,
       link: "jeu-unreal-engine-5",
+      span1: "jeux",
+      span2: "vidéo",
+      shadow: "création",
       title: "Créer un jeu vidéo sur Unreal Engine 5 en 2024",
       catchphrase:
         "Explorez le monde fascinant de la création de jeux vidéo avec Unreal Engine 5. Une aventure captivante et ludique.",
@@ -366,6 +372,9 @@ export default function DataProvider(props) {
     {
       id: 3,
       link: "audience-discord",
+      span1: "audience",
+      span2: "discord",
+      shadow: "dynamisme",
       title: "Comment avoir de l'audience sur son serveur Discord",
       catchphrase:
         "Découvrez des stratégies efficaces pour augmenter l'audience de votre serveur Discord et créer une communauté florissante.",
@@ -449,6 +458,9 @@ export default function DataProvider(props) {
     {
       id: 4,
       link: "accessibilite-developpement-web",
+      span1: "acces",
+      span2: "pour tous",
+      shadow: "accessibilité",
       title:
         "Tout ce qu'il faut savoir sur l'accessibilité dans le développement web",
       catchphrase:
@@ -536,6 +548,9 @@ export default function DataProvider(props) {
     {
       id: 5,
       link: "palworld-polemique",
+      span1: "pal",
+      span2: "wolrd",
+      shadow: "polémique",
       title: "PalWorld fait polémique",
       catchphrase:
         "Découvrez les controverses entourant le jeu PalWorld et explorez les différentes perspectives de cette polémique.",
@@ -648,6 +663,9 @@ export default function DataProvider(props) {
     {
       id: 6,
       link: "secret-maitre-chocolatier",
+      span1: "secret du",
+      span2: "chocolatier",
+      shadow: "gourmandise",
       title: "Le secret du maître chocolatier : la courbe de température",
       catchphrase:
         "Découvrez l'importance cruciale de la courbe de température dans l'art délicat de la chocolaterie.",
@@ -718,6 +736,9 @@ export default function DataProvider(props) {
     {
       id: 7,
       link: "sculpture-glace-conception-3D",
+      span1: "oeuvre",
+      span2: "d'art",
+      shadow: "glace",
       title: "Sculpture sur glace ou conception de l'espace en 3D",
       catchphrase:
         "Comparez deux formes d'art uniques : la sculpture sur glace et la conception d'espaces en 3D, et découvrez leurs similitudes surprenantes.",
@@ -783,6 +804,9 @@ export default function DataProvider(props) {
     {
       id: 8,
       link: "kinesiologie-medecine-chinoise",
+      span1: "bien-",
+      span2: "être",
+      shadow: "harmonie",
       title: "La kinésiologie a travers la médecine chinoise",
       catchphrase:
         "Explorez les liens entre la kinésiologie et la médecine chinoise, et découvrez comment ces pratiques contribuent au bien-être physique et mental.",
@@ -868,6 +892,9 @@ export default function DataProvider(props) {
     {
       id: 9,
       link: "education-positive-animaux-compagnie",
+      span1: "education",
+      span2: "positive",
+      shadow: "compagnon",
       title: "L'éducation positive chez nos animaux de compagnie",
       catchphrase:
         "Découvrez comment l'éducation positive peut renforcer le lien entre les propriétaires et leurs compagnons à quatre pattes.",

@@ -18,7 +18,11 @@ export default function Single() {
 
   return (
     <div className="w-[90%] mx-auto flex flex-col items-center lg:w-2/3">
-      <MyTitle span1={"mes débuts"} span2={"de web"} shadow={"developpeur"} />
+      <MyTitle
+        span1={currentArticle.span1}
+        span2={currentArticle.span2}
+        shadow={currentArticle.shadow}
+      />
       <div className="w-[100vw] max-h-[50vh] mb-8 flex overflow-hidden shadow-2xl lg:max-w-[95vw] hover:opacity-90 duration-500">
         {currentArticle.image}
       </div>
