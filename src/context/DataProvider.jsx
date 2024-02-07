@@ -26,6 +26,15 @@ import {
   palworld,
   glaceArt,
   accessibility,
+  alixShiba,
+  avocat,
+  ball,
+  cherry,
+  chimere,
+  dribbble,
+  helicia,
+  myQAngels,
+  prestation,
 } from "../assets/images";
 
 export const DataContext = createContext(); // Create a context object and give provider
@@ -962,9 +971,248 @@ export default function DataProvider(props) {
       ),
     },
   ];
+  const categorys = ["all", "siteweb", "appweb", "maquette", "video"];
+  const portefolioData = [
+    {
+      id: 1,
+      title: "GoReconnect",
+      category: categorys[1],
+      image: (
+        <img
+          src={alixShiba}
+          alt="kinésiologue animaliere alix"
+          className="rounded-xl object-cover"
+        />
+      ),
+      modalText: {
+        p1: "Alix, kinésiologue animalière",
+        p2: "rafraichissement de site web",
+        p3: (
+          <a
+            href="https://goreconnect.ch/"
+            target="_blanck"
+            className="text-[#bba06b]"
+          >
+            GoReconnect.ch
+          </a>
+        ),
+        p4: "HTML, CSS, JavaScript, React",
+      },
+    },
+    {
+      id: 2,
+      title: "Hélicia",
+      category: categorys[2],
+      image: (
+        <img
+          src={helicia}
+          alt="application web de livraison par drone"
+          className="rounded-xl object-cover"
+        />
+      ),
+      modalText: {
+        p1: "mes collègues et moi",
+        p2: "projet de fin de formation",
+        p3: (
+          <a
+            href="https://github.com/PilcodeurDev/Helicia"
+            target="_blanck"
+            className="text-[#bba06b]"
+          >
+            GitHub/Helicia
+          </a>
+        ),
+        p4: "HTML, CSS, JavaScript, Ruby on Rails",
+      },
+    },
+    {
+      id: 3,
+      title: "My Q Angels",
+      category: categorys[2],
+      image: (
+        <img
+          src={myQAngels}
+          alt="premiere application web"
+          className="rounded-xl object-cover"
+        />
+      ),
+      modalText: {
+        p1: "mes collègues et moi",
+        p2: "coésion d'équipe",
+        p3: (
+          <a
+            href="https://github.com/PilcodeurDev/MontQAngels"
+            target="_blanck"
+            className="text-[#bba06b]"
+          >
+            GitHub/MontQAngels
+          </a>
+        ),
+        p4: "HTML, CSS, JavaScript, Ruby on Rails",
+      },
+    },
+    {
+      id: 4,
+      title: "Prestations",
+      category: categorys[3],
+      image: (
+        <img
+          src={prestation}
+          alt="maquette de présentation de tarifs"
+          className="rounded-xl object-cover"
+        />
+      ),
+      modalText: {
+        p1: "Moi même",
+        p2: "maquette de présentation",
+        p3: (
+          <a
+            href="https://www.figma.com/proto/tF9iIhwCCv7os4LZrRFFqg/Headless-Next.js%2FStrapi?node-id=13-165&starting-point-node-id=13%3A165"
+            target="_blanck"
+            className="text-[#bba06b]"
+          >
+            Maquette figma
+          </a>
+        ),
+        p4: "Figma",
+      },
+    },
+    {
+      id: 5,
+      title: "futur Projet Dribbble",
+      category: categorys[1],
+      image: (
+        <img
+          src={dribbble}
+          alt="futur projet"
+          className="rounded-xl object-cover"
+        />
+      ),
+      modalText: {
+        p1: "Dribble",
+        p2: "site web",
+        p3: (
+          <a
+            href="https://dribbble.com/"
+            target="_blanck"
+            className="text-[#bba06b]"
+          >
+            Dribbble.com
+          </a>
+        ),
+        p4: "HTML, CSS, JavaScript, Three.js",
+      },
+    },
+    {
+      id: 6,
+      title: "futur projet youtube",
+      category: categorys[4],
+      image: (
+        <img
+          src={avocat}
+          alt="futur projet video"
+          className="rounded-xl object-cover"
+        />
+      ),
+      modalText: {
+        p1: "Youtube",
+        p2: "vidéo Youtube",
+        p3: (
+          <a
+            href="https://www.youtube.com/"
+            target="_blanck"
+            className="text-[#bba06b]"
+          >
+            Youtube.com
+          </a>
+        ),
+        p4: "Adobe After Effects",
+      },
+    },
+    {
+      id: 7,
+      title: "futur projet ThemeForest",
+      category: categorys[1],
+      image: (
+        <img
+          src={ball}
+          alt="futur projet video"
+          className="rounded-xl object-cover"
+        />
+      ),
+      modalText: {
+        p1: "ThemeForest",
+        p2: "template en vente",
+        p3: (
+          <a
+            href="https://themeforest.net/"
+            target="_blanck"
+            className="text-[#bba06b]"
+          >
+            ThemeForest.com
+          </a>
+        ),
+        p4: "HTML, CSS, Javascript, React, Three.js",
+      },
+    },
+    {
+      id: 8,
+      title: "futur projet Blender",
+      category: categorys[4],
+      image: (
+        <img
+          src={cherry}
+          alt="futur projet video"
+          className="rounded-xl object-cover"
+        />
+      ),
+      modalText: {
+        p1: "Unreal Engine 5",
+        p2: "création de vidéo",
+        p3: (
+          <a
+            href="https://www.unrealengine.com/fr/unreal-engine-5"
+            target="_blanck"
+            className="text-[#bba06b]"
+          >
+            Unreal-Engine-5.com
+          </a>
+        ),
+        p4: "Unreal Engine 5, Adobe After Effects",
+      },
+    },
+    {
+      id: 9,
+      title: "futur projet Blender",
+      category: categorys[4],
+      image: (
+        <img
+          src={chimere}
+          alt="futur projet video"
+          className="rounded-xl object-cover"
+        />
+      ),
+      modalText: {
+        p1: "Blender",
+        p2: "création de vidéo",
+        p3: (
+          <a
+            href="https://www.blender.org/"
+            target="_blanck"
+            className="text-[#bba06b]"
+          >
+            Blender.org
+          </a>
+        ),
+        p4: "Blender, Adobe After Effects",
+      },
+    },
+  ];
 
   return (
-    <DataContext.Provider value={{ owner, skillData, aboutMe, blogData }}>
+    <DataContext.Provider
+      value={{ owner, skillData, aboutMe, blogData, portefolioData }}
+    >
       {props.children}
     </DataContext.Provider>
   );
