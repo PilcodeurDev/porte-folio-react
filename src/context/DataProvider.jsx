@@ -971,12 +971,12 @@ export default function DataProvider(props) {
       ),
     },
   ];
-
+  const categorys = ["all", "siteweb", "appweb", "maquette", "video"];
   const portefolioData = [
     {
       id: 1,
       title: "GoReconnect",
-      category: "site web",
+      category: categorys[1],
       image: (
         <img
           src={alixShiba}
@@ -1002,7 +1002,7 @@ export default function DataProvider(props) {
     {
       id: 2,
       title: "Hélicia",
-      category: "web app",
+      category: categorys[2],
       image: (
         <img
           src={helicia}
@@ -1028,7 +1028,7 @@ export default function DataProvider(props) {
     {
       id: 3,
       title: "My Q Angels",
-      category: "web app",
+      category: categorys[2],
       image: (
         <img
           src={myQAngels}
@@ -1054,7 +1054,7 @@ export default function DataProvider(props) {
     {
       id: 4,
       title: "Prestations",
-      category: "maquette",
+      category: categorys[3],
       image: (
         <img
           src={prestation}
@@ -1080,7 +1080,7 @@ export default function DataProvider(props) {
     {
       id: 5,
       title: "futur Projet Dribbble",
-      category: "site web",
+      category: categorys[1],
       image: (
         <img
           src={dribbble}
@@ -1106,7 +1106,7 @@ export default function DataProvider(props) {
     {
       id: 6,
       title: "futur projet youtube",
-      category: "video",
+      category: categorys[4],
       image: (
         <img
           src={avocat}
@@ -1132,7 +1132,7 @@ export default function DataProvider(props) {
     {
       id: 7,
       title: "futur projet ThemeForest",
-      category: "site web",
+      category: categorys[1],
       image: (
         <img
           src={ball}
@@ -1158,7 +1158,7 @@ export default function DataProvider(props) {
     {
       id: 8,
       title: "futur projet Blender",
-      category: "vidéo",
+      category: categorys[4],
       image: (
         <img
           src={cherry}
@@ -1184,7 +1184,7 @@ export default function DataProvider(props) {
     {
       id: 9,
       title: "futur projet Blender",
-      category: "vidéo",
+      category: categorys[4],
       image: (
         <img
           src={chimere}
