@@ -20,3 +20,16 @@ import palworld from "./blog/palworld.jpg";
 import glaceArt from "./blog/sculpture-glace.jpg";
 
 export { accessibility, codeTogether, discordSrv, education, ue5, medecineChinoise, chocolaterie, palworld, glaceArt };
+
+
+import alixShiba from "./portefolio/alix-shiba.jpg";
+import avocat from "./portefolio/avocat.jpg";
+import ball from "./portefolio/ball.jpg";
+import cherry from "./portefolio/cherry.jpg";
+import chimere from "./portefolio/chimere.jpg";
+import dribbble from "./portefolio/dribbble.jpg";
+import helicia from "./portefolio/helicia.jpg";
+import myQAngels from "./portefolio/my-q-angels.jpg";
+import prestation from "./portefolio/prestation-website.jpg";
+
+export { alixShiba, avocat, ball, cherry, chimere, dribbble, helicia, myQAngels, prestation };

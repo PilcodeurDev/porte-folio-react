@@ -26,6 +26,15 @@ import {
   palworld,
   glaceArt,
   accessibility,
+  alixShiba,
+  avocat,
+  ball,
+  cherry,
+  chimere,
+  dribbble,
+  helicia,
+  myQAngels,
+  prestation,
 } from "../assets/images";
 
 export const DataContext = createContext(); // Create a context object and give provider
@@ -963,8 +972,232 @@ export default function DataProvider(props) {
     },
   ];
 
+  const portefolioData = [
+    {
+      id: 1,
+      title: "GoReconnect",
+      category: "site web",
+      image: (
+        <img
+          src={alixShiba}
+          alt="kinésiologue animaliere alix"
+          className="rounded-xl object-cover"
+        />
+      ),
+      modalTitle: "présence en ligne",
+      modalText: {
+        p1: "Alix, kinésiologue animalière",
+        p2: "rafraichissement de site web",
+        p3: (
+          <a href="https://goreconnect.ch/" className="text-[#bba06b]">
+            GoReconnect.ch
+          </a>
+        ),
+        p4: "HTML, CSS, JavaScript, React",
+      },
+    },
+    {
+      id: 2,
+      title: "Hélicia",
+      category: "web app",
+      image: (
+        <img
+          src={helicia}
+          alt="application web de livraison par drone"
+          className="rounded-xl object-cover"
+        />
+      ),
+      modalTitle: "App de livraison par drone",
+      modalText: {
+        p1: "mes collègues et moi",
+        p2: "projet de fin de formation",
+        p3: (
+          <a
+            href="https://github.com/PilcodeurDev/Helicia"
+            className="text-[#bba06b]"
+          >
+            GitHub/Helicia
+          </a>
+        ),
+        p4: "HTML, CSS, JavaScript, Ruby on Rails",
+      },
+    },
+    {
+      id: 3,
+      title: "My Q Angels",
+      category: "web app",
+      image: (
+        <img
+          src={myQAngels}
+          alt="premiere application web"
+          className="rounded-xl object-cover"
+        />
+      ),
+      modalTitle: "Projet AirBnB like",
+      modalText: {
+        p1: "mes collègues et moi",
+        p2: "coésion d'équipe",
+        p3: (
+          <a
+            href="https://github.com/PilcodeurDev/MontQAngels"
+            className="text-[#bba06b]"
+          >
+            GitHub/MontQAngels
+          </a>
+        ),
+        p4: "HTML, CSS, JavaScript, Ruby on Rails",
+      },
+    },
+    {
+      id: 4,
+      title: "Prestations",
+      category: "maquette",
+      image: (
+        <img
+          src={prestation}
+          alt="maquette de présentation de tarifs"
+          className="rounded-xl object-cover"
+        />
+      ),
+      modalTitle: "Presentation de prestations",
+      modalText: {
+        p1: "Moi même",
+        p2: "maquette de présentation",
+        p3: (
+          <a
+            href="https://www.figma.com/proto/tF9iIhwCCv7os4LZrRFFqg/Headless-Next.js%2FStrapi?node-id=13-165&starting-point-node-id=13%3A165"
+            className="text-[#bba06b]"
+          >
+            Maquette figma
+          </a>
+        ),
+        p4: "Figma",
+      },
+    },
+    {
+      id: 5,
+      title: "Projet Dribbble",
+      category: "site web",
+      image: (
+        <img
+          src={dribbble}
+          alt="futur projet"
+          className="rounded-xl object-cover"
+        />
+      ),
+      modalTitle: "Futur Projet",
+      modalText: {
+        p1: "Dribble",
+        p2: "site web",
+        p3: (
+          <a href="https://dribbble.com/" className="text-[#bba06b]">
+            Dribbble.com
+          </a>
+        ),
+        p4: "HTML, CSS, JavaScript, Three.js",
+      },
+    },
+    {
+      id: 6,
+      title: "projet youtube",
+      category: "video",
+      image: (
+        <img
+          src={avocat}
+          alt="futur projet video"
+          className="rounded-xl object-cover"
+        />
+      ),
+      modalTitle: "projet youtube",
+      modalText: {
+        p1: "Youtube",
+        p2: "vidéo Youtube",
+        p3: (
+          <a href="https://www.youtube.com/" className="text-[#bba06b]">
+            Youtube.com
+          </a>
+        ),
+        p4: "Adobe After Effects",
+      },
+    },
+    {
+      id: 7,
+      title: "projet ThemeForest",
+      category: "site web",
+      image: (
+        <img
+          src={ball}
+          alt="futur projet video"
+          className="rounded-xl object-cover"
+        />
+      ),
+      modalTitle: "Projet ThemeForest",
+      modalText: {
+        p1: "ThemeForest",
+        p2: "template en vente",
+        p3: (
+          <a href="https://themeforest.net/" className="text-[#bba06b]">
+            ThemeForest.com
+          </a>
+        ),
+        p4: "HTML, CSS, Javascript, React, Three.js",
+      },
+    },
+    {
+      id: 8,
+      title: "projet Blender",
+      category: "vidéo",
+      image: (
+        <img
+          src={cherry}
+          alt="futur projet video"
+          className="rounded-xl object-cover"
+        />
+      ),
+      modalTitle: "Projet Unreal Engine 5",
+      modalText: {
+        p1: "Unreal Engine 5",
+        p2: "création de vidéo",
+        p3: (
+          <a
+            href="https://www.unrealengine.com/fr/unreal-engine-5"
+            className="text-[#bba06b]"
+          >
+            Unreal-Engine-5.com
+          </a>
+        ),
+        p4: "Unreal Engine 5, Adobe After Effects",
+      },
+    },
+    {
+      id: 9,
+      title: "projet Blender",
+      category: "vidéo",
+      image: (
+        <img
+          src={chimere}
+          alt="futur projet video"
+          className="rounded-xl object-cover"
+        />
+      ),
+      modalTitle: "Projet Blender",
+      modalText: {
+        p1: "Blender",
+        p2: "création de vidéo",
+        p3: (
+          <a href="https://www.blender.org/" className="text-[#bba06b]">
+            Blender.org
+          </a>
+        ),
+        p4: "Blender, Adobe After Effects",
+      },
+    },
+  ];
+
   return (
-    <DataContext.Provider value={{ owner, skillData, aboutMe, blogData }}>
+    <DataContext.Provider
+      value={{ owner, skillData, aboutMe, blogData, portefolioData }}
+    >
       {props.children}
     </DataContext.Provider>
   );
