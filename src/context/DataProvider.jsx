@@ -984,12 +984,15 @@ export default function DataProvider(props) {
           className="rounded-xl object-cover"
         />
       ),
-      modalTitle: "présence en ligne",
       modalText: {
         p1: "Alix, kinésiologue animalière",
         p2: "rafraichissement de site web",
         p3: (
-          <a href="https://goreconnect.ch/" className="text-[#bba06b]">
+          <a
+            href="https://goreconnect.ch/"
+            target="_blanck"
+            className="text-[#bba06b]"
+          >
             GoReconnect.ch
           </a>
         ),
@@ -1007,13 +1010,13 @@ export default function DataProvider(props) {
           className="rounded-xl object-cover"
         />
       ),
-      modalTitle: "App de livraison par drone",
       modalText: {
         p1: "mes collègues et moi",
         p2: "projet de fin de formation",
         p3: (
           <a
             href="https://github.com/PilcodeurDev/Helicia"
+            target="_blanck"
             className="text-[#bba06b]"
           >
             GitHub/Helicia
@@ -1033,13 +1036,13 @@ export default function DataProvider(props) {
           className="rounded-xl object-cover"
         />
       ),
-      modalTitle: "Projet AirBnB like",
       modalText: {
         p1: "mes collègues et moi",
         p2: "coésion d'équipe",
         p3: (
           <a
             href="https://github.com/PilcodeurDev/MontQAngels"
+            target="_blanck"
             className="text-[#bba06b]"
           >
             GitHub/MontQAngels
@@ -1059,13 +1062,13 @@ export default function DataProvider(props) {
           className="rounded-xl object-cover"
         />
       ),
-      modalTitle: "Presentation de prestations",
       modalText: {
         p1: "Moi même",
         p2: "maquette de présentation",
         p3: (
           <a
             href="https://www.figma.com/proto/tF9iIhwCCv7os4LZrRFFqg/Headless-Next.js%2FStrapi?node-id=13-165&starting-point-node-id=13%3A165"
+            target="_blanck"
             className="text-[#bba06b]"
           >
             Maquette figma
@@ -1076,7 +1079,7 @@ export default function DataProvider(props) {
     },
     {
       id: 5,
-      title: "Projet Dribbble",
+      title: "futur Projet Dribbble",
       category: "site web",
       image: (
         <img
@@ -1085,12 +1088,15 @@ export default function DataProvider(props) {
           className="rounded-xl object-cover"
         />
       ),
-      modalTitle: "Futur Projet",
       modalText: {
         p1: "Dribble",
         p2: "site web",
         p3: (
-          <a href="https://dribbble.com/" className="text-[#bba06b]">
+          <a
+            href="https://dribbble.com/"
+            target="_blanck"
+            className="text-[#bba06b]"
+          >
             Dribbble.com
           </a>
         ),
@@ -1099,7 +1105,7 @@ export default function DataProvider(props) {
     },
     {
       id: 6,
-      title: "projet youtube",
+      title: "futur projet youtube",
       category: "video",
       image: (
         <img
@@ -1108,12 +1114,15 @@ export default function DataProvider(props) {
           className="rounded-xl object-cover"
         />
       ),
-      modalTitle: "projet youtube",
       modalText: {
         p1: "Youtube",
         p2: "vidéo Youtube",
         p3: (
-          <a href="https://www.youtube.com/" className="text-[#bba06b]">
+          <a
+            href="https://www.youtube.com/"
+            target="_blanck"
+            className="text-[#bba06b]"
+          >
             Youtube.com
           </a>
         ),
@@ -1122,7 +1131,7 @@ export default function DataProvider(props) {
     },
     {
       id: 7,
-      title: "projet ThemeForest",
+      title: "futur projet ThemeForest",
       category: "site web",
       image: (
         <img
@@ -1131,12 +1140,15 @@ export default function DataProvider(props) {
           className="rounded-xl object-cover"
         />
       ),
-      modalTitle: "Projet ThemeForest",
       modalText: {
         p1: "ThemeForest",
         p2: "template en vente",
         p3: (
-          <a href="https://themeforest.net/" className="text-[#bba06b]">
+          <a
+            href="https://themeforest.net/"
+            target="_blanck"
+            className="text-[#bba06b]"
+          >
             ThemeForest.com
           </a>
         ),
@@ -1145,7 +1157,7 @@ export default function DataProvider(props) {
     },
     {
       id: 8,
-      title: "projet Blender",
+      title: "futur projet Blender",
       category: "vidéo",
       image: (
         <img
@@ -1154,13 +1166,13 @@ export default function DataProvider(props) {
           className="rounded-xl object-cover"
         />
       ),
-      modalTitle: "Projet Unreal Engine 5",
       modalText: {
         p1: "Unreal Engine 5",
         p2: "création de vidéo",
         p3: (
           <a
             href="https://www.unrealengine.com/fr/unreal-engine-5"
+            target="_blanck"
             className="text-[#bba06b]"
           >
             Unreal-Engine-5.com
@@ -1171,7 +1183,7 @@ export default function DataProvider(props) {
     },
     {
       id: 9,
-      title: "projet Blender",
+      title: "futur projet Blender",
       category: "vidéo",
       image: (
         <img
@@ -1180,12 +1192,15 @@ export default function DataProvider(props) {
           className="rounded-xl object-cover"
         />
       ),
-      modalTitle: "Projet Blender",
       modalText: {
         p1: "Blender",
         p2: "création de vidéo",
         p3: (
-          <a href="https://www.blender.org/" className="text-[#bba06b]">
+          <a
+            href="https://www.blender.org/"
+            target="_blanck"
+            className="text-[#bba06b]"
+          >
             Blender.org
           </a>
         ),

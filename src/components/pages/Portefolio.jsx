@@ -1,18 +1,31 @@
 /**
  * The external imports
  */
-import { Link } from "react-router-dom";
-import { useContext } from "react";
+import { useContext, useState } from "react";
+import { createPortal } from "react-dom";
 
 /**
  * The internal imports
  */
+import { DataContext } from "../../context/DataProvider";
 import MyTitle from "../MyTitle";
 import PortefolioCard from "../portefolioCard/PortefolioCard";
-import { DataContext } from "../../context/DataProvider";
+import ModalContent from "../ModalContent";
 
 export default function Portefolio() {
   const { portefolioData } = useContext(DataContext);
+  const [showModal, setShowModal] = useState(false);
+  const [selectedItem, setSelectedItem] = useState(null);
+
+  const openModal = (item) => {
+    setSelectedItem(item);
+    setShowModal(true);
+  };
+
+  const closeModal = () => {
+    setShowModal(false);
+    setSelectedItem(null);
+  };
 
   return (
     <div className="w-[70%] m-auto max-w-[1400px]">
@@ -37,11 +50,30 @@ export default function Portefolio() {
         </ul>
       </div>
       <div className="grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-8 lg:grid-cols-3 2xl:grid-cols-4  ">
-        {portefolioData.map(({ id, title, image }) => {
+        {portefolioData.map(({ id, title, image, modalText }) => {
           return (
-            <Link to="/" key={id} className="rounded-xl shadow-2xl">
-              <PortefolioCard title={title} image={image} />
-            </Link>
+            <>
+              <button
+                key={id}
+                onClick={() => {
+                  openModal({ id, title, modalText, image });
+                }}
+                className="rounded-xl shadow-2xl"
+              >
+                <PortefolioCard title={title} image={image} />
+              </button>
+
+              {showModal &&
+                createPortal(
+                  <ModalContent
+                    closeModal={closeModal}
+                    title={selectedItem.title}
+                    modalText={selectedItem.modalText}
+                    image={selectedItem.image}
+                  />,
+                  document.body
+                )}
+            </>
           );
         })}
       </div>
