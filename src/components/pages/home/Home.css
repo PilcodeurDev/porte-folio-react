@@ -4,14 +4,3 @@
   background-repeat: no-repeat;
   background-position: center top;
 }
-
-.dash::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 25px;
-  width: 35px;
-  height: 4px;
-  border-radius: 10px;
-  background: var(--text-color-title);
-}
