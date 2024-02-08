@@ -49,9 +49,17 @@ export default function Portefolio() {
         </div>
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-8 lg:grid-cols-3 2xl:grid-cols-4">
           {portefolioData.map(({ id, title, image, modalText, category }) => {
-            if (category === showCategory || showCategory === categorysWork[0]) {
+            if (
+              category === showCategory ||
+              showCategory === categorysWork[0]
+            ) {
               return (
-                <div key={id} className="flex rounded-xl shadow-2xl">
+                <div
+                  data-aos="fade-left"
+                  data-duration="1000"
+                  key={id}
+                  className="flex rounded-xl shadow-2xl"
+                >
                   <button
                     onClick={() => {
                       openModal({ id, title, modalText, image });
