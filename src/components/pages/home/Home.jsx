@@ -30,6 +30,7 @@ export default function Home() {
       data-aos-duration="1200"
       className="m-auto h-full flex flex-col gap-20 items-center relative lg:flex-row"
     >
+      <div className="fixed h-[200%] w-[100%] -rotate-[15deg] bg-[#bba06b] -top-[50%] -left-[83%] hidden lg:block "></div>
       <div
         className="profil w-60 h-60 md:w-80 md:h-80 mt-[15%] border-[#183966] rounded-full border-4
       lg:w-[30%] lg:h-[70%] lg:fixed lg:mt-0 lg:top-[15%] lg:left-10 lg:rounded-[30px] lg:border-none
