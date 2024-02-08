@@ -2,7 +2,9 @@
  * The external imports
  */
 import { FaArrowRightLong } from "react-icons/fa6";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 /**
  * The internal imports
@@ -10,6 +12,7 @@ import { useContext } from "react";
 import "./Home.css";
 import Button from "../../button/Button";
 import { DataContext } from "../../../context/DataProvider";
+import OverlayRevealContent from "../../animation/OverlayRevealContent";
 
 export default function Home() {
   const { owner } = useContext(DataContext);
@@ -17,8 +20,16 @@ export default function Home() {
   const btnIcon = <FaArrowRightLong />;
   const btnHref = "/about";
 
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   return (
-    <div className="m-auto h-full flex flex-col gap-20 items-center relative lg:flex-row">
+    <div
+      data-aos="fade-up"
+      data-aos-duration="1200"
+      className="m-auto h-full flex flex-col gap-20 items-center relative lg:flex-row"
+    >
       <div
         className="profil w-60 h-60 md:w-80 md:h-80 mt-[15%] border-[#183966] rounded-full border-4
       lg:w-[30%] lg:h-[70%] lg:fixed lg:mt-0 lg:top-[15%] lg:left-10 lg:rounded-[30px] lg:border-none
@@ -47,6 +58,7 @@ export default function Home() {
           <Button text={btnText} href={btnHref} icon={btnIcon} />
         </div>
       </div>
+      <OverlayRevealContent />
     </div>
   );
 }

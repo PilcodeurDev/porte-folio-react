@@ -4,3 +4,23 @@
   background-repeat: no-repeat;
   background-position: center top;
 }
+
+.animation-slide-in-down {
+  position: absolute;
+  background: #b6c2c8;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  animation: slide-in-down 1.2s cubic-bezier(0.77, 0, 0.175, 1) both;
+}
+
+@keyframes slide-in-down {
+  0% {
+    transform: translateY(-10%);
+  }
+  100% {
+    transform: translateY(100%);
+    display: none;
+  }
+}

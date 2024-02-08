@@ -1,6 +1,8 @@
+import PropTypes from 'prop-types';
+
 export default function MyTitle({ span1, span2, shadow }) {
   return (
-    <header className="flex justify-center relative uppercase">
+    <header className="flex justify-center relative uppercase md:mb-10 xl:mb-20">
       <h1 className=" my-20 text-xl sm:text-3xl md:text-[2.8rem]">
         <span>{span1} </span>
         <span className="ml-2 text-[#bba06b]">{span2} </span>
@@ -11,3 +13,9 @@ export default function MyTitle({ span1, span2, shadow }) {
     </header>
   );
 }
+
+MyTitle.propTypes = {
+  span1: PropTypes.string.isRequired,
+  span2: PropTypes.string.isRequired,
+  shadow: PropTypes.string.isRequired,
+};
