@@ -14,9 +14,9 @@ import ModalContent from "../ModalContent";
 import OverlayRevealContent from "../animation/OverlayRevealContent";
 
 export default function Portefolio() {
-  const { portefolioData } = useContext(DataContext);
+  const { portefolioData, categorysWork } = useContext(DataContext);
   const [selectedItem, setSelectedItem] = useState(null);
-  const [showCategory, setShowCategory] = useState("TOUS");
+  const [showCategory, setShowCategory] = useState(categorysWork[0]);
 
   const openModal = (item) => {
     setSelectedItem(item);
@@ -32,53 +32,34 @@ export default function Portefolio() {
         <MyTitle span1={"mon"} span2={"portfolio"} shadow={"travail"} />
         <div className="flex justify-center">
           <ul className="flex mb-5 items-center text-[#183966]">
-            <li
-              onClick={() => setShowCategory("TOUS")}
-              className={`flex justify-center text-xs mx-2 mb-5 font-bold whitespace-nowrap md:text-sm lg:text-base transition-color duration-200 hover:text-[#bba06b] ${
-                showCategory === "TOUS" ? "text-[#bba06b]" : ""
-              }`}
-            >
-              TOUS
-            </li>
-            <li
-              onClick={() => setShowCategory("siteweb")}
-              className={`flex justify-center text-xs mx-2 mb-5 font-bold whitespace-nowrap md:text-sm lg:text-base transition-color duration-200 hover:text-[#bba06b] ${
-                showCategory === "siteweb" ? "text-[#bba06b]" : ""
-              }`}
-            >
-              SITE WEB
-            </li>
-            <li
-              onClick={() => setShowCategory("maquette")}
-              className={`flex justify-center text-xs mx-2 mb-5 font-bold whitespace-nowrap md:text-sm lg:text-base transition-color duration-200 hover:text-[#bba06b] ${
-                showCategory === "maquette" ? "text-[#bba06b]" : ""
-              }`}
-            >
-              MAQUETTE
-            </li>
-            <li
-              onClick={() => setShowCategory("appweb")}
-              className={`flex justify-center text-xs mx-2 mb-5 font-bold whitespace-nowrap md:text-sm lg:text-base transition-color duration-200 hover:text-[#bba06b] ${
-                showCategory === "appweb" ? "text-[#bba06b]" : ""
-              }`}
-            >
-              APP WEB
-            </li>
-            <li
-              onClick={() => setShowCategory("video")}
-              className={`flex justify-center text-xs mx-2 mb-5 font-bold whitespace-nowrap md:text-sm lg:text-base transition-color duration-200 hover:text-[#bba06b] ${
-                showCategory === "video" ? "text-[#bba06b]" : ""
-              }`}
-            >
-              VIDEO
-            </li>
+            {categorysWork.map((category, index) => {
+              return (
+                <li
+                  key={index}
+                  onClick={() => setShowCategory(category)}
+                  className={`flex justify-center text-xs mx-2 md:mx-4 mb-5 font-bold whitespace-nowrap md:text-sm lg:text-base transition-color duration-200 hover:text-[#bba06b] ${
+                    showCategory === category ? "text-[#bba06b]" : ""
+                  }`}
+                >
+                  {category}
+                </li>
+              );
+            })}
           </ul>
         </div>
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-8 lg:grid-cols-3 2xl:grid-cols-4">
           {portefolioData.map(({ id, title, image, modalText, category }) => {
-            if (category === showCategory || showCategory === "TOUS") {
+            if (
+              category === showCategory ||
+              showCategory === categorysWork[0]
+            ) {
               return (
-                <div key={id} className="flex rounded-xl shadow-2xl">
+                <div
+                  data-aos="fade-left"
+                  data-duration="1000"
+                  key={id}
+                  className="flex rounded-xl shadow-2xl"
+                >
                   <button
                     onClick={() => {
                       openModal({ id, title, modalText, image });
@@ -104,7 +85,7 @@ export default function Portefolio() {
           })}
         </div>
       </div>
-    <OverlayRevealContent />
+      <OverlayRevealContent />
     </div>
   );
 }

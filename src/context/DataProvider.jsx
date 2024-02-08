@@ -971,12 +971,13 @@ export default function DataProvider(props) {
       ),
     },
   ];
-  const categorys = ["all", "siteweb", "appweb", "maquette", "video"];
+  const categorysWork = ["Tous", "site web", "app web", "maquette", "video"];
+
   const portefolioData = [
     {
       id: 1,
       title: "GoReconnect",
-      category: categorys[1],
+      category: categorysWork[1],
       image: (
         <img
           src={alixShiba}
@@ -1002,7 +1003,7 @@ export default function DataProvider(props) {
     {
       id: 2,
       title: "Hélicia",
-      category: categorys[2],
+      category: categorysWork[2],
       image: (
         <img
           src={helicia}
@@ -1028,7 +1029,7 @@ export default function DataProvider(props) {
     {
       id: 3,
       title: "My Q Angels",
-      category: categorys[2],
+      category: categorysWork[2],
       image: (
         <img
           src={myQAngels}
@@ -1054,7 +1055,7 @@ export default function DataProvider(props) {
     {
       id: 4,
       title: "Prestations",
-      category: categorys[3],
+      category: categorysWork[3],
       image: (
         <img
           src={prestation}
@@ -1080,7 +1081,7 @@ export default function DataProvider(props) {
     {
       id: 5,
       title: "futur Projet Dribbble",
-      category: categorys[1],
+      category: categorysWork[1],
       image: (
         <img
           src={dribbble}
@@ -1106,7 +1107,7 @@ export default function DataProvider(props) {
     {
       id: 6,
       title: "futur projet youtube",
-      category: categorys[4],
+      category: categorysWork[4],
       image: (
         <img
           src={avocat}
@@ -1132,7 +1133,7 @@ export default function DataProvider(props) {
     {
       id: 7,
       title: "futur projet ThemeForest",
-      category: categorys[1],
+      category: categorysWork[1],
       image: (
         <img
           src={ball}
@@ -1158,7 +1159,7 @@ export default function DataProvider(props) {
     {
       id: 8,
       title: "futur projet Blender",
-      category: categorys[4],
+      category: categorysWork[4],
       image: (
         <img
           src={cherry}
@@ -1184,7 +1185,7 @@ export default function DataProvider(props) {
     {
       id: 9,
       title: "futur projet Blender",
-      category: categorys[4],
+      category: categorysWork[4],
       image: (
         <img
           src={chimere}
@@ -1211,7 +1212,7 @@ export default function DataProvider(props) {
 
   return (
     <DataContext.Provider
-      value={{ owner, skillData, aboutMe, blogData, portefolioData }}
+      value={{ owner, skillData, aboutMe, blogData, portefolioData, categorysWork }}
     >
       {props.children}
     </DataContext.Provider>
