@@ -29,19 +29,20 @@ export default function Home() {
     <div
       data-aos="fade-up"
       data-aos-duration="1200"
-      className="relative m-auto h-full flex flex-col gap-20 items-center overflow-hidden lg:flex-row"
+      className="relative m-auto h-full flex flex-col gap-14 items-center overflow-hidden lg:flex-row"
     >
-      <div className="fixed h-[200%] w-[100%] -rotate-[15deg] bg-mainColorContrast -top-[50%] -left-[83%] lg:block "></div>
+      <div className="fixed h-[200%] w-[100%] -rotate-[15deg] bg-mainColorContrast -top-[50%] -left-[83%] hidden lg:block "></div>
       <div
-        className="profil w-60 h-60 md:w-80 md:h-80 mt-[15%] border-mainColor rounded-full border-4
+        // photo de profil
+        className="profil w-60 h-60 md:w-72 md:h-72 mt-14 border-mainColor rounded-full border-4
       lg:w-[30%] lg:h-[70%] lg:fixed lg:mt-0 lg:top-[15%] lg:left-10 lg:rounded-[30px] lg:border-none
       xl:top-[4%] xl:left-14 xl:h-[92%]"
       ></div>
-      <div className=" w-full flex justify-center lg:w-2/3 lg:ml-[40%]">
-        <div className="relative w-2/3 -top-5 pr-5">
-          <div className="flex justify-center scale-75 sm:scale-[80%] md:scale-100 lg:block">
-            <h1 className="pl-12">
-              <span className="relative flex text-mainColorContrast before:absolute before:-left-14 before:top-6 before:w-8 before:h-1 before:rounded-full before:bg-mainColorContrast">
+      <div className="flex flex-col items-center w-full lg:w-2/3 lg:ml-[40%]">
+        <div className="relative flex flex-col items-center justify-center  w-2/3 -top-5 lg:pr-5">
+          <div className="flex justify-center pr-4 lg:block lg:pr-0  ">
+            <h1 className="text-xl sm:text-2xl md:text-3xl pl-12">
+              <span className="relative flex text-mainColorContrast before:absolute before:-left-12 before:top-[13px] before:w-6 sm:before:w-7 md:before:w-8 before:h-1 before:rounded-full before:bg-mainColorContrast">
                 Je m'appelle
               </span>
               <span className="flex text-mainColorContrast">
@@ -51,17 +52,13 @@ export default function Home() {
               <span className="flex">sites web</span>
             </h1>
           </div>
-          <p className="lg:w-[80%] text-xl my-5">
+          <p className="lg:w-[80%] text-md my-5">
             Je suis concepteur web ainsi que développeur front-end basé à la
             frontière franco-suisse. Je suis passionné par la création
             d'interfaces utilisateur interactives et dynamiques qui captiveront
             vos visiteurs dès les premières secondes.
           </p>
-          <Button
-            text={BUTTON_TEXT}
-            href={BUTTON_HREF}
-            icon={BUTTON_ICON}
-          />
+          <Button text={BUTTON_TEXT} href={BUTTON_HREF} icon={BUTTON_ICON} />
         </div>
       </div>
       <OverlayRevealContent />

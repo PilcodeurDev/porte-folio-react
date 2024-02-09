@@ -28,7 +28,7 @@ export default function Contact() {
         <MyTitle span1={"prendre"} span2={"contact"} shadow={"contact"} />
         <div className="grid grid-cols-1 xl:grid-cols-5 xl:gap-9">
           <div className="col-span-2">
-            <h3 className="text-xl pb-6 md:text-3xl ">Ne soyez pas timide !</h3>
+            <h3 className="pb-6 md:text-3xl ">Ne soyez pas timide !</h3>
             <p className="pb-6 xl:max-w-[30rem]">
               Vous avez une question ou une remarque ? Vous souhaitez en savoir
               plus sur mes prestations ? N’hésitez pas à me contacter via le
@@ -37,7 +37,7 @@ export default function Contact() {
             <div className="flex mb-4">
               <FaMap className="text-4xl text-mainColorContrast mr-4 h-10 w-10" />
               <div>
-                <p className="uppercase">Adresse Postal</p>
+                <p className="uppercase">Adresse Postale</p>
                 <p className=" font-semibold">{owner.address}</p>
                 <p className=" font-semibold">{owner.address2}</p>
               </div>

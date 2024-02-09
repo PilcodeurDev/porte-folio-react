@@ -27,25 +27,25 @@ export default function About() {
         <MyTitle span1={"à propos"} span2={"de moi"} shadow={"cv"} />
         <div className="row grid grid-cols-1 lg:grid-cols-2 gap-6">
           <div className="flex justify-center">
-            <div className="w-full mb-28">
-              <h3 className="mb-10">informations personnelles</h3>
-              <div className="grid grid-cols-1 gap-7 2xl:grid-cols-2">
+            <div className="w-full mb-10">
+              <h3 className="mb-10 lg:text-2xl">informations personnelles</h3>
+              <div className="grid grid-cols-1 gap-5 2xl:grid-cols-2">
                 {aboutMe.map(({ id, title, value }) => (
                   <div
                     key={id}
-                    className="flex justify-between lg:w-[85%] whitespace-nowrap"
+                    className="flex justify-between items-center whitespace-nowrap text-lg lg:text-xl lg:w-[85%]"
                   >
-                    <span className="flex flex-nowrap text-xl font-semibold">
+                    <span className="flex flex-nowrap font-semibold">
                       {title}
                     </span>
-                    <span className="flex flex-nowrap text-xl text-mainColorContrast font-bold">
+                    <span className="flex flex-nowrap text-mainColorContrast font-bold">
                       {value}
                     </span>
                   </div>
                 ))}
               </div>
               <Button
-                text= {BUTTON_TEXT}
+                text={BUTTON_TEXT}
                 href={BUTTON_HREF}
                 icon={BUTTON_ICON}
                 download={BUTTON_DOWNLOAD}
@@ -53,8 +53,8 @@ export default function About() {
             </div>
           </div>
           <div className="">
-            <h3 className="mb-3">Mes compétences</h3>
-            <div className="flex flex-wrap">
+            <h3 className="mb-3 lg:text-2xl">Mes compétences</h3>
+            <div className="flex flex-wrap justify-center pb-24">
               {skillData.map(({ id, logo, name }) => (
                 <div
                   key={id}

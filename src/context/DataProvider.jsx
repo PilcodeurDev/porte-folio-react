@@ -179,7 +179,7 @@ export default function DataProvider(props) {
     },
     {
       id: 9,
-      title: "What's App :",
+      title: "WhatsApp :",
       value: (
         <a
           href="https://wa.me/33614421780"
@@ -230,7 +230,7 @@ export default function DataProvider(props) {
           <p>
             Après avoir suivi l'aventure de son frère, je me suis reconnu en lui
             et j'ai décidé de tenter l'expérience du développement web, du moins
-            apprendre quelques notions de base pour "tater le terrain".
+            apprendre quelques notions de base pour "tâter le terrain".
           </p>
           <br />
           <p>
@@ -972,7 +972,7 @@ export default function DataProvider(props) {
   ];
   const categorysWork = ["Tous", "site web", "app web", "maquette", "vidéo"];
 
-  const portefolioData = [
+  const portfolioData = [
     {
       id: 1,
       title: "GoReconnect",
@@ -1225,7 +1225,7 @@ export default function DataProvider(props) {
         skillData,
         aboutMe,
         blogData,
-        portefolioData,
+        portfolioData,
         categorysWork,
       }}
     >

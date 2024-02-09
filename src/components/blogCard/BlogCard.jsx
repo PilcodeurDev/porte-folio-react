@@ -15,9 +15,7 @@ export default function BlogCard({ title, subTitle, image }) {
         {image}
       </div>
       <div className="p-4">
-        <p className="mb-5 font-extrabold text-xl tracking-tight">
-          {title}
-        </p>
+        <p className="mb-5 font-semibold text-xl tracking-tight">{title}</p>
         <p className="leading-5">{subTitle}</p>
       </div>
     </div>

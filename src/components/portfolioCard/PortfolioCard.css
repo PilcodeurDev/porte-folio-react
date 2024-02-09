@@ -1,12 +1,12 @@
-.portefolio-card h4 {
+.portfolio-card h4 {
   opacity: 0;
 }
 
-.portefolio-card:hover h4 {
+.portfolio-card:hover h4 {
   opacity: 1;
   transition: all 0.7s ease;
 }
 
-.portefolio-card:hover h4 span {
+.portfolio-card:hover h4 span {
   transform: translateY(0);
 }

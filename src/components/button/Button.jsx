@@ -6,7 +6,6 @@ import "./Button.css";
 import { Link } from "react-router-dom";
 
 export default function Button({ text, href, icon, download, type, disabled }) {
-
   if (type === "submit") {
     return (
       <button
@@ -29,7 +28,7 @@ export default function Button({ text, href, icon, download, type, disabled }) {
         target="_blank"
         rel="noreferrer"
         icon={icon}
-        className="btn scale-110 mt-10 whitespace-nowrap"
+        className="btn scale-110 mt-14 whitespace-nowrap"
       >
         {text}
         {icon && <span className="icon">{icon}</span>}
@@ -38,7 +37,7 @@ export default function Button({ text, href, icon, download, type, disabled }) {
   }
 
   return (
-    <Link to={href} className="btn ml-0 md:ml-10 whitespace-nowrap">
+    <Link to={href} className="btn whitespace-nowrap ml-0 lg:ml-12 ">
       {text}
       {icon && <span className="icon">{icon}</span>}
     </Link>

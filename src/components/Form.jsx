@@ -40,19 +40,20 @@ export default function Form() {
     },
   };
 
-  function openModal() {
-    setIsOpen(true);
-  }
+  const openModal = () => setIsOpen(true);
+  const closeModal = () => setIsOpen(false);
 
-  function closeModal() {
-    setIsOpen(false);
-  }
-
-  const onSubmit = () => {
+  const handleFormSubmit = () => {
     emailjs
-      .sendForm("service_akey2cf", "template_z2e34fz", form.current, {
-        publicKey: "wEY1a2rYcGO6Q338z",
-      })
+      .sendForm(
+        import.meta.env.VITE_REACT_APP_MY_ID_EMAILJS_API_KEY,
+        import.meta.env.VITE_REACT_APP_MY_TEMPLATE_EMAILJS_API_KEY,
+        form.current,
+        {
+          publicKey: import.meta.env
+            .VITE_REACT_APP_MY_PUBLIC_KEY_EMAILJS_API_KEY,
+        }
+      )
       .then(
         () => {
           setCongratulation(true);
@@ -65,7 +66,11 @@ export default function Form() {
   };
 
   return (
-    <form ref={form} onSubmit={handleSubmit(onSubmit)} className="col-span-3">
+    <form
+      ref={form}
+      onSubmit={handleSubmit(handleFormSubmit)}
+      className="col-span-3"
+    >
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
         <div className="flex flex-col mx-2 mb-3">
           <input
@@ -78,9 +83,14 @@ export default function Form() {
               required: "Vous devez rentrer un Prénom 👍",
             })}
             aria-invalid={errors.firstname ? "true" : "false"}
+            aria-describedby="firstname-error"
           />
           {errors.firstname && (
-            <span role="alert" className=" text-red-600 font-medium">
+            <span
+              id="firstname-error"
+              role="alert"
+              className=" text-red-600 font-medium"
+            >
               {errors.firstname.message}
             </span>
           )}
@@ -94,9 +104,14 @@ export default function Form() {
             placeholder="VOTRE NOM"
             {...register("lastname", { required: "Vous devez rentrer un Nom" })}
             aria-invalid={errors.lastname ? "true" : "false"}
+            aria-describedby="lastname-error"
           />
           {errors.lastname && (
-            <span role="alert" className=" text-red-600 font-medium">
+            <span
+              id="lastname-error"
+              role="alert"
+              className=" text-red-600 font-medium"
+            >
               {errors.lastname.message}
             </span>
           )}
@@ -110,9 +125,14 @@ export default function Form() {
             placeholder="VOTRE E-MAIL"
             {...register("email", { required: "Vous devez rentrer un email" })}
             aria-invalid={errors.email ? "true" : "false"}
+            aria-describedby="email-error"
           />
           {errors.email && (
-            <span role="alert" className=" text-red-600 font-medium">
+            <span
+              id="email-error"
+              role="alert"
+              className=" text-red-600 font-medium"
+            >
               {errors.email.message}
             </span>
           )}
@@ -134,9 +154,14 @@ export default function Form() {
               },
             })}
             aria-invalid={errors.message ? "true" : "false"}
+            aria-describedby="message-error"
           ></textarea>
           {errors.message && (
-            <span role="alert" className=" text-red-600 font-medium">
+            <span
+              id="message-error"
+              role="alert"
+              className=" text-red-600 font-medium"
+            >
               {errors.message.message}
             </span>
           )}

@@ -1,57 +1,5 @@
-.navbar {
-  position: fixed;
-  right: 30px;
-  display: flex;
-  align-items: center;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.navbar .icon-box {
-  width: 50px;
-  height: 50px;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 20px 0;
-  border-radius: 50%;
-  background: var(--btn-color);
-  cursor: pointer;
-  transition: 0.4s;
-  list-style: none;
-}
-
-.navbar .icon-box:hover {
-  background-color: var(--btn-color);
-}
-
-.navbar .icon-box .icon {
-  color: #ffffff;
-}
-.navbar .icon-box a{
-  font-size: 1.4rem;
-}
-
-.navbar .icon-box h6 {
-  margin: 0;
-  padding: 0 30px 0 25px;
-  height: 50px;
-  position: absolute;
-  top: 0;
-  right: 0;
-  white-space: nowrap;
-  opacity: 0;
-  line-height: 50px;
-  border-radius: 30px;
-  z-index: -1;
-  transition: all 0.3s;
-  text-decoration: none;
-  color: #ffffff;
-}
-
-.navbar .icon-box:hover h6,
-.navbar .icon-box h6:hover {
+.icon-box:hover h6,
+.icon-box h6:hover {
   opacity: 1;
   right: 27px;
   margin: 0;
