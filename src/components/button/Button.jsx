@@ -2,6 +2,7 @@
  * The internal imports
  */
 import "./Button.css";
+import Proptypes from "prop-types";
 
 import { Link } from "react-router-dom";
 
@@ -43,3 +44,12 @@ export default function Button({ text, href, icon, download, type, disabled }) {
     </Link>
   );
 }
+
+Button.propTypes = {
+  text: Proptypes.string.isRequired,
+  href: Proptypes.string.isRequired,
+  icon: Proptypes.element.isRequired,
+  download: Proptypes.string,
+  type: Proptypes.string,
+  disabled: Proptypes.bool,
+};
