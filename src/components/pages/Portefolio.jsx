@@ -31,14 +31,14 @@ export default function Portefolio() {
       <div className="w-[80%] m-auto max-w-[1400px] mb-40">
         <MyTitle span1={"mon"} span2={"portfolio"} shadow={"travail"} />
         <div className="flex justify-center">
-          <ul className="flex mb-5 items-center text-[#183966]">
+          <ul className="flex mb-5 items-center text-mainColor">
             {categorysWork.map((category, index) => {
               return (
                 <li
                   key={index}
                   onClick={() => setShowCategory(category)}
-                  className={`flex justify-center text-xs mx-2 md:mx-4 mb-5 font-bold whitespace-nowrap md:text-sm lg:text-base transition-color duration-200 hover:text-[#bba06b] ${
-                    showCategory === category ? "text-[#bba06b]" : ""
+                  className={`flex justify-center text-xs mx-2 md:mx-4 mb-5 font-bold whitespace-nowrap md:text-sm lg:text-base transition-color duration-200 hover:text-mainColorContrast ${
+                    showCategory === category ? "text-mainColorContrast" : ""
                   }`}
                 >
                   {category}

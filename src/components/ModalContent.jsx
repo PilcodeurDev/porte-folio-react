@@ -55,7 +55,7 @@ export default function ModalContent({ closeModal, title, modalText, image }) {
         </div>
         <button>
           <IoMdCloseCircleOutline
-            className="absolute -top-14 -right-14 text-6xl text-gray-100 cursor-pointer duration-300 hover:text-[#183966]"
+            className="absolute -top-14 -right-14 text-6xl text-gray-100 cursor-pointer duration-300 hover:text-mainColor"
             onClick={closeModal}
           />
         </button>

@@ -35,7 +35,7 @@ export default function Contact() {
               formulaire ci-dessous.
             </p>
             <div className="flex mb-4">
-              <FaMap className="text-4xl text-[#bba06b] mr-4 h-10 w-10" />
+              <FaMap className="text-4xl text-mainColorContrast mr-4 h-10 w-10" />
               <div>
                 <p className="uppercase">Adresse Postal</p>
                 <p className=" font-semibold">{owner.address}</p>
@@ -43,14 +43,14 @@ export default function Contact() {
               </div>
             </div>
             <div className="flex mb-4">
-              <FaEnvelope className="text-4xl text-[#bba06b] mr-4 h-10 w-10" />
+              <FaEnvelope className="text-4xl text-mainColorContrast mr-4 h-10 w-10" />
               <div>
                 <p className="uppercase">Envoyez-moi un email</p>
                 <p className=" font-semibold">{owner.email}</p>
               </div>
             </div>
             <div className="flex mb-4">
-              <FaPhoneSquareAlt className="text-4xl text-[#bba06b] mr-4 h-10 w-10" />
+              <FaPhoneSquareAlt className="text-4xl text-mainColorContrast mr-4 h-10 w-10" />
               <div>
                 <p className="uppercase">Appelez-moi</p>
                 <p className=" font-semibold">{owner.phone}</p>
@@ -61,7 +61,7 @@ export default function Contact() {
                 href="https://wa.me/33614421780"
                 target="_blank"
                 rel="noreferrer"
-                className="p-2 rounded-full bg-[#183966] hover:bg-[#bba06b] hover:transition-colors duration-1000"
+                className="p-2 rounded-full bg-mainColor hover:bg-mainColorContrast hover:transition-colors duration-1000"
               >
                 <RiWhatsappFill className="text-3xl text-white" />
               </a>
@@ -69,7 +69,7 @@ export default function Contact() {
                 href="https://www.linkedin.com/in/simondespres/"
                 target="_blank"
                 rel="noreferrer"
-                className="p-2 rounded-full bg-[#183966] hover:bg-[#bba06b] hover:transition-colors duration-1000"
+                className="p-2 rounded-full bg-mainColor hover:bg-mainColorContrast hover:transition-colors duration-1000"
               >
                 <FaLinkedinIn className="text-3xl text-white" />
               </a>
@@ -77,7 +77,7 @@ export default function Contact() {
                 href="https://github.com/PilcodeurDev"
                 target="_blank"
                 rel="noreferrer"
-                className="p-2 rounded-full bg-[#183966] hover:bg-[#bba06b] hover:transition-colors duration-1000"
+                className="p-2 rounded-full bg-mainColor hover:bg-mainColorContrast hover:transition-colors duration-1000"
               >
                 <FaGithub className="text-3xl text-white" />
               </a>
@@ -85,7 +85,7 @@ export default function Contact() {
                 href=""
                 target="_blank"
                 rel="noreferrer"
-                className="p-2 rounded-full bg-[#183966] hover:bg-[#bba06b] hover:transition-colors duration-1000"
+                className="p-2 rounded-full bg-mainColor hover:bg-mainColorContrast hover:transition-colors duration-1000"
               >
                 <BsDiscord className="text-3xl text-white" />
               </a>
@@ -94,7 +94,7 @@ export default function Contact() {
           <Form />
         </div>
       </div>
-    <OverlayRevealContent />
+      <OverlayRevealContent />
     </div>
   );
 }

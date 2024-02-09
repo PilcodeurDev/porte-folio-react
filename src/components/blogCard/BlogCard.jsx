@@ -11,11 +11,11 @@ import "./BlogCard.css";
 export default function BlogCard({ title, subTitle, image }) {
   return (
     <div className="h-full">
-      <div className="rounded-t-lg border-b-8 border-[#bba06b] overflow-hidden">
+      <div className="rounded-t-lg border-b-8 border-mainColorContrast overflow-hidden">
         {image}
       </div>
       <div className="p-4">
-        <p className="mb-5 font-extrabold text-xl tracking-tight text-[#0b192d]">
+        <p className="mb-5 font-extrabold text-xl tracking-tight">
           {title}
         </p>
         <p className="leading-5">{subTitle}</p>

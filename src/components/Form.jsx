@@ -19,6 +19,10 @@ export default function Form() {
   const [modalIsOpen, setIsOpen] = useState(false);
   const form = useRef();
 
+  const BUTTON_TEXT = "Envoyer";
+  const BUTTON_TYPE = "submit";
+  const BUTTON_ICON = <IoIosSend />;
+
   const {
     register,
     handleSubmit,
@@ -89,11 +93,11 @@ export default function Form() {
             name="lastname"
             placeholder="VOTRE NOM"
             {...register("lastname", { required: "Vous devez rentrer un Nom" })}
-            aria-invalid={errors.name ? "true" : "false"}
+            aria-invalid={errors.lastname ? "true" : "false"}
           />
-          {errors.name && (
+          {errors.lastname && (
             <span role="alert" className=" text-red-600 font-medium">
-              {errors.name.message}
+              {errors.lastname.message}
             </span>
           )}
         </div>
@@ -139,7 +143,7 @@ export default function Form() {
         </div>
       </div>
       <div className="block relative">
-        <Button text={"Envoyer"} type={"submit"} icon={<IoIosSend />} />
+        <Button text={BUTTON_TEXT} type={BUTTON_TYPE} icon={BUTTON_ICON} />
       </div>
       {congratulation && <Fireworks autorun={{ speed: 1 }} />}
       <Modal

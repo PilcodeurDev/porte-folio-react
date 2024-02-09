@@ -16,6 +16,11 @@ import OverlayRevealContent from "../animation/OverlayRevealContent";
 export default function About() {
   const { skillData, aboutMe } = useContext(DataContext);
 
+  const BUTTON_TEXT = "Télécharger moi";
+  const BUTTON_HREF = Cv_simon_despres;
+  const BUTTON_ICON = <FaDownload />;
+  const BUTTON_DOWNLOAD = "Simon_Despres.pdf";
+
   return (
     <div data-aos="fade-up" data-aos-duration="1200">
       <div className="w-[90%] m-auto">
@@ -33,17 +38,17 @@ export default function About() {
                     <span className="flex flex-nowrap text-xl font-semibold">
                       {title}
                     </span>
-                    <span className="flex flex-nowrap text-xl text-[#bba06b] font-bold">
+                    <span className="flex flex-nowrap text-xl text-mainColorContrast font-bold">
                       {value}
                     </span>
                   </div>
                 ))}
               </div>
               <Button
-                text="Télécharger moi"
-                href={Cv_simon_despres}
-                icon={<FaDownload />}
-                download="Simon_Despres.pdf"
+                text= {BUTTON_TEXT}
+                href={BUTTON_HREF}
+                icon={BUTTON_ICON}
+                download={BUTTON_DOWNLOAD}
               />
             </div>
           </div>
