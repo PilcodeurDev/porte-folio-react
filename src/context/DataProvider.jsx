@@ -133,7 +133,7 @@ export default function DataProvider(props) {
   ];
 
   const available = () => {
-    return <span className="text-[#41984f] font-bold text-xl">Disponible</span>;
+    return <span className="text-validColor font-bold text-xl">Disponible</span>;
   };
 
   const aboutMe = [
@@ -179,13 +179,13 @@ export default function DataProvider(props) {
     },
     {
       id: 9,
-      title: "What's App :",
+      title: "WhatsApp :",
       value: (
         <a
           href="https://wa.me/33614421780"
           rel="noreferrer"
           target="_blank"
-          className="text-5xl text-[#2fd04a] "
+          className="text-5xl text-whatsappColor hover:scale-110 transform duration-300 ease-in-out"
         >
           <FaWhatsappSquare />
         </a>
@@ -210,7 +210,7 @@ export default function DataProvider(props) {
       image: (
         <img
           src={codeTogether}
-          alt="travail a plusieur"
+          alt="travail a plusieurs"
           className="w-full object-cover duration-300 ease-in-out"
         />
       ),
@@ -220,17 +220,17 @@ export default function DataProvider(props) {
         <>
           <p>
             Tout a commencé au début de l'année 2023. J'ai découvert le
-            développement web grâce à un Youtuber du nom de BenjaminCode. J'ai
+            développement web grâce à un YouTuber du nom de BenjaminCode. J'ai
             adoré écouter ses histoires. Dans l'une d'elles, il prend son frère
             par la main et décide de lui apprendre à coder. Il commence une
             formation dans l'école mondialement connue :{" "}
-            <span className="underline">Le Wagon</span> .
+            <span className="underline">Le Wagon</span>.
           </p>
           <br />
           <p>
             Après avoir suivi l'aventure de son frère, je me suis reconnu en lui
             et j'ai décidé de tenter l'expérience du développement web, du moins
-            apprendre quelques notions de base pour "tater le terrain".
+            apprendre quelques notions de base pour "tâter le terrain".
           </p>
           <br />
           <p>
@@ -681,16 +681,16 @@ export default function DataProvider(props) {
       image: (
         <img
           src={chocolaterie}
-          alt="entreprise liloise réputé"
+          alt="entreprise lilloise réputée"
           className="w-full object-cover duration-300 ease-in-out"
         />
       ),
-      subTitle: "Un voyage au cœur de la précision thermique en chocolaterie.",
+      subTitle: "Un voyage au cœur de la chocolaterie.",
       text: (
         <>
           <p>
             Bienvenue dans l'univers raffiné de la chocolaterie, où la maîtrise
-            de l'art exige non seulement une passion pour le cacao mais aussi
+            de l'art exige non seulement une passion pour le cacao, mais aussi
             une compréhension approfondie des subtilités de la courbe de
             température. Chaque type de chocolat - noir, au lait et blanc -
             réclame son propre ballet thermique, orchestrant une danse délicate
@@ -704,14 +704,13 @@ export default function DataProvider(props) {
             cristallisation, façonnant une structure stable rapidement. Une
             remontée à 32°C, permettant de travailler la texture pour les
             différentes utilisations, donnant au chocolat noir son éclat satiné
-            et sont craquant caractéristique.
+            et son craquant caractéristique.
           </p>
           <p>
-            Le chocolat au lait et blanc ont eu aussi une courbe de températures
-            qui leurs sont propres.
+            Le chocolat au lait et blanc ont aussi une courbe de température qui
+            leur est propre.
           </p>
           <br />
-
           <p>
             Au-delà de la courbe de température, la composition du chocolat,
             notamment la quantité de beurre de cacao, dicte les températures
@@ -725,7 +724,7 @@ export default function DataProvider(props) {
             chocolatière. L'histoire commence dans les plantations tropicales,
             où les cacaoyers prospèrent sous des conditions climatiques
             spécifiques. Ces arbres fragiles nécessitent une attention
-            minutieuse, des températures constantes, et une humidité bien dosée
+            minutieuse, des températures constantes et une humidité bien dosée
             pour donner naissance aux cabosses contenant les précieuses fèves.
           </p>
           <br />
@@ -763,7 +762,7 @@ export default function DataProvider(props) {
         <>
           <p>
             Plongeons dans le monde captivant de la sculpture sur glace, une
-            forme d'art éphémère qui allie habileté technique, et créativité. En
+            forme d'art éphémère qui allie habileté technique et créativité. En
             tant qu'ancien pâtissier, je me suis aventuré dans le domaine de la
             sculpture sur glace, découvrant les subtilités de la création
             artistique dans un matériau aussi délicat que solide.
@@ -971,9 +970,9 @@ export default function DataProvider(props) {
       ),
     },
   ];
-  const categorysWork = ["Tous", "site web", "app web", "maquette", "video"];
+  const categorysWork = ["Tous", "site web", "app web", "maquette", "vidéo"];
 
-  const portefolioData = [
+  const portfolioData = [
     {
       id: 1,
       title: "GoReconnect",
@@ -991,8 +990,9 @@ export default function DataProvider(props) {
         p3: (
           <a
             href="https://goreconnect.ch/"
-            target="_blanck"
-            className="text-[#bba06b]"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-mainColorContrast"
           >
             GoReconnect.ch
           </a>
@@ -1017,8 +1017,9 @@ export default function DataProvider(props) {
         p3: (
           <a
             href="https://github.com/PilcodeurDev/Helicia"
-            target="_blanck"
-            className="text-[#bba06b]"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-mainColorContrast"
           >
             GitHub/Helicia
           </a>
@@ -1043,8 +1044,9 @@ export default function DataProvider(props) {
         p3: (
           <a
             href="https://github.com/PilcodeurDev/MontQAngels"
-            target="_blanck"
-            className="text-[#bba06b]"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-mainColorContrast"
           >
             GitHub/MontQAngels
           </a>
@@ -1069,8 +1071,9 @@ export default function DataProvider(props) {
         p3: (
           <a
             href="https://www.figma.com/proto/tF9iIhwCCv7os4LZrRFFqg/Headless-Next.js%2FStrapi?node-id=13-165&starting-point-node-id=13%3A165"
-            target="_blanck"
-            className="text-[#bba06b]"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-mainColorContrast"
           >
             Maquette figma
           </a>
@@ -1095,8 +1098,9 @@ export default function DataProvider(props) {
         p3: (
           <a
             href="https://dribbble.com/"
-            target="_blanck"
-            className="text-[#bba06b]"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-mainColorContrast"
           >
             Dribbble.com
           </a>
@@ -1121,8 +1125,9 @@ export default function DataProvider(props) {
         p3: (
           <a
             href="https://www.youtube.com/"
-            target="_blanck"
-            className="text-[#bba06b]"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-mainColorContrast"
           >
             Youtube.com
           </a>
@@ -1147,8 +1152,9 @@ export default function DataProvider(props) {
         p3: (
           <a
             href="https://themeforest.net/"
-            target="_blanck"
-            className="text-[#bba06b]"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-mainColorContrast"
           >
             ThemeForest.com
           </a>
@@ -1173,8 +1179,9 @@ export default function DataProvider(props) {
         p3: (
           <a
             href="https://www.unrealengine.com/fr/unreal-engine-5"
-            target="_blanck"
-            className="text-[#bba06b]"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-mainColorContrast"
           >
             Unreal-Engine-5.com
           </a>
@@ -1189,7 +1196,7 @@ export default function DataProvider(props) {
       image: (
         <img
           src={chimere}
-          alt="futur projet video"
+          alt="futur projet vidéo"
           className="rounded-xl object-cover"
         />
       ),
@@ -1199,8 +1206,9 @@ export default function DataProvider(props) {
         p3: (
           <a
             href="https://www.blender.org/"
-            target="_blanck"
-            className="text-[#bba06b]"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-mainColorContrast"
           >
             Blender.org
           </a>
@@ -1212,7 +1220,14 @@ export default function DataProvider(props) {
 
   return (
     <DataContext.Provider
-      value={{ owner, skillData, aboutMe, blogData, portefolioData, categorysWork }}
+      value={{
+        owner,
+        skillData,
+        aboutMe,
+        blogData,
+        portfolioData,
+        categorysWork,
+      }}
     >
       {props.children}
     </DataContext.Provider>

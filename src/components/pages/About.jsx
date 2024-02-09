@@ -16,40 +16,45 @@ import OverlayRevealContent from "../animation/OverlayRevealContent";
 export default function About() {
   const { skillData, aboutMe } = useContext(DataContext);
 
+  const BUTTON_TEXT = "Télécharger moi";
+  const BUTTON_HREF = Cv_simon_despres;
+  const BUTTON_ICON = <FaDownload />;
+  const BUTTON_DOWNLOAD = "Simon_Despres.pdf";
+
   return (
     <div data-aos="fade-up" data-aos-duration="1200">
       <div className="w-[90%] m-auto">
         <MyTitle span1={"à propos"} span2={"de moi"} shadow={"cv"} />
         <div className="row grid grid-cols-1 lg:grid-cols-2 gap-6">
           <div className="flex justify-center">
-            <div className="w-full mb-28">
-              <h3 className="mb-10">informations personnelles</h3>
-              <div className="grid grid-cols-1 gap-7 2xl:grid-cols-2">
+            <div className="w-full mb-10">
+              <h3 className="mb-10 lg:text-2xl">informations personnelles</h3>
+              <div className="grid grid-cols-1 gap-5 2xl:grid-cols-2">
                 {aboutMe.map(({ id, title, value }) => (
                   <div
                     key={id}
-                    className="flex justify-between lg:w-[85%] whitespace-nowrap"
+                    className="flex justify-between items-center whitespace-nowrap text-lg lg:text-xl lg:w-[85%]"
                   >
-                    <span className="flex flex-nowrap text-xl font-semibold">
+                    <span className="flex flex-nowrap font-semibold">
                       {title}
                     </span>
-                    <span className="flex flex-nowrap text-xl text-[#bba06b] font-bold">
+                    <span className="flex flex-nowrap text-mainColorContrast font-bold">
                       {value}
                     </span>
                   </div>
                 ))}
               </div>
               <Button
-                text="Télécharger moi"
-                href={Cv_simon_despres}
-                icon={<FaDownload />}
-                download="Simon_Despres.pdf"
+                text={BUTTON_TEXT}
+                href={BUTTON_HREF}
+                icon={BUTTON_ICON}
+                download={BUTTON_DOWNLOAD}
               />
             </div>
           </div>
           <div className="">
-            <h3 className="mb-3">Mes compétences</h3>
-            <div className="flex flex-wrap">
+            <h3 className="mb-3 lg:text-2xl">Mes compétences</h3>
+            <div className="flex flex-wrap justify-center pb-24">
               {skillData.map(({ id, logo, name }) => (
                 <div
                   key={id}

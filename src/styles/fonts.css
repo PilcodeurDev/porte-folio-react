@@ -23,11 +23,6 @@ h6 {
   text-transform: uppercase;
 }
 
-h1 {
-  line-height: 3.444rem;
-  font-size: 2.833rem;
-}
-
 h2 {
   line-height: 2.833rem;
   font-size: 2.333rem;
@@ -35,11 +30,6 @@ h2 {
 }
 
 h3 {
-  line-height: 2.333rem;
-  font-size: 1.833rem;
-}
-
-h4 {
-  line-height: 1.833rem;
-  font-size: 1.333rem;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
 }

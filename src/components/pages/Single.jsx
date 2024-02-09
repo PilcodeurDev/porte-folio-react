@@ -30,7 +30,7 @@ export default function Single() {
       <p className="w-2/3 text-xl mt-16">{currentArticle.text}</p>
       <Link
         to="/blog"
-        className=" mt-24 mb-32 text-[#183966] hover:text-[#bba06b] transition-colors duration-500"
+        className=" mt-24 mb-32 text-mainColor hover:text-mainColorContrast transition-colors duration-500"
       >
         <div className="p-4 bg-blue-100 rounded-full ">
           <h4>Merci d'avoir lu !!</h4>

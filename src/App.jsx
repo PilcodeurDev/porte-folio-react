@@ -1,7 +1,7 @@
 /**
  * The external imports
  */
-import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import PropTypes from "prop-types";
 
 /**
@@ -12,7 +12,7 @@ import Home from "./components/pages/home/Home";
 import About from "./components/pages/About";
 import Blog from "./components/pages/Blog";
 import Contact from "./components/pages/Contact";
-import Portefolio from "./components/pages/Portefolio";
+import Portfolio from "./components/pages/Portfolio";
 import Single from "./components/pages/Single";
 
 const router = createBrowserRouter([
@@ -42,8 +42,8 @@ const router = createBrowserRouter([
     element: <Root element={<Contact />} />,
   },
   {
-    path: "/portefolio",
-    element: <Root element={<Portefolio />} />,
+    path: "/portfolio",
+    element: <Root element={<Portfolio />} />,
   },
 ]);
 

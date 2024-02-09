@@ -26,8 +26,8 @@ export default function Navbar() {
     },
     {
       id: 3,
-      path: "/portefolio",
-      text: "Portefolio",
+      path: "/portfolio",
+      text: "Portfolio",
       icon: <FaBook className="icon" />,
     },
     {
@@ -45,13 +45,18 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className='navbar'>
-      <ul>
+    <nav className="fixed bottom-0 w-full flex justify-center bg-mainColor lg:w-auto lg:right-5 lg:items-center lg:top-1/2 lg:-translate-y-1/2 lg:bg-transparent ">
+      <ul className="flex lg:block lg:px-0">
         {menuIcons.map(({ id, path, icon, text }) => (
-          <li key={id} className='icon-box'>
-            <Link to={path}>
+          <li
+            key={id}
+            className="icon-box w-[50px] h-[50px] relative flex items-center justify-center mx-3 my-2 lg:mx-0 lg:my-5 rounded-full bg-mainColor cursor-pointer list-none lg:transition-all lg:duration-300"
+          >
+            <Link className="text-[1.4rem] text-white" to={path}>
               {icon}
-              <h6>{text}</h6>
+              <h6 className="hidden pr-[30px] pl-[25px] absolute top-0 right-0 whitespace-nowrap opacity-0 leading-[3.1rem] rounded-xl -z-10 no-underline transition-all duration-300 lg:block">
+                {text}
+              </h6>
             </Link>
           </li>
         ))}
