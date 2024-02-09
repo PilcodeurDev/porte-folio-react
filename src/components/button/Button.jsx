@@ -2,7 +2,7 @@
  * The internal imports
  */
 import "./Button.css";
-import Proptypes from "prop-types";
+import PropTypes from "prop-types";
 
 import { Link } from "react-router-dom";
 
@@ -11,7 +11,7 @@ export default function Button({ text, href, icon, download, type, disabled }) {
     return (
       <button
         type="submit"
-        className={`btn absolute right-0 mx-0 my-9 whitespace-nowrap ${
+        className={`btn absolute right-0 mx-0 ${
           disabled && "opacity-50 pointer-events-none"
         }`}
       >
@@ -29,7 +29,7 @@ export default function Button({ text, href, icon, download, type, disabled }) {
         target="_blank"
         rel="noreferrer"
         icon={icon}
-        className="btn scale-110 mt-14 whitespace-nowrap"
+        className="btn mt-10"
       >
         {text}
         {icon && <span className="icon">{icon}</span>}
@@ -38,7 +38,7 @@ export default function Button({ text, href, icon, download, type, disabled }) {
   }
 
   return (
-    <Link to={href} className="btn whitespace-nowrap ml-0 lg:ml-12 ">
+    <Link to={href} className="btn ml-0 lg:ml-12 ">
       {text}
       {icon && <span className="icon">{icon}</span>}
     </Link>
@@ -46,10 +46,10 @@ export default function Button({ text, href, icon, download, type, disabled }) {
 }
 
 Button.propTypes = {
-  text: Proptypes.string.isRequired,
-  href: Proptypes.string.isRequired,
-  icon: Proptypes.element.isRequired,
-  download: Proptypes.string,
-  type: Proptypes.string,
-  disabled: Proptypes.bool,
+  text: PropTypes.string.isRequired,
+  href: PropTypes.string.isRequired,
+  icon: PropTypes.element.isRequired,
+  download: PropTypes.string,
+  type: PropTypes.string,
+  disabled: PropTypes.bool,
 };
