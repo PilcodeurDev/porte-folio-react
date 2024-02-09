@@ -47,7 +47,7 @@ export default function Button({ text, href, icon, download, type, disabled }) {
 
 Button.propTypes = {
   text: PropTypes.string.isRequired,
-  href: PropTypes.string.isRequired,
+  href: PropTypes.string,
   icon: PropTypes.element.isRequired,
   download: PropTypes.string,
   type: PropTypes.string,
