@@ -1,60 +1,64 @@
-// Dans votre fichier Skills3D.js
 import { useEffect } from "react";
-import { PerspectiveCamera, Points, Scene, WebGLRenderer, PointsMaterial, BufferGeometry, Float32BufferAttribute, MathUtils, TextureLoader, Group, Clock, LineBasicMaterial, Line } from 'three';
+import { PerspectiveCamera, Points, Scene, WebGLRenderer, PointsMaterial, BufferGeometry, Float32BufferAttribute, MathUtils, TextureLoader, Group, Clock, LineBasicMaterial, Line, MeshPhongMaterial, PlaneGeometry, Mesh, PointLight, AmbientLight } from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 import propTypes from "prop-types";
+import { css, cssAlphaMap } from "../../assets/images";
 
 export default function Skills3D({ containerId }) {
   useEffect(() => {
-    const textureLoader = new TextureLoader();
-    const alphaMap = textureLoader.load("./src/assets/alphamap.png");
-
     const scene = new Scene();
-    const count = 100;
-    const distance = 2;
-    const size = 0.1;
-
     const container = document.getElementById(containerId);
 
     if (container) {
-      const camera = new PerspectiveCamera(75, container.clientWidth / container.clientHeight, 0.1, 100);
-      camera.position.x = .5;
-      camera.position.y = 3;
-      camera.position.z = 2;
+      const camera = new PerspectiveCamera(75, container.clientWidth / container.clientHeight, 1, 5000);
+      camera.position.set(0, 0, 400);
       scene.add(camera);
 
-      const points = new Float32Array(count * 3);
-      const colors = new Float32Array(count * 3);
-      for (let i = 0; i < points.length; i++) {
-        points[i] = MathUtils.randFloatSpread(distance * 2);
-        colors[i] = Math.random() / 0.5 - 0.5;
-      }
+      const ambientLight = new AmbientLight(0xffffff, 3);
+      scene.add(ambientLight);
 
-      const pointGeometry = new BufferGeometry();
-      pointGeometry.setAttribute('position', new Float32BufferAttribute(points, 3));
-      pointGeometry.setAttribute('color', new Float32BufferAttribute(colors, 3));
+      const textureLoader = new TextureLoader();
+      let Map = textureLoader.load(css);
+      let alphaMap = textureLoader.load(cssAlphaMap);
 
-      const pointMaterial = new PointsMaterial({
-        size,
-        sizeAttenuation: true,
-        transparent: true,
+      let material = new MeshPhongMaterial({
+        map: Map,
         alphaMap: alphaMap,
-        alphaTest: 0.5,
-        vertexColors: true
+        transparent: true
       });
 
-      const pointsObject = new Points(pointGeometry, pointMaterial);
+      let geometry = new PlaneGeometry(400,450,50,50);
+      let skill3D = new Mesh(geometry, material);
+
+      // const points = new Float32Array(count * 3);
+      // for (let i = 0; i < points.length; i++) {
+      //   points[i] = MathUtils.randFloatSpread(distance * 2);
+      // }
+
+      // const pointGeometry = new BufferGeometry();
+      // pointGeometry.setAttribute('position', new Float32BufferAttribute(points, 3));
+
+      // const pointMaterial = new PointsMaterial({
+      //   size,
+      //   sizeAttenuation: true,
+      //   transparent: true,
+      //   alphaMap: alphaMap,
+      //   alphaTest: 0.5,
+      //   vertexColors: true
+      // });
+
+      // const pointsObject = new Points(pointGeometry, pointMaterial);
 
       const group = new Group();
-      group.add(pointsObject);
+      group.add(skill3D);
 
-      const lineMaterial = new LineBasicMaterial({
-        color: 0xa1a1a1,
-        depthTest: false,
-      });
+      // const lineMaterial = new LineBasicMaterial({
+      //   color: 0xa1a1a1,
+      //   depthTest: false,
+      // });
 
-      const lineObject = new Line(pointGeometry, lineMaterial);
-      group.add(lineObject);
+      // const lineObject = new Line(pointGeometry, lineMaterial);
+      // group.add(lineObject);
 
       scene.add(group);
 
@@ -87,7 +91,7 @@ export default function Skills3D({ containerId }) {
 
       function tick() {
         const time = clock.getElapsedTime();
-        group.rotation.y = time * 0.1;
+        // group.rotation.y = time * 0.1;
         renderer.render(scene, camera);
         controls.update();
         requestAnimationFrame(tick);
