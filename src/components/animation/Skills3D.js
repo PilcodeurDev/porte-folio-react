@@ -1,67 +1,62 @@
 import { useEffect } from "react";
-import { PerspectiveCamera, Points, Scene, WebGLRenderer, PointsMaterial, BufferGeometry, Float32BufferAttribute, MathUtils, TextureLoader, Group, Clock, LineBasicMaterial, Line, MeshPhongMaterial, PlaneGeometry, Mesh, PointLight, AmbientLight } from 'three';
+import { PerspectiveCamera, Scene, WebGLRenderer, MeshPhongMaterial, PlaneGeometry, Mesh, TextureLoader, Group, Clock, AmbientLight } from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
-import propTypes from "prop-types";
+import PropTypes from "prop-types";
 import { css, cssAM, figma, figmaAM, html, htmlAM, js, jsAM, pgSQL, pgSQLAM, three, threeAM, react, reactAM, ruby, rubyAM } from "../../assets/images";
 
-export default function Skills3D({ containerId }) {
+const images = [css, figma, html, js, pgSQL, three, react, ruby];
+const alphaMaps = [cssAM, figmaAM, htmlAM, jsAM, pgSQLAM, threeAM, reactAM, rubyAM];
+
+const createMesh = (image, alphaMap) => {
+  const textureLoader = new TextureLoader();
+  const map = textureLoader.load(image);
+  const alphaMapTexture = textureLoader.load(alphaMap);
+
+  const material = new MeshPhongMaterial({
+    map: map,
+    alphaMap: alphaMapTexture,
+    transparent: true,
+  });
+
+  const geometry = new PlaneGeometry(400, 450);
+  return new Mesh(geometry, material);
+};
+export default function Skills3D ({ containerId }) {
   useEffect(() => {
-    const scene = new Scene();
     const container = document.getElementById(containerId);
 
-    if (container) {
+    if (!container) {
+      console.error(`L'élément avec l'id '${containerId}' n'a pas été trouvé.`);
+      return;
+    }
+
+    try {
+      // scene
+      const scene = new Scene();
+
+      // camera
       const camera = new PerspectiveCamera(75, container.clientWidth / container.clientHeight, 1, 5000);
-      camera.position.set(0, 0, 400);
+      camera.position.set(0, 0, 1500);
       scene.add(camera);
 
+      // light
       const ambientLight = new AmbientLight(0xffffff, 2);
       scene.add(ambientLight);
 
-      const textureLoader = new TextureLoader();
-      let Map = textureLoader.load(css);
-      let alphaMap = textureLoader.load(cssAM);
-
-      let material = new MeshPhongMaterial({
-        map: Map,
-        alphaMap: alphaMap,
-        transparent: true
-      });
-
-      let geometry = new PlaneGeometry(400,450,50,50);
-      let skill3D = new Mesh(geometry, material);
-
-      // const points = new Float32Array(count * 3);
-      // for (let i = 0; i < points.length; i++) {
-      //   points[i] = MathUtils.randFloatSpread(distance * 2);
-      // }
-
-      // const pointGeometry = new BufferGeometry();
-      // pointGeometry.setAttribute('position', new Float32BufferAttribute(points, 3));
-
-      // const pointMaterial = new PointsMaterial({
-      //   size,
-      //   sizeAttenuation: true,
-      //   transparent: true,
-      //   alphaMap: alphaMap,
-      //   alphaTest: 0.5,
-      //   vertexColors: true
-      // });
-
-      // const pointsObject = new Points(pointGeometry, pointMaterial);
-
+      // group
       const group = new Group();
-      group.add(skill3D);
 
-      // const lineMaterial = new LineBasicMaterial({
-      //   color: 0xa1a1a1,
-      //   depthTest: false,
-      // });
+      // create meshes and add to the group
+      for (let i = 0; i < images.length; i++) {
+        const skill3D = createMesh(images[i], alphaMaps[i]);
+        skill3D.position.x = i * 450 - 1500;
+        group.add(skill3D);
+      }
 
-      // const lineObject = new Line(pointGeometry, lineMaterial);
-      // group.add(lineObject);
-
+      // add group to the scene
       scene.add(group);
 
+      // renderer
       const renderer = new WebGLRenderer({ antialias: true, alpha: true });
       renderer.setClearColor(0x000000, 0);
       renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
@@ -71,6 +66,7 @@ export default function Skills3D({ containerId }) {
 
       renderer.setSize(container.clientWidth, container.clientHeight);
 
+      // update canvas size
       const updateCanvasSize = () => {
         camera.aspect = container.clientWidth / container.clientHeight;
         camera.updateProjectionMatrix();
@@ -81,32 +77,38 @@ export default function Skills3D({ containerId }) {
       window.addEventListener('resize', updateCanvasSize);
       updateCanvasSize();
 
+      // controls
       const controls = new OrbitControls(camera, renderer.domElement);
+
+      // clock
       const clock = new Clock();
 
+      // mouse position
       let mouseX = 0;
       window.addEventListener('mousemove', (event) => {
         mouseX = event.clientX;
       });
 
-      function tick() {
+      // animation loop
+      const tick = () => {
         const time = clock.getElapsedTime();
         // group.rotation.y = time * 0.1;
         renderer.render(scene, camera);
         controls.update();
         requestAnimationFrame(tick);
         const ration = mouseX / window.innerWidth - 0.5 * 2;
-      }
+      };
 
+      // start animation
       tick();
-    } else {
-      console.error("L'élément avec l'id 'particules-container' n'a pas été trouvé.");
+    } catch (error) {
+      console.error("Une erreur s'est produite lors de l'initialisation de la scène:", error);
     }
-  }, []);
+  }, [containerId]);
 
   return null;
-}
+};
 
 Skills3D.propTypes = {
-  containerId: propTypes.string.isRequired
-}
+  containerId: PropTypes.string.isRequired
+};
