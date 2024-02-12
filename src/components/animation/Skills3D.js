@@ -2,10 +2,10 @@ import { useEffect } from "react";
 import { PerspectiveCamera, Scene, WebGLRenderer, TextureLoader, Group, Clock, AmbientLight, SpriteMaterial, Sprite, MathUtils } from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 import PropTypes from "prop-types";
-import { css, cssAM, figma, figmaAM, html, htmlAM, js, jsAM, pgSQL, pgSQLAM, three, threeAM, react, reactAM, ruby, rubyAM } from "../../assets/images";
+import { bootstrap, bootstrapAM, css, cssAM, figma, figmaAM, github, githubAM, html, htmlAM, js, jsAM, netlify, netlifyAM, pgSQL, pgSQLAM, three, threeAM, react, reactAM, ruby, rubyAM, tailwind, tailwindAM } from "../../assets/images";
 
-const images = [css, figma, html, js, pgSQL, three, react, ruby];
-const alphaMaps = [cssAM, figmaAM, htmlAM, jsAM, pgSQLAM, threeAM, reactAM, rubyAM];
+const images = [bootstrap, css, figma, github, html, js, netlify, pgSQL, three, react, ruby, tailwind];
+const alphaMaps = [bootstrapAM, cssAM, figmaAM, githubAM, htmlAM, jsAM, netlifyAM, pgSQLAM, threeAM, reactAM, rubyAM, tailwindAM];
 
 const createMesh = (image, alphaMap) => {
   const textureLoader = new TextureLoader();
@@ -48,9 +48,18 @@ export default function Skills3D ({ containerId }) {
       const group = new Group();
 
       // create meshes and add to the group
+      const minSeparation = 1500
+
       for (let i = 0; i < images.length; i++) {
         const skill3D = createMesh(images[i], alphaMaps[i]);
-        skill3D.position.set(MathUtils.randFloatSpread(3000), MathUtils.randFloatSpread(2000), MathUtils.randFloatSpread(3000));
+        skill3D.position.set(MathUtils.randFloatSpread(container.clientWidth * 2), MathUtils.randFloatSpread(2000), MathUtils.randFloatSpread(2500));
+
+        for (let j = 0; j < i; j++) {
+          const distance = skill3D.position.distanceTo(group.children[j].position);
+          if (distance < minSeparation) {
+            skill3D.position.x += (minSeparation - distance) * Math.sign(skill3D.position.x - group.children[j].position.x);
+          }
+        }
         group.add(skill3D);
       }
 
