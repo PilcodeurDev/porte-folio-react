@@ -1,14 +1,21 @@
 import css from './css.png';
-import cssAlphaMap from './css-alphamap.png'
+import cssAM from './css-alphamap.png'
 import figma from './figma.png';
+import figmaAM from './figma-alphamap.png'
 import html from './html.png';
+import htmlAM from './html-alphamap.png'
 import js from './javascript.png';
+import jsAM from './javascript-alphamap.png'
 import pgSQL from './postgreSQL.png';
+import pgSQLAM from './postgreSQL-alphamap.png'
 import three from './threejs.png';
+import threeAM from './threejs-alphamap.png'
 import react from './react.png';
+import reactAM from './react-alphamap.png'
 import ruby from './ruby.png';
+import rubyAM from './ruby-alphamap.png'
 
-export { css, cssAlphaMap, figma, html, js, pgSQL, three, react, ruby };
+export { css, cssAM, figma, figmaAM, html, htmlAM, js, jsAM, pgSQL, pgSQLAM, three, threeAM, react, reactAM, ruby, rubyAM };
 
 
 import accessibility from "./blog/accessibility.jpg";

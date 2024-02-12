@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { PerspectiveCamera, Points, Scene, WebGLRenderer, PointsMaterial, BufferGeometry, Float32BufferAttribute, MathUtils, TextureLoader, Group, Clock, LineBasicMaterial, Line, MeshPhongMaterial, PlaneGeometry, Mesh, PointLight, AmbientLight } from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 import propTypes from "prop-types";
-import { css, cssAlphaMap } from "../../assets/images";
+import { css, cssAM, figma, figmaAM, html, htmlAM, js, jsAM, pgSQL, pgSQLAM, three, threeAM, react, reactAM, ruby, rubyAM } from "../../assets/images";
 
 export default function Skills3D({ containerId }) {
   useEffect(() => {
@@ -14,12 +14,12 @@ export default function Skills3D({ containerId }) {
       camera.position.set(0, 0, 400);
       scene.add(camera);
 
-      const ambientLight = new AmbientLight(0xffffff, 3);
+      const ambientLight = new AmbientLight(0xffffff, 2);
       scene.add(ambientLight);
 
       const textureLoader = new TextureLoader();
       let Map = textureLoader.load(css);
-      let alphaMap = textureLoader.load(cssAlphaMap);
+      let alphaMap = textureLoader.load(cssAM);
 
       let material = new MeshPhongMaterial({
         map: Map,
