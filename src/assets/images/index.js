@@ -20,10 +20,10 @@ import react from './react.png';
 import reactAM from './react-alphamap.png';
 import ruby from './ruby.png';
 import rubyAM from './ruby-alphamap.png';
-import tailwind from './tailwind.png';
-import tailwindAM from './tailwind-alphamap.png'
+// import tailwind from './tailwind.png';
+// import tailwindAM from './tailwind-alphamap.png'
 
-export { bootstrap, bootstrapAM, css, cssAM, figma, figmaAM, github, githubAM, html, htmlAM, js, jsAM, netlify, netlifyAM, pgSQL, pgSQLAM, three, threeAM, react, reactAM, ruby, rubyAM, tailwind, tailwindAM };
+export { bootstrap, bootstrapAM, css, cssAM, figma, figmaAM, github, githubAM, html, htmlAM, js, jsAM, netlify, netlifyAM, pgSQL, pgSQLAM, three, threeAM, react, reactAM, ruby, rubyAM };
 
 
 import accessibility from "./blog/accessibility.jpg";
