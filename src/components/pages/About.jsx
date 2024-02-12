@@ -12,6 +12,7 @@ import MyTitle from "../MyTitle";
 import Cv_simon_despres from "../../assets/Simon_Despres.pdf";
 import { DataContext } from "../../context/DataProvider";
 import OverlayRevealContent from "../animation/OverlayRevealContent";
+import Skills3D from "../animation/Skills3D";
 
 export default function About() {
   const { skillData, aboutMe } = useContext(DataContext);
@@ -54,7 +55,13 @@ export default function About() {
           </div>
           <div className="">
             <h3 className="mb-3 lg:text-2xl">Mes compétences</h3>
-            <div className="flex flex-wrap justify-center pb-24">
+            <div
+              id="particules-container"
+              className="h-[500px] w-full mb-[10vh] bg-slate-200"
+            >
+              <Skills3D containerId="particules-container" />
+            </div>
+            {/* <div className="flex flex-wrap justify-center pb-24">
               {skillData.map(({ id, logo, name }) => (
                 <div
                   key={id}
@@ -68,7 +75,7 @@ export default function About() {
                   </div>
                 </div>
               ))}
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
