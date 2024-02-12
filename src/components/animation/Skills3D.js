@@ -2,10 +2,10 @@ import { useEffect } from "react";
 import { PerspectiveCamera, Scene, WebGLRenderer, TextureLoader, Group, Clock, AmbientLight, SpriteMaterial, Sprite, MathUtils } from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 import PropTypes from "prop-types";
-import { bootstrap, bootstrapAM, css, cssAM, figma, figmaAM, github, githubAM, html, htmlAM, js, jsAM, netlify, netlifyAM, pgSQL, pgSQLAM, three, threeAM, react, reactAM, ruby, rubyAM } from "../../assets/images";
+import { bootstrap, bootstrapAM, css, cssAM, figma, figmaAM, github, githubAM, html, htmlAM, js, jsAM, netlify, netlifyAM, pgSQL, pgSQLAM, three, threeAM, react, reactAM, ruby, rubyAM, tailwind, tailwindAM } from "../../assets/images";
 
-const images = [bootstrap, css, figma, github, html, js, netlify, pgSQL, three, react, ruby];
-const alphaMaps = [bootstrapAM, cssAM, figmaAM, githubAM, htmlAM, jsAM, netlifyAM, pgSQLAM, threeAM, reactAM, rubyAM];
+const images = [bootstrap, css, figma, github, html, js, netlify, pgSQL, three, react, ruby, tailwind];
+const alphaMaps = [bootstrapAM, cssAM, figmaAM, githubAM, htmlAM, jsAM, netlifyAM, pgSQLAM, threeAM, reactAM, rubyAM, tailwindAM];
 
 const createMesh = (image, alphaMap) => {
   const textureLoader = new TextureLoader();
