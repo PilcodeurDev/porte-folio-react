@@ -1,5 +1,4 @@
 import css from './css.png';
-import cssBump from './css-bump.png';
 import cssAlphaMap from './css-alphamap.png'
 import figma from './figma.png';
 import html from './html.png';
@@ -9,7 +8,7 @@ import three from './threejs.png';
 import react from './react.png';
 import ruby from './ruby.png';
 
-export { css, cssBump, cssAlphaMap, figma, html, js, pgSQL, three, react, ruby };
+export { css, cssAlphaMap, figma, html, js, pgSQL, three, react, ruby };
 
 
 import accessibility from "./blog/accessibility.jpg";
