@@ -15,7 +15,7 @@ import OverlayRevealContent from "../animation/OverlayRevealContent";
 import Skills3D from "../animation/Skills3D";
 
 export default function About() {
-  const { skillData, aboutMe } = useContext(DataContext);
+  const { aboutMe } = useContext(DataContext);
 
   const BUTTON_TEXT = "Télécharger moi";
   const BUTTON_HREF = Cv_simon_despres;
@@ -61,21 +61,6 @@ export default function About() {
             >
               <Skills3D containerId="particules-container" />
             </div>
-            {/* <div className="flex flex-wrap justify-center pb-24">
-              {skillData.map(({ id, logo, name }) => (
-                <div
-                  key={id}
-                  className="flex flex-col justify-center items-center w-56 h-56   scale-[.6]"
-                >
-                  <div className=" flex justify-center items-center h-4/5 w-4/5 transition-all duration-700 hover:scale-125 hover:opacity-0">
-                    {logo}
-                  </div>
-                  <div className="mt-5 font-bold text-4xl whitespace-nowrap transition-all duration-700 hover:scale-125">
-                    {name}
-                  </div>
-                </div>
-              ))}
-            </div> */}
           </div>
         </div>
       </div>
