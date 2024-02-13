@@ -48,11 +48,11 @@ export default function Skills3D ({ containerId }) {
       const group = new Group();
 
       // create meshes and add to the group
-      const minSeparation = 1500
+      const minSeparation = 1000
 
       for (let i = 0; i < images.length; i++) {
         const skill3D = createMesh(images[i], alphaMaps[i]);
-        skill3D.position.set(MathUtils.randFloatSpread(container.clientWidth * 2), MathUtils.randFloatSpread(2000), MathUtils.randFloatSpread(2500));
+        skill3D.position.set(MathUtils.randFloatSpread(container.clientWidth), MathUtils.randFloatSpread(2000), MathUtils.randFloatSpread(2500));
 
         for (let j = 0; j < i; j++) {
           const distance = skill3D.position.distanceTo(group.children[j].position);
