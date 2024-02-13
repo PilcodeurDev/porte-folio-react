@@ -1,12 +1,15 @@
 # Hi, welcome to my Portfolio, i'm PilcodeurDev! 👋🏻
 
-🗒✏ " My test and creation space. " 
+" My test and creation space. " ✏🗒
 
 This site allows you to learn more about me through a presentation of myself, a list of projects I worked on, a page to contact me easily and a blog to talk about a subject that suits me.
 
 ## Link
 
-🌐 Visit my [website](https://despres-simon.com/) 
+Visit my [website](https://despres-simon.com/) 🌐
+
+## Image
+<img width="1709" alt="Capture d’écran 2024-02-13 à 16 18 53" src="https://github.com/PilcodeurDev/porte-folio-react/assets/130440038/be37be38-89c6-41cb-9699-766ddfa1da41">
 
 ## 🔗 Connect with me on
 
