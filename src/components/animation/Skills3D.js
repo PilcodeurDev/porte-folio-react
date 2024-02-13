@@ -1,7 +1,14 @@
+/**
+ * The external imports
+ */
 import { useEffect } from "react";
 import { PerspectiveCamera, Scene, WebGLRenderer, TextureLoader, Group, Clock, AmbientLight, SpriteMaterial, Sprite, MathUtils } from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 import PropTypes from "prop-types";
+
+/**
+ * The internal imports
+*/
 import { bootstrap, bootstrapAM, css, cssAM, figma, figmaAM, github, githubAM, html, htmlAM, js, jsAM, netlify, netlifyAM, pgSQL, pgSQLAM, three, threeAM, react, reactAM, ruby, rubyAM, tailwind, tailwindAM } from "../../assets/images";
 
 const images = [bootstrap, css, figma, github, html, js, netlify, pgSQL, three, react, ruby, tailwind];
