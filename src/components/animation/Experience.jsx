@@ -36,7 +36,6 @@ export default function Experience() {
               height: "300px",
               width: "300px",
               position: "fixed",
-              top: "4%",
               left: "50%",
               transform: "translateX(-50%)",
             }}
