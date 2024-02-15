@@ -45,11 +45,11 @@ extend({
   RoundedPlaneGeometry: geometry.RoundedPlaneGeometry,
 });
 
-export default function Profil3D() {
+export default function Profil3D({ img1, img2, ratio }) {
   const ref = useRef();
   const [texture1, texture2, dispTexture] = useTexture([
-    "/src/assets/images/profil/profil.jpg",
-    "/src/assets/images/profil/profiln&b.jpg",
+    img1,
+    img2,
     "/src/assets/images/profil/displacement/10.jpg",
   ]);
   const [hovered, setHover] = useState(false);
@@ -62,7 +62,7 @@ export default function Profil3D() {
       onPointerOut={(e) => setHover(false)}
     >
       <roundedPlaneGeometry
-        args={[2.25, 3.5]}
+        args={ratio}
         // 9:16 aspect ratio = args={[2.25, 4]}
       />
       <imageFadeMaterial
