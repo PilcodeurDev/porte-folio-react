@@ -50,7 +50,7 @@ export default function Profil3D({ img1, img2, ratio }) {
   const [texture1, texture2, dispTexture] = useTexture([
     img1,
     img2,
-    "/src/assets/images/profil/displacement/10.jpg",
+    "/profil/displacement/10.jpg",
   ]);
   const [hovered, setHover] = useState(false);
   useFrame((_state, delta) => {
