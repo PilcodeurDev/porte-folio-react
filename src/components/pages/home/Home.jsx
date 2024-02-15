@@ -13,6 +13,7 @@ import "./Home.css";
 import Button from "../../button/Button";
 import { DataContext } from "../../../context/DataProvider";
 import OverlayRevealContent from "../../animation/OverlayRevealContent";
+import Experience from "../../animation/Experience";
 
 export default function Home() {
   const { owner } = useContext(DataContext);
@@ -31,18 +32,13 @@ export default function Home() {
       data-aos-duration="1200"
       className="relative m-auto h-full flex flex-col gap-14 items-center overflow-hidden lg:flex-row"
     >
-      <div className="fixed h-[200%] w-[100%] -rotate-[15deg] bg-mainColorContrast -top-[50%] -left-[83%] hidden lg:block "></div>
-      <div
-        // photo de profil
-        className="profil w-60 h-60 md:w-72 md:h-72 mt-14 border-mainColor rounded-full border-4
-      lg:w-[30%] lg:h-[70%] lg:fixed lg:mt-0 lg:top-[15%] lg:left-10 lg:rounded-[30px] lg:border-none
-      xl:top-[4%] xl:left-14 xl:h-[92%]"
-      ></div>
+      <div className="fixed h-[200%] w-[100%] -rotate-[15deg] bg-mainColorContrast -top-[50%] -left-[83%] hidden lg:block"></div>
+      <Experience />
       <div className="flex flex-col items-center w-full lg:w-2/3 lg:ml-[40%]">
         <div className="relative flex flex-col items-center justify-center  w-2/3 -top-5 lg:pr-5">
           <div className="flex justify-center pr-4 lg:block lg:pr-0  ">
-            <h1 className="text-xl sm:text-2xl md:text-3xl pl-12">
-              <span className="relative flex text-mainColorContrast before:absolute before:-left-12 before:top-[13px] before:w-6 sm:before:w-7 md:before:w-8 before:h-1 before:rounded-full before:bg-mainColorContrast">
+            <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-6xl pl-12">
+              <span className="relative flex text-mainColorContrast before:absolute  before:h-1 before:rounded-full before:bg-mainColorContrast before:-left-12 before:top-[13px] before:w-6 sm:before:w-7 md:before:w-8 lg:before:top-5 lg:before:-left-14 lg:before:w-10 lg:before:h-2">
                 Je m'appelle
               </span>
               <span className="flex text-mainColorContrast">
@@ -52,7 +48,7 @@ export default function Home() {
               <span className="flex">sites web</span>
             </h1>
           </div>
-          <p className="lg:w-[80%] text-md my-5">
+          <p className=" my-5 text-md lg:text-xl lg:w-[80%]">
             Je suis concepteur web ainsi que développeur front-end basé à la
             frontière franco-suisse. Je suis passionné par la création
             d'interfaces utilisateur interactives et dynamiques qui captiveront
