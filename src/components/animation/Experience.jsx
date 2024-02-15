@@ -42,8 +42,8 @@ export default function Experience() {
             }}
           >
             <Profil3D
-              img1={"/src/assets/images/profil/profil-ellipse.png"}
-              img2={"/src/assets/images/profil/profiln&b-ellipse.png"}
+              img1={"/profil/profil-ellipse.png"}
+              img2={"/profil/profiln&b-ellipse.png"}
               ratio={[3.2, 3.2]}
             />
           </Canvas>
@@ -59,8 +59,8 @@ export default function Experience() {
           }}
         >
           <Profil3D
-            img1={"/src/assets/images/profil/profil.jpg"}
-            img2={"/src/assets/images/profil/profiln&b.jpg"}
+            img1={"/profil/profil.jpg"}
+            img2={"/profil/profiln&b.jpg"}
             ratio={[2.25, 3.5]}
           />
         </Canvas>
