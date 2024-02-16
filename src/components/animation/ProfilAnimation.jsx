@@ -2,8 +2,10 @@
 /**
  * The external imports
  */
+
 import { Canvas } from "@react-three/fiber";
 import { Suspense, useEffect, useState } from "react";
+import { TiArrowSyncOutline } from "react-icons/ti";
 
 /**
  * The internal imports
@@ -32,16 +34,7 @@ export default function ProfilAnimation() {
       {isBelowLG ? (
         <div className="h-[320px]">
           <Suspense>
-            <Canvas
-              camera={{ position: [0, 0, 4.6], fov: 42 }}
-              style={{
-                height: "300px",
-                width: "300px",
-                position: "fixed",
-                left: "50%",
-                transform: "translateX(-50%)",
-              }}
-            >
+            <Canvas camera={{ position: [0, 0, 4.6], fov: 42 }}>
               <Profil3D
                 img1={"/profil/profil-ellipse.png"}
                 img2={"/profil/profiln&b-ellipse.png"}
@@ -52,15 +45,7 @@ export default function ProfilAnimation() {
         </div>
       ) : (
         <Suspense>
-          <Canvas
-            camera={{ position: [0, 0, 4.6], fov: 42 }}
-            style={{
-              height: "92%",
-              width: "40%",
-              position: "fixed",
-              top: "4%",
-            }}
-          >
+          <Canvas camera={{ position: [0, 0, 4.6], fov: 42 }}>
             <Profil3D
               img1={"/profil/profil.jpg"}
               img2={"/profil/profiln&b.jpg"}

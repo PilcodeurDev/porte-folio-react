@@ -63,7 +63,7 @@ export default function Experience() {
       <Text
         font={"fonts/Poppins-Black.ttf"}
         position-y={0.5}
-        rotation-x={degToRad(20)}
+        rotation-x={degToRad(30)}
         lineHeight={0.85}
         letterSpacing={-0.05}
         textAlign="center"
@@ -87,7 +87,7 @@ export default function Experience() {
           </RenderTexture>
         </meshBasicMaterial>
       </Text>
-      <mesh position-y={-0.44} rotation-x={-Math.PI / 2 + degToRad(30)}>
+      <mesh position-y={-0.4} rotation-x={-Math.PI / 2 + degToRad(30)}>
         <planeGeometry args={[100, 100]} />
         <MeshReflectorMaterial
           blur={[100, 100]}
