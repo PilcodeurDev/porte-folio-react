@@ -9,10 +9,11 @@ import {
   RenderTexture,
   Text,
   MeshReflectorMaterial,
+  useFont,
 } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import { EffectComposer, Bloom } from "@react-three/postprocessing";
-import { Suspense, useEffect, useRef, useState } from "react";
+import { Suspense, useEffect, useRef } from "react";
 import { Color } from "three";
 
 /**
@@ -25,13 +26,12 @@ const bloomColor = new Color("#fff");
 bloomColor.multiplyScalar(1.5);
 
 export default function Experience() {
-  const [isBelowLG, setIsBelowLG] = useState(true);
   const controls = useRef();
   const meshFitCamera = useRef();
 
   const intro = async () => {
     controls.current.dolly(-20);
-    controls.current.smoothTime = 1.6;
+    controls.current.smoothTime = 2;
     fitCamera();
   };
 
@@ -54,12 +54,12 @@ export default function Experience() {
   return (
     <>
       <Canvas camera={{ position: [0, 0, 4.3], fov: 35 }}>
-        <fog attach="fog" args={["#171720", 10, 25]} />
+        <fog attach="fog" args={["#171720", 10, 20]} />
         <Suspense>
           <Environment preset="sunset" />
           <color attach="background" args={["#171720"]} />
           <CameraControls ref={controls} />
-          <mesh ref={meshFitCamera} position={[0, 0.4, 0]}>
+          <mesh ref={meshFitCamera} position={[0, 0, 0]}>
             <boxGeometry args={[5, 2.5, 1]} />
             <meshBasicMaterial
               color="pink"
@@ -95,7 +95,7 @@ export default function Experience() {
               </RenderTexture>
             </meshBasicMaterial>
           </Text>
-          <mesh position-y={-0.3} rotation-x={-Math.PI / 2 + degToRad(20)}>
+          <mesh position-y={-0.4} rotation-x={-Math.PI / 2 + degToRad(20)}>
             <planeGeometry args={[100, 100]} />
             <MeshReflectorMaterial
               blur={[100, 100]}
@@ -120,3 +120,5 @@ export default function Experience() {
     </>
   );
 }
+
+useFont.preload("fonts/Poppins-Black.ttf");
