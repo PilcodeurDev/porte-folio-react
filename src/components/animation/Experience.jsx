@@ -12,7 +12,7 @@ import {
 } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import { EffectComposer, Bloom } from "@react-three/postprocessing";
-import { Suspense, useEffect, useState } from "react";
+import { Suspense, useEffect, useRef, useState } from "react";
 import { Color } from "three";
 
 /**
@@ -27,6 +27,18 @@ bloomColor.multiplyScalar(1.5);
 
 export default function Experience({ animatedElement }) {
   const [isBelowLG, setIsBelowLG] = useState(true);
+  const controls = useRef();
+  const meshFitCamera = useRef();
+
+  const intro = async () => {
+    controls.current.dolly(-20);
+    controls.current.smoothTime = 1.4;
+    controls.current.dolly(20, true);
+  };
+
+  useEffect(() => {
+    intro();
+  }, []);
 
   useEffect(() => {
     const handleResize = () => {
@@ -88,16 +100,33 @@ export default function Experience({ animatedElement }) {
       </>
     );
   } else if (animatedElement === "title") {
+    // const fitCamera = async () => {
+    //   controls.current.fitToBox(meshFitCamera.current, true);
+    // };
+
+    // fitCamera();
+
     return (
       <>
-        <Canvas camera={{ position: [0, 2, 5.8], fov: 35 }}>
+        <Canvas camera={{ position: [0, 0, 4.3], fov: 35 }}>
+          <fog attach="fog" args={["#171720", 10, 25]} />
           <Suspense>
-            <CameraControls />
+            <Environment preset="sunset" />
             <color attach="background" args={["#171720"]} />
+            <CameraControls ref={controls} />
+            <mesh ref={meshFitCamera} position={[0, 0.4, 0]}>
+              <boxGeometry args={[5, 2.5, 1]} />
+              <meshBasicMaterial
+                color="pink"
+                transparent
+                opacity={0.1}
+                visible={false}
+              />
+            </mesh>
             <Text
               font={"fonts/Poppins-Black.ttf"}
-              position-y={1}
-              position-z={2}
+              position-y={0.5}
+              rotation-x={degToRad(20)}
               lineHeight={0.8}
               letterSpacing={-0.05}
               textAlign="center"
@@ -121,7 +150,7 @@ export default function Experience({ animatedElement }) {
                 </RenderTexture>
               </meshBasicMaterial>
             </Text>
-            <mesh position-y={0.23} rotation-x={-Math.PI / 2}>
+            <mesh position-y={-0.3} rotation-x={-Math.PI / 2 + degToRad(20)}>
               <planeGeometry args={[100, 100]} />
               <MeshReflectorMaterial
                 blur={[100, 100]}
@@ -138,7 +167,6 @@ export default function Experience({ animatedElement }) {
                 metalness={0.5}
               />
             </mesh>
-            <Environment preset="sunset" />
           </Suspense>
           <EffectComposer>
             <Bloom mipmapBlur intensity={1.2} />

@@ -43,7 +43,9 @@ export default function Home() {
             d'interfaces utilisateur interactives et dynamiques qui captiveront
             vos visiteurs dès les premières secondes.
           </p>
-          <Button text={BUTTON_TEXT} href={BUTTON_HREF} icon={BUTTON_ICON} />
+          <div>
+            <Button text={BUTTON_TEXT} href={BUTTON_HREF} icon={BUTTON_ICON} />
+          </div>
         </div>
       </div>
       <OverlayRevealContent />

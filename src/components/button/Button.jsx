@@ -38,7 +38,7 @@ export default function Button({ text, href, icon, download, type, disabled }) {
   }
 
   return (
-    <Link to={href} className="btn ml-0 h-[130px] lg:ml-12 ">
+    <Link to={href} className="btn ml-0 lg:ml-12 ">
       {text}
       {icon && <span className="icon">{icon}</span>}
     </Link>
