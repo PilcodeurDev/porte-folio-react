@@ -2,9 +2,11 @@
  * The external imports
  */
 import { FaArrowRightLong } from "react-icons/fa6";
-import { useContext, useEffect } from "react";
+import { Suspense, useContext, useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { Canvas } from "@react-three/fiber";
+import { Bloom, EffectComposer } from "@react-three/postprocessing";
 
 /**
  * The internal imports
@@ -45,10 +47,18 @@ export default function Home() {
               {owner.firstname} {owner.lastname}.
             </span>
           </h1>
-          <div className="min-w-[500px] w-3/4 h-1/2 rounded-3xl overflow-hidden">
-            <TitleAnimation />
+          <div className="min-w-[500px] w-[90%] h-1/2 rounded-3xl overflow-hidden my-8">
+            <Canvas camera={{ position: [0, 0, 4], fov: 35 }}>
+              <fog attach="fog" args={["#171720", 10, 20]} />
+              <Suspense>
+                <TitleAnimation />
+              </Suspense>
+              <EffectComposer>
+                <Bloom mipmapBlur intensity={1.2} />
+              </EffectComposer>
+            </Canvas>
           </div>
-          <p className="my-5 text-md lg:text-xl lg:w-[80%]">
+          <p className="text-md lg:text-xl lg:w-[80%]">
             Je suis concepteur web ainsi que développeur front-end basé à la
             frontière franco-suisse. Je suis passionné par la création
             d'interfaces utilisateur interactives et dynamiques qui captiveront
