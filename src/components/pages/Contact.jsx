@@ -24,7 +24,7 @@ export default function Contact() {
   const { owner } = useContext(DataContext);
   return (
     <div data-aos="fade-up" data-aos-duration="1200">
-      <div className="w-[90%] m-auto md:max-w-[60%]">
+      <div className="w-[90%] m-auto min-h-[100vh] pb-48 md:max-w-[60%]">
         <MyTitle span1={"prendre"} span2={"contact"} shadow={"contact"} />
         <div className="grid grid-cols-1 xl:grid-cols-5 xl:gap-9">
           <div className="col-span-2">

@@ -29,7 +29,7 @@ export default function Button({ text, href, icon, download, type, disabled }) {
         target="_blank"
         rel="noreferrer"
         icon={icon}
-        className="btn mt-10"
+        className="btn mx-0"
       >
         {text}
         {icon && <span className="icon">{icon}</span>}

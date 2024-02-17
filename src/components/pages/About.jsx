@@ -24,37 +24,41 @@ export default function About() {
 
   return (
     <div data-aos="fade-up" data-aos-duration="1200">
-      <div className="w-[90%] m-auto">
+      <div className="w-[90%] m-auto pb-10 mb-8">
         <MyTitle span1={"à propos"} span2={"de moi"} shadow={"cv"} />
         <div className="row grid grid-cols-1 lg:grid-cols-2 gap-6">
-          <div className="flex justify-center">
-            <div className="w-full mb-10">
-              <h3 className="mb-10 lg:text-2xl">informations personnelles</h3>
-              <div className="grid grid-cols-1 gap-5 2xl:grid-cols-2">
-                {aboutMe.map(({ id, title, value }) => (
-                  <div
-                    key={id}
-                    className="flex justify-between items-center whitespace-nowrap text-lg lg:text-xl lg:w-[85%]"
-                  >
-                    <span className="flex flex-nowrap font-semibold">
-                      {title}
-                    </span>
-                    <span className="flex flex-nowrap text-mainColorContrast font-bold">
-                      {value}
-                    </span>
-                  </div>
-                ))}
+          <div className="flex  flex-col">
+            <h3 className="mb-10 lg:text-2xl">informations personnelles</h3>
+            <div className="flex flex-col items-center justify-center">
+              <div className="flex justify-center w-full max-w-[600px]">
+                <div className="grid grid-cols-1 w-full gap-5 2xl:grid-cols-2">
+                  {aboutMe.map(({ id, title, value }) => (
+                    <div
+                      key={id}
+                      className="flex justify-between items-center whitespace-nowrap text-lg lg:text-xl lg:w-[85%]"
+                    >
+                      <span className="flex flex-nowrap font-semibold">
+                        {title}
+                      </span>
+                      <span className="flex flex-nowrap text-mainColorContrast font-bold">
+                        {value}
+                      </span>
+                    </div>
+                  ))}
+                </div>
               </div>
-              <Button
-                text={BUTTON_TEXT}
-                href={BUTTON_HREF}
-                icon={BUTTON_ICON}
-                download={BUTTON_DOWNLOAD}
-              />
+              <div className="my-14">
+                <Button
+                  text={BUTTON_TEXT}
+                  href={BUTTON_HREF}
+                  icon={BUTTON_ICON}
+                  download={BUTTON_DOWNLOAD}
+                />
+              </div>
             </div>
           </div>
           <div className="">
-            <h3 className="mb-3 lg:text-2xl">Mes compétences</h3>
+            <h3 className="mb-10 lg:text-2xl">Mes compétences</h3>
             <div
               id="particules-container"
               className="h-[500px] w-full mb-[10vh] bg-slate-200"
