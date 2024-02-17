@@ -52,7 +52,7 @@ export default function Home() {
             {owner.firstname} {owner.lastname}.
           </span>
         </h1>
-        <div className="min-w-[500px] w-[90%] h-1/2 rounded-3xl overflow-hidden my-8">
+        <div className="min-w-[500px] w-full h-1/2 rounded-3xl overflow-hidden my-8">
           <Canvas camera={{ position: [0, 0.5, 3], fov: 35 }}>
             <fog attach="fog" args={["#171720", 10, 20]} />
             <Suspense>
@@ -69,7 +69,7 @@ export default function Home() {
           d'interfaces utilisateur interactives et dynamiques qui captiveront
           vos visiteurs dès les premières secondes.
         </p>
-        <div className="mt-4">
+        <div className="mt-8">
           <Button text={BUTTON_TEXT} href={BUTTON_HREF} icon={BUTTON_ICON} />
         </div>
       </div>
