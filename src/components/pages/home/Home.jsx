@@ -41,7 +41,7 @@ export default function Home() {
         <div className="my-6 lg:my-0 lg:fixed lg:h-[92%] lg:w-[40%] lg:top-[4%]">
           <div className="relative w-full h-full">
             <ProfilAnimation />
-            <TiArrowSyncOutline className="absolute text-white z-50 bottom-[12%] right-[25%] text-2xl lg:text-4xl lg:bottom-[3%] lg:right-[12%] pointer-events-none" />
+            <TiArrowSyncOutline className="absolute text-white z-50 bottom-[12%] right-[25%] text-2xl lg:text-4xl lg:bottom-[3%] lg:right-[15%] pointer-events-none" />
           </div>
         </div>
         <div className="flex flex-col items-center w-[90%] lg:w-2/4 lg:ml-[40%]">
