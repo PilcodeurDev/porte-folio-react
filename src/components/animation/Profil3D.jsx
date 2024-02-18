@@ -45,7 +45,7 @@ extend({
   RoundedPlaneGeometry: geometry.RoundedPlaneGeometry,
 });
 
-export default function Profil3D({ img1, img2, ratio }) {
+export default function Profil3D({ img1, img2, ratio, screenSize }) {
   const ref = useRef();
   const [texture1, texture2, dispTexture] = useTexture([
     img1,
@@ -56,10 +56,25 @@ export default function Profil3D({ img1, img2, ratio }) {
   useFrame((_state, delta) => {
     easing.damp(ref.current, "dispFactor", hovered ? 1 : 0, 0.4, delta);
   });
-  return (
+
+  return screenSize === "phone" ? (
+    <mesh onClick={() => setHover(!hovered)}>
+      <roundedPlaneGeometry
+        args={ratio}
+        // 9:16 aspect ratio = args={[2.25, 4]}
+      />
+      <imageFadeMaterial
+        ref={ref}
+        tex={texture1}
+        tex2={texture2}
+        disp={dispTexture}
+        toneMapped={false}
+      />
+    </mesh>
+  ) : (
     <mesh
-      onPointerOver={(e) => setHover(true)}
-      onPointerOut={(e) => setHover(false)}
+      onPointerOver={() => setHover(true)}
+      onPointerOut={() => setHover(false)}
     >
       <roundedPlaneGeometry
         args={ratio}

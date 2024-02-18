@@ -26,6 +26,10 @@ export default function Home() {
   const BUTTON_HREF = "/about";
   const BUTTON_ICON = <FaArrowRightLong />;
 
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   return (
     <>
       <div
@@ -49,7 +53,7 @@ export default function Home() {
               {owner.firstname} {owner.lastname}.
             </span>
           </h1>
-          <div className="min-w-[500px] w-full h-1/2 rounded-3xl overflow-hidden my-8">
+          <div className="min-w-[500px] w-2/3 h-1/2 rounded-3xl overflow-hidden my-8">
             <Canvas camera={{ position: [0, 0.5, 3], fov: 35 }}>
               <fog attach="fog" args={["#171720", 10, 20]} />
               <Suspense>
