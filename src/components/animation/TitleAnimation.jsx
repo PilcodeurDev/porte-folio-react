@@ -11,15 +11,14 @@ import {
   MeshReflectorMaterial,
   useFont,
 } from "@react-three/drei";
-import { useFrame } from "@react-three/fiber";
 import { useEffect, useRef } from "react";
+import { degToRad } from "three/src/math/MathUtils";
 import { Color } from "three";
 
 /**
  * The internal imports
  */
 import GoodNeighbor from "./GoodNeighbor";
-import { degToRad } from "three/src/math/MathUtils";
 
 const bloomColor = new Color("#fff");
 bloomColor.multiplyScalar(1.5);

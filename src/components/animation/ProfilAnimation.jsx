@@ -1,11 +1,8 @@
-/* eslint-disable react/no-unknown-property */
 /**
  * The external imports
  */
-
 import { Canvas } from "@react-three/fiber";
 import { Suspense, useEffect, useState } from "react";
-import { TiArrowSyncOutline } from "react-icons/ti";
 
 /**
  * The internal imports
@@ -39,6 +36,7 @@ export default function ProfilAnimation() {
                 img1={"/profil/profil-ellipse.png"}
                 img2={"/profil/profiln&b-ellipse.png"}
                 ratio={[3.2, 3.2]}
+                screenSize={"phone"}
               />
             </Canvas>
           </Suspense>

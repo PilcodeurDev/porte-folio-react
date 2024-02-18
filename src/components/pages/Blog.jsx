@@ -17,7 +17,7 @@ export default function Blog() {
 
   return (
     <div data-aos="fade-up" data-aos-duration="1200">
-      <div className="w-[90%] m-auto max-w-[1400px]">
+      <div className="w-[90%] m-auto max-w-[1400px] mb-24 lg:mb-0">
         <MyTitle span1={"mon"} span2={"blog"} shadow={"articles"} />
         <div className="grid grid-cols-1 gap-x-10 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 ">
           {blogData.map(({ id, link, title, subTitle, image }) => (

@@ -167,7 +167,7 @@ export default function Form() {
           )}
         </div>
       </div>
-      <div className="block relative">
+      <div className="block relative mt-4">
         <Button text={BUTTON_TEXT} type={BUTTON_TYPE} icon={BUTTON_ICON} />
       </div>
       {congratulation && <Fireworks autorun={{ speed: 1 }} />}
