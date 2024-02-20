@@ -3,7 +3,8 @@
  */
 import { Link } from "react-router-dom";
 import { BsFillHouseFill } from "react-icons/bs";
-import { FaUser, FaBook, FaEnvelope, FaComments } from "react-icons/fa";
+import { FaUser, FaBook, FaEnvelope } from "react-icons/fa";
+import { FaRegFolderOpen } from "react-icons/fa6";
 
 /**
  * The internal imports
@@ -28,7 +29,7 @@ export default function Navbar() {
       id: 3,
       path: "/portfolio",
       text: "Portfolio",
-      icon: <FaBook className="icon" />,
+      icon: <FaRegFolderOpen className="icon" />,
     },
     {
       id: 4,
@@ -40,7 +41,7 @@ export default function Navbar() {
       id: 5,
       path: "/blog",
       text: "Blog",
-      icon: <FaComments className="icon" />,
+      icon: <FaBook className="icon" />,
     },
   ];
 
