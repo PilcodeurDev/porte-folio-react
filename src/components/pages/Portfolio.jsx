@@ -37,7 +37,7 @@ export default function Portfolio() {
                 <li
                   key={index}
                   onClick={() => setShowCategory(category)}
-                  className={`flex justify-center  mx-1 md:mx-4 mb-5 font-bold whitespace-nowrap transition-color duration-200 hover:text-mainColorContrast ${
+                  className={`flex justify-center mx-1 md:mx-4 mb-5 font-bold whitespace-nowrap transition-color duration-200 hover:text-mainColorContrast cursor-pointer ${
                     showCategory === category ? "text-mainColorContrast" : ""
                   }`}
                 >
