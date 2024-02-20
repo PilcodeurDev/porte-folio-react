@@ -27,7 +27,11 @@ export default function Portfolio() {
   };
 
   return (
-    <div data-aos="fade-up" data-aos-duration="1200" className="pb-28">
+    <div
+      data-aos="fade-up"
+      data-aos-duration="1200"
+      className="pb-28 overflow-hidden"
+    >
       <div className="w-[80%] m-auto max-w-[1400px]">
         <MyTitle span1={"mon"} span2={"portfolio"} shadow={"travail"} />
         <div className="flex justify-center">
