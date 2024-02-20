@@ -9,7 +9,7 @@ import { useContext } from "react";
  */
 import Button from "../button/Button";
 import MyTitle from "../MyTitle";
-import Cv_simon_despres from "../../assets/Simon_Despres.pdf";
+import CV_2024 from "../../assets/CV-2024.pdf";
 import { DataContext } from "../../context/DataProvider";
 import OverlayRevealContent from "../animation/OverlayRevealContent";
 import Skills3D from "../animation/Skills3D";
@@ -18,9 +18,9 @@ export default function About() {
   const { aboutMe } = useContext(DataContext);
 
   const BUTTON_TEXT = "Télécharger moi";
-  const BUTTON_HREF = Cv_simon_despres;
+  const BUTTON_HREF = CV_2024;
   const BUTTON_ICON = <FaDownload />;
-  const BUTTON_DOWNLOAD = "Simon_Despres.pdf";
+  const BUTTON_DOWNLOAD = "CV-2024.pdf";
 
   return (
     <div data-aos="fade-up" data-aos-duration="1200">
