@@ -17,7 +17,7 @@ import Skills3D from "../animation/Skills3D";
 export default function About() {
   const { aboutMe } = useContext(DataContext);
 
-  const BUTTON_TEXT = "Télécharger moi";
+  const BUTTON_TEXT = "Téléchargez moi";
   const BUTTON_HREF = CV_2024;
   const BUTTON_ICON = <FaDownload />;
   const BUTTON_DOWNLOAD = "CV-2024.pdf";
@@ -30,22 +30,20 @@ export default function About() {
           <div className="flex  flex-col">
             <h3 className="mb-10 lg:text-2xl">informations personnelles</h3>
             <div className="flex flex-col items-center justify-center">
-              <div className="flex justify-center w-full max-w-[600px]">
-                <div className="grid grid-cols-1 w-full gap-5 2xl:grid-cols-2">
-                  {aboutMe.map(({ id, title, value }) => (
-                    <div
-                      key={id}
-                      className="flex justify-between items-center whitespace-nowrap text-lg lg:text-xl lg:w-[85%]"
-                    >
-                      <span className="flex flex-nowrap font-semibold">
-                        {title}
-                      </span>
-                      <span className="flex flex-nowrap text-mainColorContrast font-bold">
-                        {value}
-                      </span>
-                    </div>
-                  ))}
-                </div>
+              <div className="text-sm sm:text-base grid grid-cols-1 w-full gap-5 lg:text-lg xl:max-w-full">
+                {aboutMe.map(({ id, title, value }) => (
+                  <div
+                    key={id}
+                    className="flex items-center whitespace-nowrap lg:w-[90%]"
+                  >
+                    <span className="flex flex-nowrap w-2/5 font-semibold">
+                      {title}
+                    </span>
+                    <span className="flex flex-nowrap text-mainColorContrast font-bold">
+                      {value}
+                    </span>
+                  </div>
+                ))}
               </div>
               <div className="my-14">
                 <Button

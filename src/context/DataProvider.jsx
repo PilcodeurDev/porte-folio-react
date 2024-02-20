@@ -49,7 +49,7 @@ export default function DataProvider(props) {
     phone: "+33 6 14 42 17 80",
     email: "simondprs62790@gmail.com",
     nationality: "Française",
-    languages: "Français, Anglais",
+    languages: "Français maternel, Anglais B1",
   });
 
   const skillData = [
@@ -132,10 +132,6 @@ export default function DataProvider(props) {
     },
   ];
 
-  const available = () => {
-    return <span className="text-validColor font-bold text-xl">Disponible</span>;
-  };
-
   const aboutMe = [
     {
       id: 1,
@@ -159,23 +155,23 @@ export default function DataProvider(props) {
     },
     {
       id: 5,
-      title: "Indépendant :",
-      value: available(),
-    },
-    {
-      id: 6,
       title: "Adresse :",
       value: owner.address2,
     },
     {
-      id: 7,
+      id: 6,
       title: "Téléphone :",
       value: owner.phone,
     },
     {
-      id: 8,
+      id: 7,
       title: "Email :",
       value: owner.email,
+    },
+    {
+      id: 8,
+      title: "Langue :",
+      value: owner.languages,
     },
     {
       id: 9,
@@ -190,11 +186,6 @@ export default function DataProvider(props) {
           <FaWhatsappSquare />
         </a>
       ),
-    },
-    {
-      id: 10,
-      title: "Langue :",
-      value: owner.languages,
     },
   ];
 
