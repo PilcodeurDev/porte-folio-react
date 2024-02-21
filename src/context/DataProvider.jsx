@@ -960,7 +960,7 @@ export default function DataProvider(props) {
       ),
     },
   ];
-  const categorysWork = ["Tous", "site web", "app web", "maquette", "vidéo"];
+  const categorysWork = ["Tous", "Site Web", "App Web", "Maquette"];
 
   const portfolioData = [
     {
