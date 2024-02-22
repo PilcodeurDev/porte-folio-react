@@ -964,9 +964,23 @@ export default function DataProvider(props) {
 
   const portfolioData = [
     {
-      id: 1,
       title: "GoReconnect",
       category: categorysWork[1],
+      techStack: "HTML, CSS, JavaScript, React.JS, Netlify et GitHub.",
+      subTitle: "Création de site web pour kinésiologue animalière",
+      description:
+        "GoReconnect est un site web mettant en avant les prestations de service de Alix, kinésiologue animalière. L'objectif de ce projet était de créer une visibilité sur internet avec une identité numérique correspondant à l'image que souhaite exprimer la cliente. Le site permet aux utilisateurs, d'en un premier temps, de prendre rendez-vous en ligne en fonction des créneaux disponibles sur l'agenda de la practicienne. Les utilisateurs peuvent enregistrer les informations de leurs animaux via le formulaire et les sauvegarder pour gagner du temps lors des prochaines prise de rendez-vous. Puis ils pourront liker, partager et lire les différents articles que crée Alix ainsi que participer à un quizz interactif pour découvrir les éléments de médecine chinoise de leurs animaux. Le site web a été conçu avec une approche mobile-first pour garantir une expérience utilisateur optimale sur tous type d'écran. De plus, le site est orienté sur le référencement naturel (SEO) afin d'augmenter sa visibilité sur les moteurs de recherche.",
+      features: [
+        "Calendrier connecter à Google Agenda",
+        "API Google Maps",
+        "Création de compte utilisateur",
+        "Formulaire Dynamique",
+        "Mail automatisé",
+        "Paiement en ligne",
+        "Intégration de contenu (blog)",
+        "like, partage des articles sur les réseaux sociaux",
+        "SEO",
+      ],
       image: (
         <img
           src={alixShiba}
@@ -974,26 +988,29 @@ export default function DataProvider(props) {
           className="rounded-xl object-cover"
         />
       ),
-      modalText: {
-        p1: "Alix, kinésiologue animalière",
-        p2: "rafraichissement de site web",
-        p3: (
-          <a
-            href="https://goreconnect.ch/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-mainColorContrast"
-          >
-            GoReconnect.ch
-          </a>
-        ),
-        p4: "HTML, CSS, JavaScript, React",
+      webSite: {
+        name: "Goreconnect.ch",
+        url: "https://goreconnect.ch/",
+      },
+      github: {
+        name: "Github",
+        url: "https://github.com/PilcodeurDev/GoReconnect",
       },
     },
     {
-      id: 2,
       title: "Hélicia",
       category: categorysWork[2],
+      techStack: "HTML, CSS, JavaScript, Ruby on Rails, Scalingo et GitHub.",
+      subTitle: "Application web de livraison par drone",
+      description:
+        "Helicia est une application web de livraison par drone. Elle a été conçue dans le cadre de la formation de développement full-stack chez Le Wagon. Le but de ce projet était de réaliser une application web fonctionnelle en 5 jours, en équipe de 3 personnes, avec une répartition des tâches et des responsabilités. Nous avons également utilisé des outils de gestion de projet tels que Trello et GitHub pour organiser notre travail et collaborer efficacement.",
+      features: [
+        "Search bar intelligente",
+        "Map interactive avec drone",
+        "Création de compte utilisateur",
+        "fil d'ariane",
+        "Panier d'achat",
+      ],
       image: (
         <img
           src={helicia}
@@ -1001,26 +1018,27 @@ export default function DataProvider(props) {
           className="rounded-xl object-cover"
         />
       ),
-      modalText: {
-        p1: "mes collègues et moi",
-        p2: "projet de fin de formation",
-        p3: (
-          <a
-            href="https://github.com/PilcodeurDev/Helicia"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-mainColorContrast"
-          >
-            GitHub/Helicia
-          </a>
-        ),
-        p4: "HTML, CSS, JavaScript, Ruby on Rails",
+      webSite: {
+        name: "Helicia.net",
+        url: "",
+      },
+      github: {
+        name: "Github",
+        url: "https://github.com/PilcodeurDev/Helicia",
       },
     },
     {
-      id: 3,
       title: "My Q Angels",
       category: categorysWork[2],
+      techStack: "HTML, CSS, JavaScript, Ruby on Rails, Scalingo et Github.",
+      subTitle: "Ma première app web - Airbnb like",
+      description:
+        "My Q Angels est une application web qui met en relation des personnes qui souhaitent louer du papier toilette à des personnes en situation de précarité. Cette application web a été réalisée en équipe de 3 personnes, avec une répartition des tâches et des responsabilités. Elle a été conçue dans le cadre de la formation de développement full-stack chez Le Wagon. L'objectif de ce projet était de découvrir la méthodologie AGILE dans un vrai projet en équipe et de réaliser une application web fonctionnelle en 5 jours. Nous avons également utilisé des outils de gestion de projet tels que Trello et GitHub pour organiser notre travail et collaborer efficacement",
+      features: [
+        "Création de compte utilisateur",
+        "Création d'annonce",
+        "Recherche d'annonce",
+      ],
       image: (
         <img
           src={myQAngels}
@@ -1028,47 +1046,37 @@ export default function DataProvider(props) {
           className="rounded-xl object-cover"
         />
       ),
-      modalText: {
-        p1: "mes collègues et moi",
-        p2: "coésion d'équipe",
-        p3: (
-          <a
-            href="https://github.com/PilcodeurDev/MontQAngels"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-mainColorContrast"
-          >
-            GitHub/MontQAngels
-          </a>
-        ),
-        p4: "HTML, CSS, JavaScript, Ruby on Rails",
+      webSite: {
+        name: "MontQAngels.net",
+        url: "",
+      },
+      github: {
+        name: "Github",
+        url: "https://github.com/PilcodeurDev/MontQAngels",
       },
     },
     {
-      id: 4,
-      title: "Prestations",
+      title: "Maquette de prestations de services",
       category: categorysWork[3],
+      techStack: "Figma.",
+      subTitle: "Outil de communication du développeur",
+      description:
+        "Présentation tarifaire pour un développeur web freelance qui souhaite créer, vendre et maintenir un site internet. La maquette, composée de plusieurs prestations différentes, sert d'appui visuel pour vulgariser et promouvoir son travail devant un client qui souhaite avoir une visibilité sur internet. Elle est également un outil de travail pour le développeur qui a besoin d'une vision claire de ses prestations. Cette maquette est sujette à des modifications et des améliorations en fonction de l'évolution des compétences du développeur en charge de la création du site. ",
+      features: "",
       image: (
         <img
           src={prestation}
           alt="maquette de présentation de tarifs"
-          className="rounded-xl object-cover"
+          className="rounded-xl object-cover w-[1600px]"
         />
       ),
-      modalText: {
-        p1: "Moi même",
-        p2: "maquette de présentation",
-        p3: (
-          <a
-            href="https://www.figma.com/proto/tF9iIhwCCv7os4LZrRFFqg/Headless-Next.js%2FStrapi?node-id=13-165&starting-point-node-id=13%3A165"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-mainColorContrast"
-          >
-            Maquette figma
-          </a>
-        ),
-        p4: "Figma",
+      webSite: {
+        name: "Maquette figma",
+        url: "https://www.figma.com/proto/tF9iIhwCCv7os4LZrRFFqg/Headless-Next.js%2FStrapi?node-id=13-165&starting-point-node-id=13%3A165",
+      },
+      github: {
+        name: "Github",
+        url: "",
       },
     },
   ];

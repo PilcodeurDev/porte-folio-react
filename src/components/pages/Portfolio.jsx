@@ -12,7 +12,6 @@ import { createPortal } from "react-dom";
 import { DataContext } from "../../context/DataProvider";
 import MyTitle from "../MyTitle";
 import PortfolioCard from "../portfolioCard/PortfolioCard";
-import ModalContent from "../ModalContent";
 import OverlayRevealContent from "../animation/OverlayRevealContent";
 
 export default function Portfolio() {
@@ -35,30 +34,17 @@ export default function Portfolio() {
     };
   }, []);
 
-  const openModal = (item) => {
-    setSelectedItem(item);
-  };
-
-  const closeModal = () => {
-    setSelectedItem(null);
-  };
-
-  const handleCategoryChange = (e) => {
-    setShowCategory(e.target.value);
-    console.log(e.target.value);
-  };
-
   return (
     <div
       data-aos="fade-up"
       data-aos-duration="1200"
       className="pb-28 overflow-hidden"
     >
-      <div className="w-[80%] m-auto max-w-[1400px]">
+      <div className="w-[80%] m-auto max-w-[1600px]">
         <MyTitle span1={"mon"} span2={"portfolio"} shadow={"travail"} />
         {isWideScreen ? (
           <div className="flex justify-center">
-            <ul className="flex mb-5 items-center text-mainColor">
+            <ul className="flex mb-8 items-center text-mainColor">
               {categorysWork.map((category, index) => {
                 return (
                   <li
@@ -119,42 +105,48 @@ export default function Portfolio() {
             </div>
           </div>
         )}
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-8 lg:grid-cols-3 2xl:grid-cols-4">
-          {portfolioData.map(({ id, title, image, modalText, category }) => {
-            if (
-              category === showCategory ||
-              showCategory === categorysWork[0]
-            ) {
-              return (
-                <div
-                  data-aos="fade-left"
-                  data-duration="1000"
-                  key={id}
-                  className="flex rounded-xl shadow-2xl"
-                >
-                  <button
-                    onClick={() => {
-                      openModal({ id, title, modalText, image });
-                    }}
+        <div className="grid grid-cols-1 gap-20 mt-10">
+          {portfolioData.map(
+            (
+              {
+                category,
+                title,
+                subTitle,
+                techStack,
+                features,
+                description,
+                image,
+                webSite,
+                github,
+              },
+              index
+            ) => {
+              if (
+                category === showCategory ||
+                showCategory === categorysWork[0]
+              ) {
+                return (
+                  <div
+                    // data-aos="fade-left"
+                    // data-duration="1000"
+                    key={index}
+                    className="relative w-full h-[700px] font-medium"
                   >
-                    <PortfolioCard title={title} image={image} />
-                  </button>
-
-                  {selectedItem &&
-                    selectedItem.id === id &&
-                    createPortal(
-                      <ModalContent
-                        closeModal={closeModal}
-                        title={selectedItem.title}
-                        modalText={selectedItem.modalText}
-                        image={selectedItem.image}
-                      />,
-                      document.body
-                    )}
-                </div>
-              );
+                    <PortfolioCard
+                      title={title}
+                      subTitle={subTitle}
+                      techStack={techStack}
+                      features={features}
+                      description={description}
+                      image={image}
+                      webSite={webSite}
+                      github={github}
+                    />
+                  </div>
+                );
+              }
             }
-          })}
+          )}
         </div>
       </div>
       <OverlayRevealContent />
