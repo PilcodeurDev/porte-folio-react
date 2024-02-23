@@ -25,18 +25,18 @@ export default function PortfolioCard({
       // data-duration="1000"
       className="relative w-full h-[700px] font-medium"
     >
-      <div className="absolute w-2/5 left-10 top-5 shadow-lg shadow-black/50 rounded-xl z-10">
-        {image}
-      </div>
-      <div className="absolute bottom-0 right-0 w-[92%] h-3/4 bg-[#FFFFFF] rounded-3xl shadow-lg shadow-black/30">
-        <div className="relative h-full py-6 px-7">
-          <div className="grid grid-cols-5 h-full">
-            <div className="col-span-2 relative">
+      <div className="bg-[#FFFFFF] rounded-3xl shadow-lg shadow-black/30 2xl:absolute 2xl:bottom-0 2xl:right-0 2xl:w-[92%] 2xl:h-4/5">
+        <div className="mb-6 shadow-lg shadow-black/50 rounded-xl 2xl:absolute 2xl:w-2/5 2xl:-left-[5rem] 2xl:translate-x- 2xl:-top-1/2 2xl:translate-y-1/2  2xl:mb-0  2xl:z-10">
+          {image}
+        </div>
+        <div className="p-4 relative h-full 2xl:py-6 2xl:px-7">
+          <div className="flex flex-col 2xl:grid 2xl:grid-cols-5 2xl:h-full">
+            <div className="order-2 2xl:col-span-2 2xl:relative">
               {features ? (
-                <div className="absolute top-[44%] py-3 px-8 w-[92%] bg-[#eeeeee] rounded-xl">
+                <div className="p-4 2xl:absolute 2xl:top-[44%] 2xl:py-3 2xl:px-8 2xl:w-[84%] bg-[#eeeeee] rounded-xl">
                   <div>
                     <p className="font-bold ">Fonctionnalitées :</p>
-                    <ul className="">
+                    <ul>
                       {features.map((feature, index) => (
                         <li className="list-disc ml-7" key={index}>
                           {feature}
@@ -46,10 +46,10 @@ export default function PortfolioCard({
                   </div>
                 </div>
               ) : (
-                <div className="absolute top-[44%] py-3 px-8 w-[92%]"></div>
+                <div className="2xl:absolute 2xl:top-[44%] 2xl:py-3 2xl:px-8 2xl:w-[92%]"></div>
               )}
             </div>
-            <div className="col-span-3 h-full">
+            <div className="order-1 2xl:col-span-3 h-full">
               <div className="relative h-full">
                 <h3 className="text-mainColor text-3xl mb-6">{title}</h3>
                 <p className="font-semibold mb-6">{subTitle}</p>

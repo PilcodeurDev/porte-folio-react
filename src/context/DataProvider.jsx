@@ -967,11 +967,40 @@ export default function DataProvider(props) {
       title: "GoReconnect",
       category: categorysWork[1],
       techStack: "HTML, CSS, JavaScript, React.JS, Netlify et GitHub.",
-      subTitle: "Création de site web de prestation de service + identitée visuelle.",
-      description:
-        "GoReconnect est un site web mettant en avant les prestations de service de Alix, kinésiologue animalière. L'objectif de ce projet était de créer une identité numérique correspondant à l'image que souhaite exprimer la cliente. Le site permet aux utilisateurs de prendre rendez-vous en ligne, enregistrer les informations de leurs animaux pour gagner du temps lors des prochaines prise de rendez-vous. Les utilisateurs pourront en apprendre plus sur la kinésiologie grace à une page dédiée. Ils pourront liker, partager et lire les différents articles que crée Alix sur son blog. Le site web a été conçu avec une approche mobile-first et en étant orienté sur le référencement naturel (SEO) afin d'augmenter sa visibilité sur les moteurs de recherche.",
+      subTitle:
+        "Création de site web de prestation de service + identitée visuelle.",
+      description: (
+        <>
+          <p>
+            GoReconnect est un site web mettant en avant les prestations de
+            service de <strong>Alix, kinésiologue animalière</strong>.
+          </p>
+          <p>
+            L'objectif de ce projet était de créer une{" "}
+            <strong>identité numérique</strong> correspondant à l'image que
+            souhaite exprimer la cliente.
+          </p>
+          <p>
+            Le site permet aux utilisateurs de{" "}
+            <strong>prendre rendez-vous</strong> en ligne, enregistrer les
+            informations de leurs animaux pour gagner du temps lors des
+            prochaines prise de rendez-vous.
+          </p>
+          <p>
+            Les utilisateurs pourront en apprendre plus sur la kinésiologie
+            grace à une page dédiée. Ils pourront <strong>liker</strong>,{" "}
+            <strong>partager</strong> et <strong>lire</strong> les articles
+            qu'écrit Alix sur son blog.
+          </p>
+          <p>
+            Le site web a été conçu avec une approche mobile-first et en étant
+            orienté sur le référencement naturel (SEO) afin d'augmenter sa
+            visibilité sur les moteurs de recherche.
+          </p>
+        </>
+      ),
       features: [
-        "Calendrier connecter à Google Agenda",
+        "Agenda connecter à Google Agenda",
         "API Google Maps",
         "Création de compte utilisateur",
         "Formulaire Dynamique",
@@ -985,7 +1014,7 @@ export default function DataProvider(props) {
         <img
           src={alixShiba}
           alt="kinésiologue animaliere alix"
-          className="rounded-xl object-cover"
+          className="object-cover"
         />
       ),
       webSite: {
@@ -1002,8 +1031,24 @@ export default function DataProvider(props) {
       category: categorysWork[2],
       techStack: "HTML, CSS, JavaScript, Ruby on Rails, Scalingo et GitHub.",
       subTitle: "Application web de livraison par drone",
-      description:
-        "Helicia est une application web de livraison par drone. Elle a été conçue dans le cadre de la formation de développement full-stack chez Le Wagon. Le but de ce projet était de réaliser une application web fonctionnelle en 5 jours, en équipe de 3 personnes, avec une répartition des tâches et des responsabilités. Nous avons également utilisé des outils de gestion de projet tels que Trello et GitHub pour organiser notre travail et collaborer efficacement.",
+      description: (
+        <>
+          <p>
+            Helicia a été conçue dans le cadre de la formation de développement
+            full-stack chez Le Wagon.
+          </p>
+          <p>
+            Le but de ce projet était de réaliser une application web
+            fonctionnelle en 5 jours, par équipe de 3 personnes, avec une
+            répartition des tâches et des responsabilités.
+          </p>
+          <p>
+            Nous avons également utilisé des outils de gestion de projet tels
+            que Figma, Trello et GitHub pour organiser notre travail et
+            collaborer efficacement.
+          </p>
+        </>
+      ),
       features: [
         "Search bar intelligente",
         "Map interactive avec drone",
@@ -1015,7 +1060,7 @@ export default function DataProvider(props) {
         <img
           src={helicia}
           alt="application web de livraison par drone"
-          className="rounded-xl object-cover"
+          className="object-cover"
         />
       ),
       webSite: {
@@ -1032,8 +1077,31 @@ export default function DataProvider(props) {
       category: categorysWork[2],
       techStack: "HTML, CSS, JavaScript, Ruby on Rails, Scalingo et Github.",
       subTitle: "Ma première app web - Airbnb like",
-      description:
-        "My Q Angels est une application web qui met en relation des personnes qui souhaitent louer du papier toilette à des personnes en situation de précarité. Cette application web a été réalisée en équipe de 3 personnes, avec une répartition des tâches et des responsabilités. Elle a été conçue dans le cadre de la formation de développement full-stack chez Le Wagon. L'objectif de ce projet était de découvrir la méthodologie AGILE dans un vrai projet en équipe et de réaliser une application web fonctionnelle en 5 jours. Nous avons également utilisé des outils de gestion de projet tels que Trello et GitHub pour organiser notre travail et collaborer efficacement",
+      description: (
+        <>
+          <p>
+            My Q Angels est une application web qui met en relation des
+            personnes qui souhaitent louer du papier toilette à des personnes en
+            situation de précarité.
+          </p>
+          <p>
+            Cette application web a été réalisée en 3jours, par équipe de 3,
+            avec une répartition des tâches et des responsabilités. Elle a été
+            conçue dans le cadre de la formation de développement full-stack
+            chez Le Wagon.
+          </p>
+          <p>
+            L'objectif de ce projet était de découvrir la méthodologie AGILE
+            dans un vrai projet en équipe et de réaliser une application web
+            fonctionnelle en 5 jours.
+          </p>
+          <p>
+            Nous avons également utilisé des outils de gestion de projet tels
+            que Trello et GitHub pour organiser notre travail et collaborer
+            efficacement.
+          </p>
+        </>
+      ),
       features: [
         "Création de compte utilisateur",
         "Création d'annonce",
@@ -1043,7 +1111,7 @@ export default function DataProvider(props) {
         <img
           src={myQAngels}
           alt="premiere application web"
-          className="rounded-xl object-cover"
+          className="object-cover"
         />
       ),
       webSite: {
@@ -1060,14 +1128,34 @@ export default function DataProvider(props) {
       category: categorysWork[3],
       techStack: "Figma.",
       subTitle: "Outil de communication du développeur",
-      description:
-        "Présentation tarifaire pour un développeur web freelance qui souhaite créer, vendre et maintenir un site internet. La maquette, composée de plusieurs prestations différentes, sert d'appui visuel pour vulgariser et promouvoir son travail devant un client qui souhaite avoir une visibilité sur internet. Elle est également un outil de travail pour le développeur qui a besoin d'une vision claire de ses prestations. Cette maquette est sujette à des modifications et des améliorations en fonction de l'évolution des compétences du développeur en charge de la création du site. ",
+      description: (
+        <>
+          <p>
+            Présentation tarifaire pour un développeur web freelance qui
+            souhaite créer, vendre et maintenir un site internet.
+          </p>
+          <p>
+            La maquette, composée de plusieurs prestations différentes, sert
+            d'appui visuel pour vulgariser et promouvoir son travail devant un
+            client qui souhaite avoir une visibilité sur internet.
+          </p>
+          <p>
+            Elle est également un outil de travail pour le développeur qui a
+            besoin d'une vision claire de ses prestations.
+          </p>
+          <p>
+            Cette maquette est sujette à des modifications et des améliorations
+            en fonction de l'évolution des compétences du développeur en charge
+            de la création du site.
+          </p>
+        </>
+      ),
       features: "",
       image: (
         <img
           src={prestation}
           alt="maquette de présentation de tarifs"
-          className="rounded-xl object-cover w-[1600px]"
+          className="object-cover"
         />
       ),
       webSite: {
