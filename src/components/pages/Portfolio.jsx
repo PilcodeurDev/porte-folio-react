@@ -105,7 +105,7 @@ export default function Portfolio() {
             </div>
           </div>
         )}
-        <div className="grid grid-cols-1 gap-20 mt-10">
+        <div className="grid grid-cols-1 gap-36 mt-10">
           {portfolioData.map(
             (
               {
@@ -126,23 +126,17 @@ export default function Portfolio() {
                 showCategory === categorysWork[0]
               ) {
                 return (
-                  <div
-                    // data-aos="fade-left"
-                    // data-duration="1000"
+                  <PortfolioCard
                     key={index}
-                    className="relative w-full h-[700px] font-medium"
-                  >
-                    <PortfolioCard
-                      title={title}
-                      subTitle={subTitle}
-                      techStack={techStack}
-                      features={features}
-                      description={description}
-                      image={image}
-                      webSite={webSite}
-                      github={github}
-                    />
-                  </div>
+                    title={title}
+                    subTitle={subTitle}
+                    techStack={techStack}
+                    features={features}
+                    description={description}
+                    image={image}
+                    webSite={webSite}
+                    github={github}
+                  />
                 );
               }
             }

@@ -967,9 +967,9 @@ export default function DataProvider(props) {
       title: "GoReconnect",
       category: categorysWork[1],
       techStack: "HTML, CSS, JavaScript, React.JS, Netlify et GitHub.",
-      subTitle: "Création de site web pour kinésiologue animalière",
+      subTitle: "Création de site web de prestation de service + identitée visuelle.",
       description:
-        "GoReconnect est un site web mettant en avant les prestations de service de Alix, kinésiologue animalière. L'objectif de ce projet était de créer une visibilité sur internet avec une identité numérique correspondant à l'image que souhaite exprimer la cliente. Le site permet aux utilisateurs, d'en un premier temps, de prendre rendez-vous en ligne en fonction des créneaux disponibles sur l'agenda de la practicienne. Les utilisateurs peuvent enregistrer les informations de leurs animaux via le formulaire et les sauvegarder pour gagner du temps lors des prochaines prise de rendez-vous. Puis ils pourront liker, partager et lire les différents articles que crée Alix ainsi que participer à un quizz interactif pour découvrir les éléments de médecine chinoise de leurs animaux. Le site web a été conçu avec une approche mobile-first pour garantir une expérience utilisateur optimale sur tous type d'écran. De plus, le site est orienté sur le référencement naturel (SEO) afin d'augmenter sa visibilité sur les moteurs de recherche.",
+        "GoReconnect est un site web mettant en avant les prestations de service de Alix, kinésiologue animalière. L'objectif de ce projet était de créer une identité numérique correspondant à l'image que souhaite exprimer la cliente. Le site permet aux utilisateurs de prendre rendez-vous en ligne, enregistrer les informations de leurs animaux pour gagner du temps lors des prochaines prise de rendez-vous. Les utilisateurs pourront en apprendre plus sur la kinésiologie grace à une page dédiée. Ils pourront liker, partager et lire les différents articles que crée Alix sur son blog. Le site web a été conçu avec une approche mobile-first et en étant orienté sur le référencement naturel (SEO) afin d'augmenter sa visibilité sur les moteurs de recherche.",
       features: [
         "Calendrier connecter à Google Agenda",
         "API Google Maps",
@@ -978,7 +978,7 @@ export default function DataProvider(props) {
         "Mail automatisé",
         "Paiement en ligne",
         "Intégration de contenu (blog)",
-        "like, partage des articles sur les réseaux sociaux",
+        "Like, commente et partage des articles",
         "SEO",
       ],
       image: (
@@ -989,7 +989,7 @@ export default function DataProvider(props) {
         />
       ),
       webSite: {
-        name: "Goreconnect.ch",
+        name: "GoReconnect.ch",
         url: "https://goreconnect.ch/",
       },
       github: {
