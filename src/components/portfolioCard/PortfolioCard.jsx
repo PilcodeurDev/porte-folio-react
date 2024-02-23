@@ -2,6 +2,7 @@
  * The external imports
  */
 import PropTypes from "prop-types";
+import { MdOutlineArrowOutward } from "react-icons/md";
 
 /**
  * The internal imports
@@ -31,8 +32,8 @@ export default function PortfolioCard({
         <div className="relative h-full py-6 px-7">
           <div className="grid grid-cols-5 h-full">
             <div className="col-span-2 relative">
-              <div className="absolute top-[44%] py-3 px-8 w-[92%] bg-[#eeeeee] rounded-xl">
-                {features && (
+              {features ? (
+                <div className="absolute top-[44%] py-3 px-8 w-[92%] bg-[#eeeeee] rounded-xl">
                   <div>
                     <p className="font-bold ">Fonctionnalitées :</p>
                     <ul className="">
@@ -43,46 +44,68 @@ export default function PortfolioCard({
                       ))}
                     </ul>
                   </div>
-                )}
-              </div>
+                </div>
+              ) : (
+                <div className="absolute top-[44%] py-3 px-8 w-[92%]"></div>
+              )}
             </div>
             <div className="col-span-3 h-full">
               <div className="relative h-full">
-                <h3 className="text-mainColor text-3xl ml-4 mb-6">{title}</h3>
+                <h3 className="text-mainColor text-3xl mb-6">{title}</h3>
                 <p className="font-semibold mb-6">{subTitle}</p>
                 <div className="py-3 px-5 mb-8 bg-[#eeeeee] rounded-xl">
                   <p className="mb-2">Description : </p>
                   <p>{description}</p>
                 </div>
                 <div className="mb-3 text-sm text-gray-800">
-                  <span className="underline">Technologies : </span>
-                  <span className="">{techStack}</span>
+                  <span className="underline">Technologies :</span>
+                  <span> {techStack}</span>
                 </div>
-                <div className="absolute bottom-0 right-0 w-1/3">
-                  {github.url ? (
+                <div className="absolute bottom-0 right-0 w-2/5">
+                  {webSite.url && github.url ? (
                     <div className="flex justify-between">
                       <a
                         href={github.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="py-2 px-3 bg-mainColor rounded-xl shadow-lg shadow-black/30 text-white font-extrabold transition-all duration-200 hover:brightness-150 hover:text-mainColorContrast"
+                        className="flex item-center py-2 px-3 bg-mainColor rounded-lg shadow-lg shadow-black/30 text-white font-extrabold transition-all duration-200 hover:brightness-150 hover:text-mainColorContrast"
                       >
                         {github.name}
+                        <MdOutlineArrowOutward className="ml-1" />
                       </a>
                       <a
                         href={webSite.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="py-2 px-3 bg-mainColor rounded-xl shadow-lg shadow-black/30 text-white font-extrabold transition-all duration-200 hover:brightness-150 hover:text-mainColorContrast"
+                        className="flex item-center py-2 px-3 bg-mainColor rounded-lg shadow-lg shadow-black/30 text-white font-extrabold transition-all duration-200 hover:brightness-150 hover:text-mainColorContrast"
                       >
                         {webSite.name}
+                        <MdOutlineArrowOutward className="ml-1" />
+                      </a>
+                    </div>
+                  ) : webSite.url ? (
+                    <div className="flex justify-end">
+                      <a
+                        href={webSite.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex item-center py-2 px-3 bg-mainColor rounded-lg shadow-lg shadow-black/30 text-white font-extrabold transition-all duration-200 hover:brightness-150 hover:text-mainColorContrast"
+                      >
+                        {webSite.name}
+                        <MdOutlineArrowOutward className="ml-1" />
                       </a>
                     </div>
                   ) : (
                     <div className="flex justify-end">
-                      <span className="py-2 px-3 bg-mainColor rounded-xl shadow-lg shadow-black/30 text-white font-extrabold transition-all duration-200 hover:brightness-150 hover:text-mainColorContrast">
-                        {webSite.name}
-                      </span>
+                      <a
+                        href={webSite.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex item-center py-2 px-3 bg-mainColor rounded-lg shadow-lg shadow-black/30 text-white font-extrabold transition-all duration-200 hover:brightness-150 hover:text-mainColorContrast"
+                      >
+                        {github.name}
+                        <MdOutlineArrowOutward className="ml-1" />
+                      </a>
                     </div>
                   )}
                 </div>
