@@ -968,7 +968,7 @@ export default function DataProvider(props) {
       category: categorysWork[1],
       techStack: "HTML, CSS, JavaScript, React.JS, Netlify et GitHub.",
       subTitle:
-        "Création de site web de prestation de service + identitée visuelle.",
+        "Création d'un site de prestation de service et identitée visuelle.",
       description: (
         <>
           <p>
@@ -978,10 +978,7 @@ export default function DataProvider(props) {
           <p>
             L'objectif de ce projet était de créer une{" "}
             <strong>identité numérique</strong> correspondant à l'image que
-            souhaite exprimer la cliente.
-          </p>
-          <p>
-            Le site permet aux utilisateurs de{" "}
+            souhaite exprimer la cliente. Le site permet aux utilisateurs de{" "}
             <strong>prendre rendez-vous</strong> en ligne, enregistrer les
             informations de leurs animaux pour gagner du temps lors des
             prochaines prise de rendez-vous.
@@ -989,11 +986,8 @@ export default function DataProvider(props) {
           <p>
             Les utilisateurs pourront en apprendre plus sur la kinésiologie
             grace à une page dédiée. Ils pourront <strong>liker</strong>,{" "}
-            <strong>partager</strong> et <strong>lire</strong> les articles
-            qu'écrit Alix sur son blog.
-          </p>
-          <p>
-            Le site web a été conçu avec une approche mobile-first et en étant
+            <strong>commenter</strong> et <strong>partager</strong> les articles
+            qu'écrit Alix sur son blog. Le site web a été conçu avec une approche mobile-first et en étant
             orienté sur le référencement naturel (SEO) afin d'augmenter sa
             visibilité sur les moteurs de recherche.
           </p>
