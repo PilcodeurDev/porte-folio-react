@@ -12,7 +12,6 @@ import { DataContext } from "../../context/DataProvider";
 import MyTitle from "../MyTitle";
 import PortfolioCard from "../portfolioCard/PortfolioCard";
 import OverlayRevealContent from "../animation/OverlayRevealContent";
-import PortfolioCard2 from "../portfolioCard/PortfolioCard2";
 
 export default function Portfolio() {
   const { portfolioData, categorysWork } = useContext(DataContext);
@@ -39,7 +38,7 @@ export default function Portfolio() {
       data-aos-duration="1200"
       className="pb-16 overflow-hidden"
     >
-      <div className="w-full px-4 m-auto sm:w-[90%] max-w-[1600px]">
+      <div className="w-full px-8 m-auto sm:w-[90%] max-w-[1600px]">
         <MyTitle span1={"mon"} span2={"portfolio"} shadow={"travail"} />
         {isWideScreen ? (
           <div className="flex justify-center">
@@ -104,7 +103,7 @@ export default function Portfolio() {
             </div>
           </div>
         )}
-        <div className="flex flex-col">
+        <div className="flex flex-col gap-52 mt-16">
           {portfolioData.map(
             (
               {
@@ -125,7 +124,7 @@ export default function Portfolio() {
                 showCategory === categorysWork[0]
               ) {
                 return (
-                  <PortfolioCard2
+                  <PortfolioCard
                     key={index}
                     title={title}
                     subTitle={subTitle}
@@ -136,17 +135,6 @@ export default function Portfolio() {
                     webSite={webSite}
                     github={github}
                   />
-                  // <PortfolioCard
-                  //   key={index}
-                  //   title={title}
-                  //   subTitle={subTitle}
-                  //   techStack={techStack}
-                  //   features={features}
-                  //   description={description}
-                  //   image={image}
-                  //   webSite={webSite}
-                  //   github={github}
-                  // />
                 );
               }
             }

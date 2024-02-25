@@ -7,9 +7,8 @@ import { MdOutlineArrowOutward } from "react-icons/md";
 /**
  * The internal imports
  */
-import "./PortfolioCard.css";
 
-export default function PortfolioCard({
+export default function PortfolioCard2({
   title,
   subTitle,
   techStack,
@@ -21,95 +20,89 @@ export default function PortfolioCard({
 }) {
   return (
     <div
-      // data-aos="fade-left"
-      // data-duration="1000"
-      className="relative w-full h-[700px] font-medium"
+      data-aos="zoom-in-left"
+      data-aos-duration="800"
+      data-aos-easing="ease-in-out"
+      className="relative min-h-[700px]"
     >
-      <div className="bg-[#FFFFFF] rounded-3xl shadow-lg shadow-black/30 2xl:absolute 2xl:bottom-0 2xl:right-0 2xl:w-[92%] 2xl:h-4/5">
-        <div className="mb-6 shadow-lg shadow-black/50 rounded-xl 2xl:absolute 2xl:w-2/5 2xl:-left-[5rem] 2xl:translate-x- 2xl:-top-1/2 2xl:translate-y-1/2  2xl:mb-0  2xl:z-10">
+      <div className="text-sm bg-[#ffffff] rounded-xl overflow-hidden shadow-lg shadow-slate-600 lg:overflow-visible lg:absolute lg:h-4/5 lg:w-[90%] lg:right-0 lg:bottom-0">
+        <div className="relative z-10 overflow-hidden shadow-lg shadow-black/50 lg:absolute lg:-top-[8rem] lg:-left-[11%] lg:w-1/2 lg:rounded-lg">
           {image}
         </div>
-        <div className="p-4 relative h-full 2xl:py-6 2xl:px-7">
-          <div className="flex flex-col 2xl:grid 2xl:grid-cols-5 2xl:h-full">
-            <div className="order-2 2xl:col-span-2 2xl:relative">
-              {features ? (
-                <div className="p-4 2xl:absolute 2xl:top-[44%] 2xl:py-3 2xl:px-8 2xl:w-[84%] bg-[#eeeeee] rounded-xl">
-                  <div>
-                    <p className="font-bold ">Fonctionnalitées :</p>
-                    <ul>
-                      {features.map((feature, index) => (
-                        <li className="list-disc ml-7" key={index}>
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
+        <div className="px-6 py-8 lg:grid lg:grid-cols-3 lg:p-0 lg:h-full">
+          <div className="lg:col-span-1"></div>
+          <div className="lg:col-span-2 lg:px-4 lg:py-4 lg:ml-[9%] lg:flex lg:flex-col">
+            <h3 className="mb-2 text-mainColor">{title}</h3>
+            <p className="mb-4 text-gray-600">{subTitle}</p>
+            <div className="bg-[#eeeeee] rounded-lg mb-5 p-4">
+              <p className="mb-2 font-semibold">Description :</p>
+              <p className="pl-3">{description}</p>
+            </div>
+            <div className="mb-4 lg:absolute lg:top-1/2 lg:-translate-y-1/2 lg:left-3 bg-[#eeeeee] rounded-lg p-4 min-w-[304px] xl:top-[72.5%] xl:left-6 xl:min-w-[37.2%]">
+              {features && (
+                <div>
+                  <p className="mb-2 font-semibold">Fonctionnalitées :</p>
+                  <ul>
+                    {features.map((feature, index) => (
+                      <li className="list-disc ml-7" key={index}>
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-              ) : (
-                <div className="2xl:absolute 2xl:top-[44%] 2xl:py-3 2xl:px-8 2xl:w-[92%]"></div>
               )}
             </div>
-            <div className="order-1 2xl:col-span-3 h-full">
-              <div className="relative h-full">
-                <h3 className="text-mainColor text-3xl mb-6">{title}</h3>
-                <p className="font-semibold mb-6">{subTitle}</p>
-                <div className="py-3 px-5 mb-8 bg-[#eeeeee] rounded-xl">
-                  <p className="mb-2">Description : </p>
-                  <p>{description}</p>
+            <div className="mb-12 lg:mb-6">
+              <p className="mb-1 font-semibold">Technologies :</p>
+              <p className="ml-4">{techStack}</p>
+            </div>
+            <div className="lg:flex-1">
+              {webSite.url && github.url ? (
+                <div className="flex justify-between lg:h-3/4 lg:items-end">
+                  <a
+                    href={github.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex item-center px-3 py-2 bg-mainColor rounded-lg shadow-lg shadow-black/30 text-white font-extrabold transition-all duration-200 hover:brightness-150 hover:text-mainColorContrast xl:px-4 xl:py-3 2xl:px-6 xl:p 2xl:py-4"
+                  >
+                    {github.name}
+                    <MdOutlineArrowOutward className="ml-1" />
+                  </a>
+                  <a
+                    href={webSite.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex item-center px-3 py-2 bg-mainColor rounded-lg shadow-lg shadow-black/30 text-white font-extrabold transition-all duration-200 hover:brightness-150 hover:text-mainColorContrast xl:px-4 xl:py-3 2xl:px-6 xl:p 2xl:py-4"
+                  >
+                    {webSite.name}
+                    <MdOutlineArrowOutward className="ml-1" />
+                  </a>
                 </div>
-                <div className="mb-3 text-sm text-gray-800">
-                  <span className="underline">Technologies :</span>
-                  <span> {techStack}</span>
+              ) : webSite.url ? (
+                <div className="flex justify-end lg:h-3/4 lg:items-end lg:px-4">
+                  <a
+                    href={webSite.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex item-center px-3 py-2 bg-mainColor rounded-lg shadow-lg shadow-black/30 text-white font-extrabold transition-all duration-200 hover:brightness-150 hover:text-mainColorContrast xl:px-4 xl:py-3 2xl:px-6 xl:p 2xl:py-4"
+                  >
+                    {webSite.name}
+                    <MdOutlineArrowOutward className="ml-1" />
+                  </a>
                 </div>
-                <div className="absolute bottom-0 right-0 w-2/5">
-                  {webSite.url && github.url ? (
-                    <div className="flex justify-between">
-                      <a
-                        href={github.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex item-center py-2 px-3 bg-mainColor rounded-lg shadow-lg shadow-black/30 text-white font-extrabold transition-all duration-200 hover:brightness-150 hover:text-mainColorContrast"
-                      >
-                        {github.name}
-                        <MdOutlineArrowOutward className="ml-1" />
-                      </a>
-                      <a
-                        href={webSite.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex item-center py-2 px-3 bg-mainColor rounded-lg shadow-lg shadow-black/30 text-white font-extrabold transition-all duration-200 hover:brightness-150 hover:text-mainColorContrast"
-                      >
-                        {webSite.name}
-                        <MdOutlineArrowOutward className="ml-1" />
-                      </a>
-                    </div>
-                  ) : webSite.url ? (
-                    <div className="flex justify-end">
-                      <a
-                        href={webSite.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex item-center py-2 px-3 bg-mainColor rounded-lg shadow-lg shadow-black/30 text-white font-extrabold transition-all duration-200 hover:brightness-150 hover:text-mainColorContrast"
-                      >
-                        {webSite.name}
-                        <MdOutlineArrowOutward className="ml-1" />
-                      </a>
-                    </div>
-                  ) : (
-                    <div className="flex justify-end">
-                      <a
-                        href={webSite.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex item-center py-2 px-3 bg-mainColor rounded-lg shadow-lg shadow-black/30 text-white font-extrabold transition-all duration-200 hover:brightness-150 hover:text-mainColorContrast"
-                      >
-                        {github.name}
-                        <MdOutlineArrowOutward className="ml-1" />
-                      </a>
-                    </div>
-                  )}
+              ) : (
+                <div className="flex justify-end lg:h-3/4 lg:items-end lg:px-4">
+                  <a
+                    href={webSite.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex item-center px-3 py-2 bg-mainColor rounded-lg shadow-lg shadow-black/30 text-white font-extrabold transition-all duration-200 hover:brightness-150 hover:text-mainColorContrast xl:px-4 xl:py-3 2xl:px-6 xl:p 2xl:py-4"
+                  >
+                    {github.name}
+                    <MdOutlineArrowOutward className="ml-1" />
+                  </a>
                 </div>
-              </div>
+              )}
             </div>
           </div>
         </div>
@@ -118,13 +111,20 @@ export default function PortfolioCard({
   );
 }
 
-PortfolioCard.propTypes = {
+PortfolioCard2.propTypes = {
   title: PropTypes.string.isRequired,
-  image: PropTypes.object.isRequired,
   subTitle: PropTypes.string.isRequired,
   techStack: PropTypes.string.isRequired,
-  features: PropTypes.array.isRequired,
-  description: PropTypes.string.isRequired,
-  webSite: PropTypes.object,
-  github: PropTypes.object,
+  features: PropTypes.arrayOf(PropTypes.string).isRequired,
+  description: PropTypes.oneOfType([PropTypes.string, PropTypes.node])
+    .isRequired,
+  image: PropTypes.element.isRequired,
+  webSite: PropTypes.shape({
+    name: PropTypes.string,
+    url: PropTypes.string,
+  }),
+  github: PropTypes.shape({
+    name: PropTypes.string,
+    url: PropTypes.string,
+  }),
 };
