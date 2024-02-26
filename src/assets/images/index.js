@@ -39,11 +39,17 @@ import glaceArt from "./blog/sculpture-glace.jpg";
 export { accessibility, codeTogether, discordSrv, education, ue5, medecineChinoise, chocolaterie, palworld, glaceArt };
 
 
-import alixShiba from "./portfolio/alix-shiba.jpg";
+import alixShibaSm from "./portfolio/alix-shiba-small.jpg";
+import alixShibaMd from "./portfolio/alix-shiba-medium.jpg";
+import alixShibaLg from "./portfolio/alix-shiba-large.jpg";
 import heliciaSm from "./portfolio/helicia-small.png";
 import heliciaMd from "./portfolio/helicia-medium.png";
 import heliciaLg from "./portfolio/helicia-large.png";
-import montQAngels from "./portfolio/mont-q-angels.jpg";
-import prestation from "./portfolio/prestation-website.jpg";
+import montQAngelsSm from "./portfolio/mont-q-angels-small.jpg";
+import montQAngelsMd from "./portfolio/mont-q-angels-medium.jpg";
+import montQAngelsLg from "./portfolio/mont-q-angels-large.jpg";
+import maquetteSm from "./portfolio/maquette-small.jpg";
+import maquetteMd from "./portfolio/maquette-medium.jpg";
+import maquetteLg from "./portfolio/maquette-large.jpg";
 
-export { alixShiba, heliciaSm, heliciaMd, heliciaLg, montQAngels, prestation };
+export { alixShibaSm, alixShibaMd, alixShibaLg, heliciaSm, heliciaMd, heliciaLg, montQAngelsSm, montQAngelsMd, montQAngelsLg, maquetteSm, maquetteMd, maquetteLg};

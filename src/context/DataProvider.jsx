@@ -25,12 +25,18 @@ import {
   palworld,
   glaceArt,
   accessibility,
-  alixShiba,
+  alixShibaSm,
+  alixShibaMd,
+  alixShibaLg,
   heliciaSm,
   heliciaMd,
   heliciaLg,
-  montQAngels,
-  prestation,
+  montQAngelsSm,
+  montQAngelsMd,
+  montQAngelsLg,
+  maquetteSm,
+  maquetteMd,
+  maquetteLg,
 } from "../assets/images";
 
 export const DataContext = createContext(); // Create a context object and give provider
@@ -1004,7 +1010,17 @@ export default function DataProvider(props) {
       ],
       image: (
         <img
-          src={alixShiba}
+          srcSet={`
+            ${alixShibaSm} 460w,
+            ${alixShibaMd} 690w,
+            ${alixShibaLg} 900w
+          `}
+          sizes="
+            (max-width: 460px) 460px,
+            (max-width: 690px) 690px,
+            900px
+          "
+          src={alixShibaLg}
           alt="kinésiologue animaliere alix"
           className="object-cover"
         />
@@ -1112,7 +1128,17 @@ export default function DataProvider(props) {
       ],
       image: (
         <img
-          src={montQAngels}
+          srcSet={`
+            ${montQAngelsSm} 460w,
+            ${montQAngelsMd} 690w,
+            ${montQAngelsLg} 900w
+          `}
+          sizes="
+            (max-width: 460px) 460px,
+            (max-width: 690px) 690px,
+            900px
+          "
+          src={montQAngelsLg}
           alt="premiere application web"
           className="object-cover"
         />
@@ -1157,7 +1183,17 @@ export default function DataProvider(props) {
       features: "",
       image: (
         <img
-          src={prestation}
+          srcSet={`
+            ${maquetteSm} 460w,
+            ${maquetteMd} 690w,
+            ${maquetteLg} 900w
+          `}
+          sizes="
+            (max-width: 460px) 460px,
+            (max-width: 690px) 690px,
+            900px
+          "
+          src={maquetteLg}
           alt="maquette de présentation de tarifs"
           className="object-cover"
         />
