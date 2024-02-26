@@ -132,7 +132,7 @@ export default function PortfolioCard({
               ) : (
                 <div className="flex justify-end lg:items-end">
                   <a
-                    href={webSite.url}
+                    href={github.url}
                     target="_blank"
                     rel="noopener noreferrer"
                     className={`flex item-center px-3 py-2 rounded-lg shadow-xl shadow-mainColor/20 text-white font-extrabold transition-all duration-200 hover:brightness-150 hover:text-mainColorContrast xl:px-4 xl:py-3 ${
