@@ -25,14 +25,14 @@ export default function PortfolioCard({
       data-aos="fade-left"
       data-aos-duration="600"
       data-aos-easing="ease-in-out"
-      className="relative min-h-[800px]"
+      className="relative font-medium min-h-[800px]"
     >
       <div
         className={`text-sm rounded-xl overflow-hidden shadow-lg shadow-slate-600 lg:overflow-visible lg:absolute lg:h-4/5 lg:w-[90%] lg:bottom-0 xl:text-[15px] 2xl:text-base
         ${
           isEven
-            ? "lg:right-0 bg-mainColorContrast/60"
-            : "lg:left-0 bg-mainColor/60"
+            ? "lg:right-0 bg-mainColorContrast/80"
+            : "lg:left-0 bg-mainColor/80"
         }
          `}
       >
@@ -68,7 +68,7 @@ export default function PortfolioCard({
             </div>
             {features && (
               <div
-                className={`mb-4 bg-[#D1D8E2] shadow-xl shadow-mainColor/20 rounded-lg p-4 lg:absolute lg:top-1/2 lg:-translate-y-1/2 lg:w-[37.5%] xl:top-[65.5%] xl:w-[37.2%] ${
+                className={`mb-4 bg-[#D1D8E2] shadow-xl shadow-mainColor/20 rounded-lg p-4 lg:absolute lg:top-1/2 lg:-translate-y-1/2 lg:w-[37.5%] xl:top-[66%] xl:w-[37.2%] ${
                   isEven ? "lg:left-3 xl:left-5" : "lg:right-3 xl:right-5"
                 } `}
               >
