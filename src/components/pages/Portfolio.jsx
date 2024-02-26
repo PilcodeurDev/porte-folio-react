@@ -134,6 +134,7 @@ export default function Portfolio() {
                     image={image}
                     webSite={webSite}
                     github={github}
+                    index={index}
                   />
                 );
               }
