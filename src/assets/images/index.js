@@ -40,13 +40,10 @@ export { accessibility, codeTogether, discordSrv, education, ue5, medecineChinoi
 
 
 import alixShiba from "./portfolio/alix-shiba.jpg";
-import avocat from "./portfolio/avocat.jpg";
-import ball from "./portfolio/ball.jpg";
-import cherry from "./portfolio/cherry.jpg";
-import chimere from "./portfolio/chimere.jpg";
-import dribbble from "./portfolio/dribbble.jpg";
-import helicia from "./portfolio/helicia.jpg";
-import myQAngels from "./portfolio/my-q-angels.jpg";
+import heliciaSm from "./portfolio/helicia-small.png";
+import heliciaMd from "./portfolio/helicia-medium.png";
+import heliciaLg from "./portfolio/helicia-large.png";
+import montQAngels from "./portfolio/mont-q-angels.jpg";
 import prestation from "./portfolio/prestation-website.jpg";
 
-export { alixShiba, avocat, ball, cherry, chimere, dribbble, helicia, myQAngels, prestation };
+export { alixShiba, heliciaSm, heliciaMd, heliciaLg, montQAngels, prestation };

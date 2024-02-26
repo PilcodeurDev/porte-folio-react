@@ -26,13 +26,10 @@ import {
   glaceArt,
   accessibility,
   alixShiba,
-  avocat,
-  ball,
-  cherry,
-  chimere,
-  dribbble,
-  helicia,
-  myQAngels,
+  heliciaSm,
+  heliciaMd,
+  heliciaLg,
+  montQAngels,
   prestation,
 } from "../assets/images";
 
@@ -1054,7 +1051,17 @@ export default function DataProvider(props) {
       ],
       image: (
         <img
-          src={helicia}
+          srcSet={`
+            ${heliciaSm} 460w,
+            ${heliciaMd} 690w,
+            ${heliciaLg} 900w
+          `}
+          sizes="
+            (max-width: 460px) 460px,
+            (max-width: 690px) 690px,
+            900px
+          "
+          src={heliciaLg}
           alt="application web de livraison par drone"
           className="object-cover"
         />
@@ -1105,7 +1112,7 @@ export default function DataProvider(props) {
       ],
       image: (
         <img
-          src={myQAngels}
+          src={montQAngels}
           alt="premiere application web"
           className="object-cover"
         />
