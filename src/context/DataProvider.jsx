@@ -1,4 +1,3 @@
-/* eslint-disable react/no-unescaped-entities */
 /**
  * The external imports
  */
@@ -49,7 +48,7 @@ export default function DataProvider(props) {
     phone: "+33 6 14 42 17 80",
     email: "simondprs62790@gmail.com",
     nationality: "Française",
-    languages: "Français, Anglais",
+    languages: "Français maternel, Anglais B1",
   });
 
   const skillData = [
@@ -132,10 +131,6 @@ export default function DataProvider(props) {
     },
   ];
 
-  const available = () => {
-    return <span className="text-validColor font-bold text-xl">Disponible</span>;
-  };
-
   const aboutMe = [
     {
       id: 1,
@@ -159,23 +154,23 @@ export default function DataProvider(props) {
     },
     {
       id: 5,
-      title: "Indépendant :",
-      value: available(),
-    },
-    {
-      id: 6,
       title: "Adresse :",
       value: owner.address2,
     },
     {
-      id: 7,
+      id: 6,
       title: "Téléphone :",
       value: owner.phone,
     },
     {
-      id: 8,
+      id: 7,
       title: "Email :",
       value: owner.email,
+    },
+    {
+      id: 8,
+      title: "Langue :",
+      value: owner.languages,
     },
     {
       id: 9,
@@ -190,11 +185,6 @@ export default function DataProvider(props) {
           <FaWhatsappSquare />
         </a>
       ),
-    },
-    {
-      id: 10,
-      title: "Langue :",
-      value: owner.languages,
     },
   ];
 
@@ -970,250 +960,208 @@ export default function DataProvider(props) {
       ),
     },
   ];
-  const categorysWork = ["Tous", "site web", "app web", "maquette", "vidéo"];
+  const categorysWork = ["Tous", "Site Web", "App Web", "Maquette"];
 
   const portfolioData = [
     {
-      id: 1,
       title: "GoReconnect",
       category: categorysWork[1],
+      techStack: "HTML, CSS, JavaScript, React.JS, Netlify et GitHub.",
+      subTitle:
+        "Création d'un site de prestation de service et identitée visuelle.",
+      description: (
+        <>
+          <p>
+            GoReconnect est un site web mettant en avant les prestations de
+            service de <strong>Alix, kinésiologue animalière</strong>.
+          </p>
+          <p>
+            L'objectif de ce projet était de créer une{" "}
+            <strong>identité numérique</strong> correspondant à l'image que
+            souhaite exprimer la cliente. Le site permet aux utilisateurs de{" "}
+            <strong>prendre rendez-vous</strong> en ligne, enregistrer les
+            informations de leurs animaux pour gagner du temps lors des
+            prochaines prise de rendez-vous.
+          </p>
+          <p>
+            Les utilisateurs pourront en apprendre plus sur la kinésiologie
+            grace à une page dédiée. Ils pourront <strong>liker</strong>,{" "}
+            <strong>commenter</strong> et <strong>partager</strong> les articles
+            qu'écrit Alix sur son blog. Le site web a été conçu avec une
+            approche mobile-first et en étant orienté sur le référencement
+            naturel (SEO) afin d'augmenter sa visibilité sur les moteurs de
+            recherche.
+          </p>
+        </>
+      ),
+      features: [
+        "Agenda connecter à Google Agenda",
+        "API Google Maps",
+        "Création de compte utilisateur",
+        "Formulaire Dynamique",
+        "Mail automatisé",
+        "Paiement en ligne",
+        "Intégration de contenu (blog)",
+        "Like, commente et partage des articles",
+        "SEO",
+      ],
       image: (
         <img
           src={alixShiba}
           alt="kinésiologue animaliere alix"
-          className="rounded-xl object-cover"
+          className="object-cover"
         />
       ),
-      modalText: {
-        p1: "Alix, kinésiologue animalière",
-        p2: "rafraichissement de site web",
-        p3: (
-          <a
-            href="https://goreconnect.ch/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-mainColorContrast"
-          >
-            GoReconnect.ch
-          </a>
-        ),
-        p4: "HTML, CSS, JavaScript, React",
+      webSite: {
+        name: "GoReconnect.ch",
+        url: "https://goreconnect.ch/",
+      },
+      github: {
+        name: "Github",
+        url: "https://github.com/PilcodeurDev/GoReconnect",
       },
     },
     {
-      id: 2,
       title: "Hélicia",
       category: categorysWork[2],
+      techStack: "HTML, CSS, JavaScript, Ruby on Rails, Scalingo et GitHub.",
+      subTitle: "Application web de livraison par drone",
+      description: (
+        <>
+          <p>
+            Helicia a été conçue dans le cadre de la formation de développement
+            full-stack chez Le Wagon.
+          </p>
+          <p>
+            L'<strong>objectif</strong> de ce projet était de réaliser une
+            application web <strong>fonctionnelle en 5 jours</strong>, par
+            équipe de 3 personnes, avec une répartition des tâches et des
+            responsabilités.
+          </p>
+          <p>
+            Nous avons également utilisé des outils de gestion de projet tels
+            que Figma, Trello et GitHub pour organiser notre travail et
+            collaborer efficacement.
+          </p>
+        </>
+      ),
+      features: [
+        "Search bar intelligente",
+        "Map interactive avec drone",
+        "Création de compte utilisateur",
+        "fil d'ariane",
+        "Panier d'achat",
+      ],
       image: (
         <img
           src={helicia}
           alt="application web de livraison par drone"
-          className="rounded-xl object-cover"
+          className="object-cover"
         />
       ),
-      modalText: {
-        p1: "mes collègues et moi",
-        p2: "projet de fin de formation",
-        p3: (
-          <a
-            href="https://github.com/PilcodeurDev/Helicia"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-mainColorContrast"
-          >
-            GitHub/Helicia
-          </a>
-        ),
-        p4: "HTML, CSS, JavaScript, Ruby on Rails",
+      webSite: {
+        name: "Helicia.net",
+        url: "",
+      },
+      github: {
+        name: "Github",
+        url: "https://github.com/PilcodeurDev/Helicia",
       },
     },
     {
-      id: 3,
-      title: "My Q Angels",
+      title: "Mont Q Angels",
       category: categorysWork[2],
+      techStack: "HTML, CSS, JavaScript, Ruby on Rails, Scalingo et Github.",
+      subTitle: "Ma première app web - Airbnb like",
+      description: (
+        <>
+          <p>
+            Mont Q Angels est une application web qui met en relation des
+            personnes qui souhaitent louer du papier toilette à des personnes en
+            situation de précarité.
+          </p>
+          <p>
+            Cette application web a été réalisée en <strong>3 jours</strong>,
+            par équipe de 3, avec une répartition des tâches et des
+            responsabilités. Elle a été conçue dans le cadre de la formation de
+            développement full-stack chez Le Wagon.
+          </p>
+          <p>
+            L'<strong>objectif</strong> de ce projet était de découvrir la
+            méthodologie <strong>AGILE</strong> dans un vrai projet en équipe et
+            de réaliser une application web fonctionnelle en 5 jours.
+          </p>
+          <p>
+            Nous avons également utilisé des outils de gestion de projet tels
+            que Trello et GitHub pour organiser notre travail et collaborer
+            efficacement.
+          </p>
+        </>
+      ),
+      features: [
+        "Création de compte utilisateur",
+        "Création d'annonce",
+        "Recherche d'annonce",
+      ],
       image: (
         <img
           src={myQAngels}
           alt="premiere application web"
-          className="rounded-xl object-cover"
+          className="object-cover"
         />
       ),
-      modalText: {
-        p1: "mes collègues et moi",
-        p2: "coésion d'équipe",
-        p3: (
-          <a
-            href="https://github.com/PilcodeurDev/MontQAngels"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-mainColorContrast"
-          >
-            GitHub/MontQAngels
-          </a>
-        ),
-        p4: "HTML, CSS, JavaScript, Ruby on Rails",
+      webSite: {
+        name: "MontQAngels.net",
+        url: "",
+      },
+      github: {
+        name: "Github",
+        url: "https://github.com/PilcodeurDev/MontQAngels",
       },
     },
     {
-      id: 4,
-      title: "Prestations",
+      title: "Maquette de prestations de services",
       category: categorysWork[3],
+      techStack: "Figma.",
+      subTitle: "Outil de communication du développeur",
+      description: (
+        <>
+          <p>
+            Présentation tarifaire pour un développeur web freelance qui
+            souhaite créer, vendre et maintenir un site internet.
+          </p>
+          <p>
+            La maquette, composée de plusieurs prestations différentes, est
+            utilisée comme <strong>appui visuel</strong> pour vulgariser et
+            promouvoir son travail devant un client qui souhaite avoir une
+            visibilité sur internet.
+          </p>
+          <p>
+            Elle est également un <strong>outil de travail</strong> pour le
+            développeur qui a besoin d'une vision claire de ses prestations.
+          </p>
+          <p>
+            Cette maquette est sujette à des modifications et des améliorations
+            en fonction de l'évolution des compétences du développeur en charge
+            de la création du site.
+          </p>
+        </>
+      ),
+      features: "",
       image: (
         <img
           src={prestation}
           alt="maquette de présentation de tarifs"
-          className="rounded-xl object-cover"
+          className="object-cover"
         />
       ),
-      modalText: {
-        p1: "Moi même",
-        p2: "maquette de présentation",
-        p3: (
-          <a
-            href="https://www.figma.com/proto/tF9iIhwCCv7os4LZrRFFqg/Headless-Next.js%2FStrapi?node-id=13-165&starting-point-node-id=13%3A165"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-mainColorContrast"
-          >
-            Maquette figma
-          </a>
-        ),
-        p4: "Figma",
+      webSite: {
+        name: "Maquette figma",
+        url: "https://www.figma.com/proto/tF9iIhwCCv7os4LZrRFFqg/Headless-Next.js%2FStrapi?node-id=13-165&starting-point-node-id=13%3A165",
       },
-    },
-    {
-      id: 5,
-      title: "futur Projet Dribbble",
-      category: categorysWork[1],
-      image: (
-        <img
-          src={dribbble}
-          alt="futur projet"
-          className="rounded-xl object-cover"
-        />
-      ),
-      modalText: {
-        p1: "Dribble",
-        p2: "site web",
-        p3: (
-          <a
-            href="https://dribbble.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-mainColorContrast"
-          >
-            Dribbble.com
-          </a>
-        ),
-        p4: "HTML, CSS, JavaScript, Three.js",
-      },
-    },
-    {
-      id: 6,
-      title: "futur projet youtube",
-      category: categorysWork[4],
-      image: (
-        <img
-          src={avocat}
-          alt="futur projet video"
-          className="rounded-xl object-cover"
-        />
-      ),
-      modalText: {
-        p1: "Youtube",
-        p2: "vidéo Youtube",
-        p3: (
-          <a
-            href="https://www.youtube.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-mainColorContrast"
-          >
-            Youtube.com
-          </a>
-        ),
-        p4: "Adobe After Effects",
-      },
-    },
-    {
-      id: 7,
-      title: "futur projet ThemeForest",
-      category: categorysWork[1],
-      image: (
-        <img
-          src={ball}
-          alt="futur projet video"
-          className="rounded-xl object-cover"
-        />
-      ),
-      modalText: {
-        p1: "ThemeForest",
-        p2: "template en vente",
-        p3: (
-          <a
-            href="https://themeforest.net/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-mainColorContrast"
-          >
-            ThemeForest.com
-          </a>
-        ),
-        p4: "HTML, CSS, Javascript, React, Three.js",
-      },
-    },
-    {
-      id: 8,
-      title: "futur projet Blender",
-      category: categorysWork[4],
-      image: (
-        <img
-          src={cherry}
-          alt="futur projet video"
-          className="rounded-xl object-cover"
-        />
-      ),
-      modalText: {
-        p1: "Unreal Engine 5",
-        p2: "création de vidéo",
-        p3: (
-          <a
-            href="https://www.unrealengine.com/fr/unreal-engine-5"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-mainColorContrast"
-          >
-            Unreal-Engine-5.com
-          </a>
-        ),
-        p4: "Unreal Engine 5, Adobe After Effects",
-      },
-    },
-    {
-      id: 9,
-      title: "futur projet Blender",
-      category: categorysWork[4],
-      image: (
-        <img
-          src={chimere}
-          alt="futur projet vidéo"
-          className="rounded-xl object-cover"
-        />
-      ),
-      modalText: {
-        p1: "Blender",
-        p2: "création de vidéo",
-        p3: (
-          <a
-            href="https://www.blender.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-mainColorContrast"
-          >
-            Blender.org
-          </a>
-        ),
-        p4: "Blender, Adobe After Effects",
+      github: {
+        name: "Github",
+        url: "",
       },
     },
   ];

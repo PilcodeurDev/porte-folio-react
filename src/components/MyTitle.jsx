@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 
 export default function MyTitle({ span1, span2, shadow }) {
   return (
-    <header className="flex justify-center relative uppercase md:mb-10 xl:mb-20">
+    <header className="flex justify-center relative uppercase md:mb-10">
       <h1 className=" my-16 text-3xl md:text-[2.8rem]">
         <span>{span1} </span>
         <span className="ml-2 text-mainColorContrast">{span2} </span>

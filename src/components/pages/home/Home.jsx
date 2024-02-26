@@ -2,9 +2,7 @@
  * The external imports
  */
 import { FaArrowRightLong } from "react-icons/fa6";
-import { Suspense, useContext, useEffect } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
+import { Suspense, useContext } from "react";
 import { Canvas } from "@react-three/fiber";
 import { Bloom, EffectComposer } from "@react-three/postprocessing";
 import { TiArrowSyncOutline } from "react-icons/ti";
@@ -25,10 +23,6 @@ export default function Home() {
   const BUTTON_TEXT = "À propos de moi";
   const BUTTON_HREF = "/about";
   const BUTTON_ICON = <FaArrowRightLong />;
-
-  useEffect(() => {
-    AOS.init();
-  }, []);
 
   return (
     <>
