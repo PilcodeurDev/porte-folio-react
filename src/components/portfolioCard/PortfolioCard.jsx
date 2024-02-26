@@ -37,7 +37,7 @@ export default function PortfolioCard({
          `}
       >
         <div
-          data-aos="flip-down"
+          data-aos="fade-down"
           data-aos-duration="800"
           data-aos-easing="ease-in-out"
           data-aos-delay="300"
@@ -50,18 +50,18 @@ export default function PortfolioCard({
         <div className="p-4 lg:grid lg:grid-cols-3 lg:p-0 lg:h-full">
           <div className={`lg:col-span-1 ${isEven ? "" : "order-2"} `}></div>
           <div
-            className={`lg:col-span-2 lg:px-4 lg:py-4 lg:flex lg:flex-col ${
+            className={`lg:col-span-2 lg:px-5 lg:py-4 lg:flex lg:flex-col ${
               isEven ? "lg:ml-[9%]" : "lg:mr-[9%] order-1"
             } `}
           >
             <h3
-              className={`mb-2 ${
+              className={`mb-2 xl:mb-4 ${
                 isEven ? "text-mainColor" : "text-mainColorContrast"
               }`}
             >
               {title}
             </h3>
-            <p className="mb-4 text-white font-extrabold">{subTitle}</p>
+            <p className="mb-4 text-white font-black">{subTitle}</p>
             <div className="bg-[#D1D8E2] shadow-xl shadow-mainColor/20 rounded-lg mb-5 p-4">
               <p className="mb-2 font-semibold">Description :</p>
               <p className="pl-3">{description}</p>
@@ -69,7 +69,7 @@ export default function PortfolioCard({
             {features && (
               <div
                 className={`mb-4 bg-[#D1D8E2] shadow-xl shadow-mainColor/20 rounded-lg p-4 lg:absolute lg:top-1/2 lg:-translate-y-1/2 lg:w-[37.5%] xl:top-[65.5%] xl:w-[37.2%] ${
-                  isEven ? "lg:left-3 xl:left-4" : "lg:right-3 xl:right-4"
+                  isEven ? "lg:left-3 xl:left-5" : "lg:right-3 xl:right-5"
                 } `}
               >
                 <div>
@@ -86,11 +86,12 @@ export default function PortfolioCard({
             )}
             <div className="mb-10 bg-[#D1D8E2] shadow-xl shadow-mainColor/20 rounded-lg p-4 lg:mb-6">
               <p className="mb-1 font-semibold">Technologies :</p>
-              <p className="ml-4">{techStack}</p>
+              <p className="ml-3">{techStack}</p>
             </div>
             <div className="lg:flex-1">
+              {/* The conditionnal rendering button */}
               {webSite.url && github.url ? (
-                <div className="flex justify-between lg:h-3/4 lg:items-end">
+                <div className="flex justify-between lg:items-end">
                   <a
                     href={github.url}
                     target="_blank"

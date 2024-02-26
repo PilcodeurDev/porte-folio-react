@@ -987,9 +987,10 @@ export default function DataProvider(props) {
             Les utilisateurs pourront en apprendre plus sur la kinésiologie
             grace à une page dédiée. Ils pourront <strong>liker</strong>,{" "}
             <strong>commenter</strong> et <strong>partager</strong> les articles
-            qu'écrit Alix sur son blog. Le site web a été conçu avec une approche mobile-first et en étant
-            orienté sur le référencement naturel (SEO) afin d'augmenter sa
-            visibilité sur les moteurs de recherche.
+            qu'écrit Alix sur son blog. Le site web a été conçu avec une
+            approche mobile-first et en étant orienté sur le référencement
+            naturel (SEO) afin d'augmenter sa visibilité sur les moteurs de
+            recherche.
           </p>
         </>
       ),
@@ -1032,9 +1033,10 @@ export default function DataProvider(props) {
             full-stack chez Le Wagon.
           </p>
           <p>
-            Le but de ce projet était de réaliser une application web
-            fonctionnelle en 5 jours, par équipe de 3 personnes, avec une
-            répartition des tâches et des responsabilités.
+            L'<strong>objectif</strong> de ce projet était de réaliser une
+            application web <strong>fonctionnelle en 5 jours</strong>, par
+            équipe de 3 personnes, avec une répartition des tâches et des
+            responsabilités.
           </p>
           <p>
             Nous avons également utilisé des outils de gestion de projet tels
@@ -1067,27 +1069,27 @@ export default function DataProvider(props) {
       },
     },
     {
-      title: "My Q Angels",
+      title: "Mont Q Angels",
       category: categorysWork[2],
       techStack: "HTML, CSS, JavaScript, Ruby on Rails, Scalingo et Github.",
       subTitle: "Ma première app web - Airbnb like",
       description: (
         <>
           <p>
-            My Q Angels est une application web qui met en relation des
+            Mont Q Angels est une application web qui met en relation des
             personnes qui souhaitent louer du papier toilette à des personnes en
             situation de précarité.
           </p>
           <p>
-            Cette application web a été réalisée en 3jours, par équipe de 3,
-            avec une répartition des tâches et des responsabilités. Elle a été
-            conçue dans le cadre de la formation de développement full-stack
-            chez Le Wagon.
+            Cette application web a été réalisée en <strong>3 jours</strong>,
+            par équipe de 3, avec une répartition des tâches et des
+            responsabilités. Elle a été conçue dans le cadre de la formation de
+            développement full-stack chez Le Wagon.
           </p>
           <p>
-            L'objectif de ce projet était de découvrir la méthodologie AGILE
-            dans un vrai projet en équipe et de réaliser une application web
-            fonctionnelle en 5 jours.
+            L'<strong>objectif</strong> de ce projet était de découvrir la
+            méthodologie <strong>AGILE</strong> dans un vrai projet en équipe et
+            de réaliser une application web fonctionnelle en 5 jours.
           </p>
           <p>
             Nous avons également utilisé des outils de gestion de projet tels
@@ -1129,13 +1131,14 @@ export default function DataProvider(props) {
             souhaite créer, vendre et maintenir un site internet.
           </p>
           <p>
-            La maquette, composée de plusieurs prestations différentes, sert
-            d'appui visuel pour vulgariser et promouvoir son travail devant un
-            client qui souhaite avoir une visibilité sur internet.
+            La maquette, composée de plusieurs prestations différentes, est
+            utilisée comme <strong>appui visuel</strong> pour vulgariser et
+            promouvoir son travail devant un client qui souhaite avoir une
+            visibilité sur internet.
           </p>
           <p>
-            Elle est également un outil de travail pour le développeur qui a
-            besoin d'une vision claire de ses prestations.
+            Elle est également un <strong>outil de travail</strong> pour le
+            développeur qui a besoin d'une vision claire de ses prestations.
           </p>
           <p>
             Cette maquette est sujette à des modifications et des améliorations
