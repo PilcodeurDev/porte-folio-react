@@ -103,7 +103,7 @@ export default function Portfolio() {
             </div>
           </div>
         )}
-        <div className="flex flex-col gap-40 mt-16 lg:gap-52">
+        <div className="flex flex-col gap-28 my-16 lg:gap-52">
           {portfolioData.map(
             (
               {

@@ -16,24 +16,45 @@ import {
   pgSQL,
   react,
   ruby,
-  codeTogether,
-  discordSrv,
-  education,
-  ue5,
-  medecineChinoise,
-  chocolaterie,
-  palworld,
-  glaceArt,
-  accessibility,
-  alixShiba,
-  avocat,
-  ball,
-  cherry,
-  chimere,
-  dribbble,
-  helicia,
-  myQAngels,
-  prestation,
+  accessibilitySm,
+  accessibilityMd,
+  accessibilityFtd,
+  codeTogetherSm,
+  codeTogetherMd,
+  codeTogetherFtd,
+  discordSrvSm,
+  discordSrvMd,
+  discordSrvFtd,
+  educationSm,
+  educationMd,
+  educationFtd,
+  ue5Sm,
+  ue5Md,
+  ue5Ftd,
+  medecineChinoiseSm,
+  medecineChinoiseMd,
+  medecineChinoiseFtd,
+  chocolaterieSm,
+  chocolaterieMd,
+  chocolaterieFtd,
+  palworldSm,
+  palworldMd,
+  palworldFtd,
+  glaceArtSm,
+  glaceArtMd,
+  glaceArtFtd,
+  alixShibaSm,
+  alixShibaMd,
+  alixShibaLg,
+  heliciaSm,
+  heliciaMd,
+  heliciaLg,
+  montQAngelsSm,
+  montQAngelsMd,
+  montQAngelsLg,
+  maquetteSm,
+  maquetteMd,
+  maquetteLg,
 } from "../assets/images";
 
 export const DataContext = createContext(); // Create a context object and give provider
@@ -199,7 +220,22 @@ export default function DataProvider(props) {
       catchphrase: "Mon parcours pour devenir développeur web",
       image: (
         <img
-          src={codeTogether}
+          srcSet={`
+            ${codeTogetherSm} 460w,
+            ${codeTogetherMd} 690w
+          `}
+          sizes="
+            (max-width: 460px) 460px,
+            690px,
+          "
+          src={codeTogetherMd}
+          alt="travail a plusieurs"
+          className="w-full object-cover duration-300 ease-in-out"
+        />
+      ),
+      featuredImage: (
+        <img
+          src={codeTogetherFtd}
           alt="travail a plusieurs"
           className="w-full object-cover duration-300 ease-in-out"
         />
@@ -275,8 +311,23 @@ export default function DataProvider(props) {
         "Explorez le monde fascinant de la création de jeux vidéo avec Unreal Engine 5. Une aventure captivante et ludique.",
       image: (
         <img
-          src={ue5}
-          alt="fond d'écran jeux vidéo"
+          srcSet={`
+            ${ue5Sm} 460w,
+            ${ue5Md} 690w
+          `}
+          sizes="
+            (max-width: 460px) 460px,
+            690px,
+          "
+          src={ue5Md}
+          alt="travail a plusieurs"
+          className="w-full object-cover duration-300 ease-in-out"
+        />
+      ),
+      featuredImage: (
+        <img
+          src={ue5Ftd}
+          alt="travail a plusieurs"
           className="w-full object-cover duration-300 ease-in-out"
         />
       ),
@@ -379,8 +430,23 @@ export default function DataProvider(props) {
         "Découvrez des stratégies efficaces pour augmenter l'audience de votre serveur Discord et créer une communauté florissante.",
       image: (
         <img
-          src={discordSrv}
-          alt="logo discord"
+          srcSet={`
+            ${discordSrvSm} 460w,
+            ${discordSrvMd} 690w
+          `}
+          sizes="
+            (max-width: 460px) 460px,
+            690px,
+          "
+          src={discordSrvMd}
+          alt="travail a plusieurs"
+          className="w-full object-cover duration-300 ease-in-out"
+        />
+      ),
+      featuredImage: (
+        <img
+          src={discordSrvFtd}
+          alt="travail a plusieurs"
           className="w-full object-cover duration-300 ease-in-out"
         />
       ),
@@ -466,8 +532,23 @@ export default function DataProvider(props) {
         "Explorez les principes fondamentaux pour rendre vos sites web accessibles à tous, quel que soit leur niveau d'aptitude.",
       image: (
         <img
-          src={accessibility}
-          alt="dessin sur l'accessibilité"
+          srcSet={`
+            ${accessibilitySm} 460w,
+            ${accessibilityMd} 690w
+          `}
+          sizes="
+            (max-width: 460px) 460px,
+            690px,
+          "
+          src={accessibilityMd}
+          alt="travail a plusieurs"
+          className="w-full object-cover duration-300 ease-in-out"
+        />
+      ),
+      featuredImage: (
+        <img
+          src={accessibilityFtd}
+          alt="travail a plusieurs"
           className="w-full object-cover duration-300 ease-in-out"
         />
       ),
@@ -555,9 +636,24 @@ export default function DataProvider(props) {
         "Découvrez les controverses entourant le jeu PalWorld et explorez les différentes perspectives de cette polémique.",
       image: (
         <img
-          src={palworld}
-          alt="familier avec une arme a feu"
-          className="w-full object-cover object-top duration-300 ease-in-out"
+          srcSet={`
+            ${palworldSm} 460w,
+            ${palworldMd} 690w
+          `}
+          sizes="
+            (max-width: 460px) 460px,
+            690px,
+          "
+          src={palworldMd}
+          alt="travail a plusieurs"
+          className="w-full object-cover duration-300 ease-in-out"
+        />
+      ),
+      featuredImage: (
+        <img
+          src={palworldFtd}
+          alt="travail a plusieurs"
+          className="w-full object-cover duration-300 ease-in-out"
         />
       ),
       subTitle: "Analyse approfondie des opinions divergentes sur PalWorld.",
@@ -670,8 +766,23 @@ export default function DataProvider(props) {
         "Découvrez l'importance cruciale de la courbe de température dans l'art délicat de la chocolaterie.",
       image: (
         <img
-          src={chocolaterie}
-          alt="entreprise lilloise réputée"
+          srcSet={`
+            ${chocolaterieSm} 460w,
+            ${chocolaterieMd} 690w
+          `}
+          sizes="
+            (max-width: 460px) 460px,
+            690px,
+          "
+          src={chocolaterieMd}
+          alt="travail a plusieurs"
+          className="w-full object-cover duration-300 ease-in-out"
+        />
+      ),
+      featuredImage: (
+        <img
+          src={chocolaterieFtd}
+          alt="travail a plusieurs"
           className="w-full object-cover duration-300 ease-in-out"
         />
       ),
@@ -742,8 +853,23 @@ export default function DataProvider(props) {
         "Comparez deux formes d'art uniques : la sculpture sur glace et la conception d'espaces en 3D, et découvrez leurs similitudes surprenantes.",
       image: (
         <img
-          src={glaceArt}
-          alt="sculpture sur glace"
+          srcSet={`
+            ${glaceArtSm} 460w,
+            ${glaceArtMd} 690w
+          `}
+          sizes="
+            (max-width: 460px) 460px,
+            690px,
+          "
+          src={glaceArtMd}
+          alt="travail a plusieurs"
+          className="w-full object-cover duration-300 ease-in-out"
+        />
+      ),
+      featuredImage: (
+        <img
+          src={glaceArtFtd}
+          alt="travail a plusieurs"
           className="w-full object-cover duration-300 ease-in-out"
         />
       ),
@@ -810,8 +936,23 @@ export default function DataProvider(props) {
         "Explorez les liens entre la kinésiologie et la médecine chinoise, et découvrez comment ces pratiques contribuent au bien-être physique et mental.",
       image: (
         <img
-          src={medecineChinoise}
-          alt="médecine chinoise"
+          srcSet={`
+            ${medecineChinoiseSm} 460w,
+            ${medecineChinoiseMd} 690w
+          `}
+          sizes="
+            (max-width: 460px) 460px,
+            690px,
+          "
+          src={medecineChinoiseMd}
+          alt="travail a plusieurs"
+          className="w-full object-cover duration-300 ease-in-out"
+        />
+      ),
+      featuredImage: (
+        <img
+          src={medecineChinoiseFtd}
+          alt="travail a plusieurs"
           className="w-full object-cover duration-300 ease-in-out"
         />
       ),
@@ -898,8 +1039,23 @@ export default function DataProvider(props) {
         "Découvrez comment l'éducation positive peut renforcer le lien entre les propriétaires et leurs compagnons à quatre pattes.",
       image: (
         <img
-          src={education}
-          alt="éducation positive"
+          srcSet={`
+            ${educationSm} 460w,
+            ${educationMd} 690w
+          `}
+          sizes="
+            (max-width: 460px) 460px,
+            690px,
+          "
+          src={educationMd}
+          alt="travail a plusieurs"
+          className="w-full object-cover duration-300 ease-in-out"
+        />
+      ),
+      featuredImage: (
+        <img
+          src={educationFtd}
+          alt="travail a plusieurs"
           className="w-full object-cover duration-300 ease-in-out"
         />
       ),
@@ -1007,7 +1163,17 @@ export default function DataProvider(props) {
       ],
       image: (
         <img
-          src={alixShiba}
+          srcSet={`
+            ${alixShibaSm} 460w,
+            ${alixShibaMd} 690w,
+            ${alixShibaLg} 900w
+          `}
+          sizes="
+            (max-width: 460px) 460px,
+            (max-width: 690px) 690px,
+            900px
+          "
+          src={alixShibaLg}
           alt="kinésiologue animaliere alix"
           className="object-cover"
         />
@@ -1054,7 +1220,17 @@ export default function DataProvider(props) {
       ],
       image: (
         <img
-          src={helicia}
+          srcSet={`
+            ${heliciaSm} 460w,
+            ${heliciaMd} 690w,
+            ${heliciaLg} 900w
+          `}
+          sizes="
+            (max-width: 460px) 460px,
+            (max-width: 690px) 690px,
+            900px
+          "
+          src={heliciaLg}
           alt="application web de livraison par drone"
           className="object-cover"
         />
@@ -1105,7 +1281,17 @@ export default function DataProvider(props) {
       ],
       image: (
         <img
-          src={myQAngels}
+          srcSet={`
+            ${montQAngelsSm} 460w,
+            ${montQAngelsMd} 690w,
+            ${montQAngelsLg} 900w
+          `}
+          sizes="
+            (max-width: 460px) 460px,
+            (max-width: 690px) 690px,
+            900px
+          "
+          src={montQAngelsLg}
           alt="premiere application web"
           className="object-cover"
         />
@@ -1150,7 +1336,17 @@ export default function DataProvider(props) {
       features: "",
       image: (
         <img
-          src={prestation}
+          srcSet={`
+            ${maquetteSm} 460w,
+            ${maquetteMd} 690w,
+            ${maquetteLg} 900w
+          `}
+          sizes="
+            (max-width: 460px) 460px,
+            (max-width: 690px) 690px,
+            900px
+          "
+          src={maquetteLg}
           alt="maquette de présentation de tarifs"
           className="object-cover"
         />

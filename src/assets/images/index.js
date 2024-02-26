@@ -26,27 +26,48 @@ import tailwindAM from './tailwind-alphamap.png';
 export { bootstrap, bootstrapAM, css, cssAM, figma, figmaAM, github, githubAM, html, htmlAM, js, jsAM, netlify, netlifyAM, pgSQL, pgSQLAM, three, threeAM, react, reactAM, ruby, rubyAM, tailwind, tailwindAM };
 
 
-import accessibility from "./blog/accessibility.jpg";
-import codeTogether from "./blog/work-together.jpg";
-import discordSrv from "./blog/discord-server.jpeg";
-import education from "./blog/positif-dog.jpg";
-import ue5 from "./blog/jeuxvideo.jpg";
-import medecineChinoise from "./blog/medecine-chinoise.jpg";
-import chocolaterie from "./blog/meert.jpg";
-import palworld from "./blog/palworld.jpg";
-import glaceArt from "./blog/sculpture-glace.jpg";
+import accessibilitySm from "./blog/accessibility-small.jpg";
+import accessibilityMd from "./blog/accessibility-medium.jpg";
+import accessibilityFtd from "./blog/accessibility-featured.jpg";
+import codeTogetherSm from "./blog/work-together-small.jpg";
+import codeTogetherMd from "./blog/work-together-medium.jpg";
+import codeTogetherFtd from "./blog/work-together-featured.jpg";
+import discordSrvSm from "./blog/discord-server-small.jpg";
+import discordSrvMd from "./blog/discord-server-medium.jpg";
+import discordSrvFtd from "./blog/discord-server-featured.jpg";
+import educationSm from "./blog/positif-dog-small.jpg";
+import educationMd from "./blog/positif-dog-medium.jpg";
+import educationFtd from "./blog/positif-dog-featured.jpg";
+import ue5Sm from "./blog/jeuxvideo-small.jpg";
+import ue5Md from "./blog/jeuxvideo-medium.jpg";
+import ue5Ftd from "./blog/jeuxvideo-featured.jpg";
+import medecineChinoiseSm from "./blog/medecine-chinoise-small.jpg";
+import medecineChinoiseMd from "./blog/medecine-chinoise-medium.jpg";
+import medecineChinoiseFtd from "./blog/medecine-chinoise-featured.jpg";
+import chocolaterieSm from "./blog/meert-small.jpg";
+import chocolaterieMd from "./blog/meert-medium.jpg";
+import chocolaterieFtd from "./blog/meert-featured.jpg";
+import palworldSm from "./blog/palworld-small.jpg";
+import palworldMd from "./blog/palworld-medium.jpg";
+import palworldFtd from "./blog/palworld-featured.jpg";
+import glaceArtSm from "./blog/sculpture-glace-small.jpg";
+import glaceArtMd from "./blog/sculpture-glace-medium.jpg";
+import glaceArtFtd from "./blog/sculpture-glace-featured.jpg";
 
-export { accessibility, codeTogether, discordSrv, education, ue5, medecineChinoise, chocolaterie, palworld, glaceArt };
+export { accessibilitySm, accessibilityMd, accessibilityFtd, codeTogetherSm, codeTogetherMd, codeTogetherFtd, discordSrvSm, discordSrvMd, discordSrvFtd, educationSm, educationMd, educationFtd, ue5Sm, ue5Md, ue5Ftd, medecineChinoiseSm, medecineChinoiseMd, medecineChinoiseFtd, chocolaterieSm, chocolaterieMd, chocolaterieFtd, palworldSm, palworldMd, palworldFtd, glaceArtSm, glaceArtMd, glaceArtFtd};
 
 
-import alixShiba from "./portfolio/alix-shiba.jpg";
-import avocat from "./portfolio/avocat.jpg";
-import ball from "./portfolio/ball.jpg";
-import cherry from "./portfolio/cherry.jpg";
-import chimere from "./portfolio/chimere.jpg";
-import dribbble from "./portfolio/dribbble.jpg";
-import helicia from "./portfolio/helicia.jpg";
-import myQAngels from "./portfolio/my-q-angels.jpg";
-import prestation from "./portfolio/prestation-website.jpg";
+import alixShibaSm from "./portfolio/alix-shiba-small.jpg";
+import alixShibaMd from "./portfolio/alix-shiba-medium.jpg";
+import alixShibaLg from "./portfolio/alix-shiba-large.jpg";
+import heliciaSm from "./portfolio/helicia-small.png";
+import heliciaMd from "./portfolio/helicia-medium.png";
+import heliciaLg from "./portfolio/helicia-large.png";
+import montQAngelsSm from "./portfolio/mont-q-angels-small.jpg";
+import montQAngelsMd from "./portfolio/mont-q-angels-medium.jpg";
+import montQAngelsLg from "./portfolio/mont-q-angels-large.jpg";
+import maquetteSm from "./portfolio/maquette-small.jpg";
+import maquetteMd from "./portfolio/maquette-medium.jpg";
+import maquetteLg from "./portfolio/maquette-large.jpg";
 
-export { alixShiba, avocat, ball, cherry, chimere, dribbble, helicia, myQAngels, prestation };
+export { alixShibaSm, alixShibaMd, alixShibaLg, heliciaSm, heliciaMd, heliciaLg, montQAngelsSm, montQAngelsMd, montQAngelsLg, maquetteSm, maquetteMd, maquetteLg};
