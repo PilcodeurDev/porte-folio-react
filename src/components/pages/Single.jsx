@@ -23,8 +23,8 @@ export default function Single() {
         span2={currentArticle.span2}
         shadow={currentArticle.shadow}
       />
-      <div className="w-[100vw] max-h-[50vh] mb-8 flex overflow-hidden shadow-2xl lg:max-w-[95vw] hover:opacity-90 duration-500">
-        {currentArticle.image}
+      <div className="w-[100vw] max-h-[50vh] mb-8 flex overflow-hidden shadow-2xl lg:max-w-[95vw]">
+        {currentArticle.featuredImage}
       </div>
       <h3 className="mt-10">{currentArticle.title}</h3>
       <p className="w-2/3 text-xl mt-16">{currentArticle.text}</p>
