@@ -142,7 +142,7 @@ export default function Portfolio() {
           )}
         </div>
       </div>
-      <OverlayRevealContent />
+      {/* <OverlayRevealContent /> */}
     </div>
   );
 }

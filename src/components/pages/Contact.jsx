@@ -94,7 +94,7 @@ export default function Contact() {
           <Form />
         </div>
       </div>
-      <OverlayRevealContent />
+      {/* <OverlayRevealContent /> */}
     </div>
   );
 }
