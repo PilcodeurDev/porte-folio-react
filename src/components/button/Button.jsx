@@ -11,7 +11,7 @@ export default function Button({ text, href, icon, download, type, disabled }) {
     return (
       <button
         type="submit"
-        className={`btn absolute right-0 mx-0 ${
+        className={`btn absolute right-0 mr-2 ${
           disabled && "opacity-50 pointer-events-none"
         }`}
       >
