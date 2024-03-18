@@ -1151,7 +1151,7 @@ export default function DataProvider(props) {
         </>
       ),
       features: [
-        "Agenda connecter à Google Agenda",
+        "Agenda connecté à Google Agenda",
         "API Google Maps",
         "Création de compte utilisateur",
         "Formulaire Dynamique",
