@@ -31,7 +31,7 @@ export default function Blog() {
           ))}
         </div>
       </div>
-      <OverlayRevealContent />
+      {/* <OverlayRevealContent /> */}
     </div>
   );
 }

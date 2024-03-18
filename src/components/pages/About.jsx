@@ -66,7 +66,7 @@ export default function About() {
           </div>
         </div>
       </div>
-      <OverlayRevealContent />
+      {/* <OverlayRevealContent /> */}
     </div>
   );
 }
