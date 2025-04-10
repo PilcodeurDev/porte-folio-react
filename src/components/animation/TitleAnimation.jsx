@@ -50,7 +50,7 @@ export default function Experience() {
     <>
       <CameraControls ref={controls} />
       <mesh ref={meshFitCamera} position={[0, 0, 0]}>
-        <boxGeometry args={[5, 2.5, 1]} />
+        <boxGeometry args={[5, 3, 1]} />
         <meshBasicMaterial
           color="pink"
           transparent
@@ -66,8 +66,8 @@ export default function Experience() {
         letterSpacing={-0.05}
         textAlign="center"
       >
-        CREATEUR {"\n"}
-        DE SITE WEB
+        DEVELOPPEUR {"\n"}
+        INFORMATIQUE
         <meshBasicMaterial color={bloomColor} toneMapped={false}>
           <RenderTexture attach="map">
             <color attach="background" args={["#fff"]} />
