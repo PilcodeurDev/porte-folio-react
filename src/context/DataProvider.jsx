@@ -63,9 +63,9 @@ export default function DataProvider(props) {
   const [owner] = useState({
     firstname: "Simon",
     lastname: "Despres",
-    age: "28 ans",
-    address: "32 Bis rue de l'Etang, 25560 Frasne",
-    address2: "Doubs, France",
+    age: "29 ans",
+    address: "33 rue des Pyrénées, Saint-Jammes (64160)",
+    address2: "Pyrénées-Atlantiques, France",
     phone: "+33 6 14 42 17 80",
     email: "simondprs62790@gmail.com",
     nationality: "Française",

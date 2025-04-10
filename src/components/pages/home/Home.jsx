@@ -60,10 +60,10 @@ export default function Home() {
             </Canvas>
           </div>
           <p className="text-md lg:text-xl lg:w-[80%]">
-            Je suis concepteur web ainsi que développeur front-end basé à la
-            frontière franco-suisse. Je suis passionné par la création
-            d'interfaces utilisateur interactives et dynamiques qui captiveront
-            vos visiteurs dès les premières secondes.
+            Accepter par le <u>CESI, l'école d'ingénieurs</u>, je suis à la
+            recherche d'une entreprise sur le secteur de Pau, pour effectuer un <b>Bachelor Concepteur
+            Développeur Informatique</b> en alternance
+            sur 2 ans.
           </p>
           <div className="mt-8">
             <Button text={BUTTON_TEXT} href={BUTTON_HREF} icon={BUTTON_ICON} />
