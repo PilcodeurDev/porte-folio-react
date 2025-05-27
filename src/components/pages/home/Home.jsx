@@ -60,11 +60,16 @@ export default function Home() {
             </Canvas>
           </div>
           <p className="text-md lg:text-xl lg:w-[80%]">
-            Accepté par le <u>CESI, école d'ingénieurs</u>, je suis à la
-            recherche d'une entreprise sur le secteur de Pau, pour effectuer un <b>Bachelor Concepteur
-            Développeur Informatique</b> en alternance
+            Accepté par le{" "}
+            <a href="https://pau.cesi.fr/" target="_blank" rel="noreferrer">
+              <u>CESI, école d'ingénieurs</u>
+            </a>
+            , je suis à la recherche d'une entreprise sur le secteur de Pau,
+            pour effectuer un{" "}
+            <b>Bachelor Concepteur Développeur Informatique</b> en alternance
             sur 2 ans.
           </p>
+
           <div className="mt-8">
             <Button text={BUTTON_TEXT} href={BUTTON_HREF} icon={BUTTON_ICON} />
           </div>
