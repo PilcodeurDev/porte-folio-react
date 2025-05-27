@@ -60,7 +60,7 @@ export default function Home() {
             </Canvas>
           </div>
           <p className="text-md lg:text-xl lg:w-[80%]">
-            Accepter par le <u>CESI, l'école d'ingénieurs</u>, je suis à la
+            Accepté par le <u>CESI, école d'ingénieurs</u>, je suis à la
             recherche d'une entreprise sur le secteur de Pau, pour effectuer un <b>Bachelor Concepteur
             Développeur Informatique</b> en alternance
             sur 2 ans.
